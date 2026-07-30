@@ -1,0 +1,50 @@
+<link rel="shortcut icon" href="https://apache.org/favicons/favicon.ico">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/fontawesome.all.min.css" rel="stylesheet">
+<link href="css/headerlink.css" rel="stylesheet">
+<link href="css/app.css" rel="stylesheet">
+<link href="highlight/github.min.css" rel="stylesheet">
+<script src="highlight/highlight.min.js"></script>
+<script src="js/mermaid.min.js"></script>
+<!-- pagefind search -->
+<link href="_pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="_pagefind/pagefind-ui.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+      new PagefindUI({ element: "#pagefind-search" });
+  });
+  var pageTitle = '';
+  if(pageTitle === '404'){
+      window.addEventListener('DOMContentLoaded', (event) => {
+          new PagefindUI({ element: "#page-404-search" });
+      });
+  }
+</script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: "default"
+  });
+</script>
+<!-- pagefind search box styling -->
+<style>
+  body {
+      padding-top: 44px;
+  }
+  .search-form {
+      right: 0;
+      left: initial !important;
+      min-width: 25vw;
+      max-width: 90vw;
+      max-height: calc(95vh - 100px);
+      overflow: auto;
+      margin-top: 5px;
+  }
+  .mermaid {
+      margin: 1.2em 0;
+      padding: 1em;
+      background: #fff;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+  }
+</style>
