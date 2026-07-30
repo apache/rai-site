@@ -1,0 +1,183 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Apache Responsible AI</title>
+<link rel="shortcut icon" href="https://apache.org/favicons/favicon.ico">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/fontawesome.all.min.css" rel="stylesheet">
+<link href="css/headerlink.css" rel="stylesheet">
+<link href="css/app.css" rel="stylesheet">
+<link href="highlight/github.min.css" rel="stylesheet">
+<script src="highlight/highlight.min.js"></script>
+<script src="js/mermaid.min.js"></script>
+<!-- pagefind search -->
+<link href="_pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="_pagefind/pagefind-ui.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+      new PagefindUI({ element: "#pagefind-search" });
+  });
+  var pageTitle = '';
+  if(pageTitle === '404'){
+      window.addEventListener('DOMContentLoaded', (event) => {
+          new PagefindUI({ element: "#page-404-search" });
+      });
+  }
+</script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: "default"
+  });
+</script>
+<!-- pagefind search box styling -->
+<style>
+  body {
+      padding-top: 44px;
+  }
+  .search-form {
+      right: 0;
+      left: initial !important;
+      min-width: 25vw;
+      max-width: 90vw;
+      max-height: calc(95vh - 100px);
+      overflow: auto;
+      margin-top: 5px;
+  }
+  .mermaid {
+      margin: 1.2em 0;
+      padding: 1em;
+      background: #fff;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+  }
+</style>  </head>
+  <body class="d-flex flex-column h-100">
+<!-- nav bar -->
+<nav class="navbar navbar-expand-md navbar-light bg-info-light fixed-top" aria-label="Responsible AI Navigation">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="https://apache.org/img/asf_logo.png" alt="The Apache Software Foundation" style="height: 42px; margin-left: 6px;">
+      <span style="font-weight: bold; position: relative; top: 5px; margin-left: 10px;">Responsible AI</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarADP" aria-controls="navbarADP" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarADP" style="position: relative; top: 4px; margin-left: 16px;">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="what-we-do.html">What We Do</a></li>
+        <li class="nav-item"><a class="nav-link" href="get-involved.html">Get Involved</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Source</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://github.com/apache/rai-site/">Website repository</a></li>
+            <li><a class="dropdown-item" href="https://lists.apache.org/list.html?discuss@rai.apache.org">Mailing list archive</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle hidden-xs" data-bs-toggle="dropdown"><span class="fa-solid fa-magnifying-glass" aria-hidden="true"></span> Search</a>
+          <ul class="search-form dropdown-menu">
+            <li>
+              <div id="pagefind-search" class="input-group" style="width: 100%; padding: 0 5px;"></div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            About The ASF
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="https://www.apache.org/">Foundation</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://www.apache.org/licenses/">License</a></li>
+            <li><a class="dropdown-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></li>
+            <li><a class="dropdown-item" href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://www.apache.org/security/">Security</a></li>
+            <li><a class="dropdown-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy Policy</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>    <main class="flex-shrink-0">
+      <div>
+<!-- page contents -->
+<div id="contents">
+    <div class="bg-white p-5 rounded">
+        <div class="col-sm-12 mx-auto">
+          <h1>
+            FAQ
+          </h1>
+          <h2>What is the Responsible AI initiative?</h2>
+<p>It is an Apache Software Foundation effort to strengthen the open source technologies
+that underpin modern AI and to help ASF communities adopt AI responsibly. It provides
+access to AI models and tooling, ecosystem support for AI-focused projects, and a place
+to share good practices.</p>
+<h2>Who leads it?</h2>
+<p>A <strong>Vice President, Responsible AI</strong>, appointed by the ASF Board, leads the initiative.
+The work itself is open to contributors from across the Foundation and the wider
+community.</p>
+<h2>Is the initiative's guidance binding on my project?</h2>
+<p>The initiative offers guidance, resources, and shared good practices. Apache projects
+remain self-governing and adopt what is useful to them.</p>
+<h2>What principles guide the responsible use of AI at the ASF?</h2>
+<p>Four core principles: <strong>human oversight, licensing integrity, security, and
+documentation</strong> &mdash; rooted in the ASF philosophy of <em>community over code</em>.</p>
+<h2>How can I get involved in a specific area (security, innovation, policy, education)?</h2>
+<p>Volunteers currently organize around four work streams &mdash; <strong>Security</strong>, <strong>Innovation</strong>,
+<strong>Policy</strong>, and <strong>Education, Adoption &amp; Outreach</strong>. Reply on the mailing list to join one &mdash;
+see <a href="get-involved.html">Get Involved</a> for details.</p>
+<h2>How can I take part or ask a question?</h2>
+<p>Join <strong><a href="mailto:discuss@rai.apache.org">discuss@rai.apache.org</a></strong> or ask to be invited to the <strong>#ai-discuss</strong> channel on the
+ASF Slack. See <a href="get-involved.html">Get Involved</a> for details.</p>
+<p><em>This FAQ will grow as questions come up on the mailing list.</em></p>
+
+        </div>
+    </div>
+</div>    <!-- footer -->
+    <div class="row">
+      <div class="large-12 medium-12 columns">
+        <p style="font-style: italic; font-size: 0.8rem; text-align: center;">
+          Copyright 2026, <a href="https://www.apache.org/">The Apache Software Foundation</a>, Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br>
+          Apache&reg; and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation.
+        </p>
+      </div>
+    </div>      </div>
+    </main>
+    <script src="js/bootstrap.bundle.min.js" integrity="sha384-TYMA+uAx4f43rilxPIhmlqA+Vi+xbyMe+YVR3BcL15NyHLqd+7WYNtyBPdayiOPx"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+      function decodeHtmlEntities(str) {
+        const txt = document.createElement("textarea");
+        txt.innerHTML = str;
+        return txt.value;
+      }
+      document.querySelectorAll("pre > code.language-mermaid").forEach((code, i) => {
+        let decoded = decodeHtmlEntities(code.innerHTML);
+        // Normalize whitespace
+        decoded = decoded.replace(/\t/g, "    ");
+        decoded = decoded.replace(/^\s*\n/, "").replace(/\n\s*$/, "");
+        const div = document.createElement("div");
+        div.className = "mermaid";
+        div.textContent = decoded;
+        code.parentElement.replaceWith(div);
+        console.log(`=== Mermaid block ${i} ===`);
+        console.log(decoded);
+      });
+      // Mermaid v10+ runs asynchronously
+      mermaid.run({ querySelector: ".mermaid" })
+        .catch(err => {
+          console.error("Mermaid rendering failed:", err);
+        });
+      });
+    </script>
+    <script>hljs.highlightAll();</script>  </body>
+</html>
