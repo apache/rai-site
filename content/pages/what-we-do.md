@@ -2,7 +2,7 @@ Title: What We Do
 license: https://www.apache.org/licenses/LICENSE-2.0
 
 The Responsible AI initiative organizes its work around three complementary
-directions. Together they aim to keep the Apache projects that underpin modern AI
+activities. Together they aim to keep the Apache projects that underpin modern AI
 secure and sustainable, while helping ASF communities adopt AI in a way that is open,
 transparent, and human-centered.
 
@@ -30,7 +30,7 @@ lower the barrier for new communities adopting AI responsibly.
 ## Current work
 
 Volunteers are currently organizing around four work streams — **Security**, **Innovation**,
-**Policy**, and **Education, Adoption & Outreach** — each complementing the directions above
+**Policy**, and **Education, Adoption & Outreach** — each complementing the activities above
 and open to anyone who wants to help. See [Get Involved](get-involved.html) to join one.
 
 ## Guiding principles
@@ -44,5 +44,5 @@ The initiative is grounded in the ASF's guidelines for the responsible use of AI
 
 These reflect the ASF's longstanding philosophy of *community over code*.
 
-_This page describes the initiative's current direction and will evolve as the work
+_This page describes the initiative's current activities and will evolve as the work
 progresses._

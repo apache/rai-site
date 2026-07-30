@@ -28,7 +28,8 @@ pyproject.toml  Python dependencies (managed with uv)
   (`Title:` and `license:`); the home page also sets `Template: index`.
 - New pages appear automatically; add them to the navigation in
   `content/theme/templates/menu.html`.
-- Small fixes can be made with the GitHub pencil icon; larger changes via a pull request.
+- Changes go through a pull request (fork, branch, PR) - for small fixes, GitHub's
+  pencil icon on a file is a quick way to start one straight from the file view.
 
 ## Local build (optional)
 

@@ -30,6 +30,6 @@ rooted in the Foundation's longstanding philosophy of *community over code*.
 ### Learn more
 
 - [About](about.html) — what the initiative is and how it is organized
-- [What We Do](what-we-do.html) — our directions and guiding principles
+- [What We Do](what-we-do.html) — our activities and guiding principles
 - [Get Involved](get-involved.html) — join the discussion and contribute
 - [FAQ](faq.html) — common questions
