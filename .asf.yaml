@@ -29,13 +29,13 @@ github:
     merge:   false
     rebase:  false
   protected_branches:
-    main: {}
-    asf-site: {}
+    main: []
+    asf-site: []
 
 notifications:
-  commits:      commits@rai.apache.org
-  pullrequests: commits@rai.apache.org
-  jobs:         commits@rai.apache.org
+  commits:      private-commits@rai.apache.org
+  pullrequests: private-commits@rai.apache.org
+  jobs:         private-commits@rai.apache.org
 
 pelican:
   autobuild: preview/*
