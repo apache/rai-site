@@ -32,10 +32,20 @@ github:
     main: []
     asf-site: []
 
-publish:
-  whoami: asf-site
-
 notifications:
   commits:      private-commits@rai.apache.org
   pullrequests: private-commits@rai.apache.org
   jobs:         private-commits@rai.apache.org
+
+pelican:
+  autobuild: preview/*
+  target: asf-site
+  whoami: main
+
+staging:
+  profile: ~
+  whoami: asf-site
+  autostage: preview/*
+
+publish:
+  whoami: asf-site
