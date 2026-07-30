@@ -29,8 +29,8 @@ github:
     merge:   false
     rebase:  false
   protected_branches:
-    main: []
-    asf-site: []
+    main: {}
+    asf-site: {}
 
 notifications:
   commits:      private-commits@rai.apache.org
