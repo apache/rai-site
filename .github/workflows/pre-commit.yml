@@ -1,7 +1,8 @@
-# https://pre-commit.com/
 name: Lint
 
-on: [pull_request]
+on:
+  pull_request:
+    branches: [ main ]
 
 permissions:
   contents: read
@@ -12,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3  # v6.0.0
+        uses: actions/checkout@v7
         with:
           persist-credentials: false
       - name: Install
@@ -21,7 +22,7 @@ jobs:
           pip install pre-commit
       - name: Set PY
         run: echo "PY=$(python -VV | sha256sum | cut -d' ' -f1)" >> "$GITHUB_ENV"
-      - uses: actions/cache@v4
+      - uses: actions/cache@v6
         with:
           path: ~/.cache/pre-commit
           key: pre-commit|${{ env.PY }}|${{ hashFiles('.pre-commit-config.yaml') }}
