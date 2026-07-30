@@ -7,8 +7,6 @@ infrastructure from this repository via `.asf.yaml` (the `pelican:` block builds
 `main` and publishes the generated HTML to the `asf-site` branch, which is served at
 `rai.apache.org`). Content is written in **Markdown** with **Mermaid** diagram support.
 
-The structure is adapted from [`apache/tooling-docs`](https://github.com/apache/tooling-docs).
-
 ## Layout
 
 ```
@@ -38,12 +36,23 @@ Pelican plugins (`asfgenid`, `asfrun`, `gfm`, …) provided by
 [`apache/infrastructure-pelican`](https://github.com/apache/infrastructure-pelican); see
 that project for setup.
 
+## Previewing proposed changes
+
+Any branch in this repository that is named `preview/*` will auto-build and stage to `rai-*.staged.apache.org`.
+
+If you need to test your changes, create a branch such as `preview/<your-asf-id>`.
+
+Commits to it will be staged at `rai-<your-asf-id>.staged.apache.org`.
+
+> [!NOTE]
+>
+> The branch name must not include any "." characters, or browsers will refuse to display the site due to an invalid SSL certificate. The underscore character ("_") should not be used either, as it is disallowed in host names.
+
 ## Get involved
 
-- Mailing list: **discuss@rai.apache.org** —
-  [archives](https://lists.apache.org/list.html?discuss@rai.apache.org)
-- ASF Slack: **#ai-discuss** (ask to be invited)
+- Mailing list: discuss@rai.apache.org ([archives](https://lists.apache.org/list.html?discuss@rai.apache.org))
+- ASF Slack: #ai-discuss (Ask to be invited)
 
 ## License
 
-Apache License 2.0. See [`LICENSE`](LICENSE).
+This project is licensed under [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
