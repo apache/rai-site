@@ -22,7 +22,8 @@ github:
     issues: false
     projects: false
     wiki: false
-  labels: {}
+  labels:
+    - apache
   enabled_merge_buttons:
     squash:  true
     merge:   false
