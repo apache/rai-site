@@ -33,9 +33,9 @@ github:
     asf-site: {}
 
 notifications:
-  commits:      private-commits@rai.apache.org
-  pullrequests: private-commits@rai.apache.org
-  jobs:         private-commits@rai.apache.org
+  commits:      site-notify@rai.apache.org
+  pullrequests: site-notify@rai.apache.org
+  jobs:         site-notify@rai.apache.org
 
 pelican:
   autobuild: preview/*
