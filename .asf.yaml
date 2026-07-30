@@ -35,6 +35,6 @@ publish:
   whoami: asf-site
 
 notifications:
-  commits:      commits@curator.apache.org
-  pullrequests: commits@curator.apache.org
-  jobs:         commits@curator.apache.org
+  commits:      commits@rai.apache.org
+  pullrequests: commits@rai.apache.org
+  jobs:         commits@rai.apache.org
