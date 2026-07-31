@@ -44,5 +44,5 @@ The initiative is grounded in the ASF's guidelines for the responsible use of AI
 
 These reflect the ASF's longstanding philosophy of *community over code*.
 
-_This page describes the initiative's current activities and will evolve as the work
-progresses._
+*This page describes the initiative's current activities and will evolve as the work
+progresses.*
