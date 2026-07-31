@@ -51,7 +51,7 @@ Commits to it will be staged at `rai-<your-asf-id>.staged.apache.org`.
 ## Get involved
 
 - Mailing list: discuss@rai.apache.org ([archives](https://lists.apache.org/list.html?discuss@rai.apache.org))
-- ASF Slack: #ai-discuss (Ask to be invited)
+- ASF Slack: #rai-discuss (Ask to be invited)
 
 ## License
 
