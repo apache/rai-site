@@ -35,4 +35,4 @@ see [Get Involved](get-involved.html) for details.
 Join **discuss@rai.apache.org** or ask to be invited to the **#ai-discuss** channel on the
 ASF Slack. See [Get Involved](get-involved.html) for details.
 
-_This FAQ will grow as questions come up on the mailing list._
+*This FAQ will grow as questions come up on the mailing list.*
