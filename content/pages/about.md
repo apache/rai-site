@@ -20,8 +20,8 @@ The VP coordinates the initiative's work and its resources, including this websi
 mailing list, and related repositories.
 
 The work follows the **Apache Way** of collaborative, vendor-neutral development.
-Contributors from across the Foundation — and from the wider community — are welcome to
-take part.
+Participation is through the discussion list, open to ASF Members, the **#ai-discuss**
+channel on the ASF Slack, and the initiative's public repositories.
 
 ## Areas of focus
 

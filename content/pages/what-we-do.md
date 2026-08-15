@@ -30,8 +30,8 @@ lower the barrier for new communities adopting AI responsibly.
 ## Current work
 
 Volunteers are currently organizing around four work streams — **Security**, **Innovation**,
-**Policy**, and **Education, Adoption & Outreach** — each complementing the activities above
-and open to anyone who wants to help. See [Get Involved](get-involved.html) to join one.
+**Policy**, and **Education, Adoption & Outreach** — each complementing the activities
+above. See [Get Involved](get-involved.html) for how to take part.
 
 ## Guiding principles
 
