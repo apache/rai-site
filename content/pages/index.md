@@ -24,8 +24,8 @@ rooted in the Foundation's longstanding philosophy of *community over code*.
 
 - An open, Foundation-wide initiative to strengthen the Apache projects that underpin AI.
 - Led by a **Vice President, Responsible AI**, appointed by the ASF Board.
-- Coordinated in the open on the **discuss@rai.apache.org** mailing list and the
-  **#ai-discuss** channel on the ASF Slack.
+- Coordinated on the **discuss@rai.apache.org** mailing list, open to ASF Members, and
+  the **#ai-discuss** channel on the ASF Slack.
 
 ### Learn more
 

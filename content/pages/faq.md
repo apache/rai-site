@@ -32,7 +32,7 @@ see [Get Involved](get-involved.html) for details.
 
 ## How can I take part or ask a question?
 
-Join **discuss@rai.apache.org** or ask to be invited to the **#ai-discuss** channel on the
-ASF Slack. See [Get Involved](get-involved.html) for details.
+Join **discuss@rai.apache.org**, open to ASF Members, or ask to be invited to the
+**#ai-discuss** channel on the ASF Slack. See [Get Involved](get-involved.html) for details.
 
 *This FAQ will grow as questions come up on the mailing list.*

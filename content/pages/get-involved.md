@@ -2,12 +2,14 @@ Title: Get Involved
 license: https://www.apache.org/licenses/LICENSE-2.0
 
 Everyone interested in the responsible use of AI at the ASF is welcome to follow the work
-and take part. The initiative is run in the open, the Apache Way.
+and take part. The initiative follows the Apache Way, and its discussion list is open to
+ASF Members.
 
 ## Join the discussion
 
-- **Mailing list:** send an email to **discuss-subscribe@rai.apache.org** to subscribe (any
-  email address works), or browse the [public archives](https://lists.apache.org/list.html?discuss@rai.apache.org).
+- **Mailing list:** **discuss@rai.apache.org**, open to ASF Members. Send an email to
+  **discuss-subscribe@rai.apache.org** to subscribe, or browse the
+  [archives](https://lists.apache.org/list.html?discuss@rai.apache.org).
 - **Chat:** ask to be invited to the **#ai-discuss** channel on the [ASF Slack](https://infra.apache.org/slack.html).
 
 Introduce yourself, share what your project is doing with AI, and tell us where expanded
