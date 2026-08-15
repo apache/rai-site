@@ -19,9 +19,9 @@ established by the ASF Board. **Jeff Genender** was appointed to the role in Jul
 The VP coordinates the initiative's work and its resources, including this website, the
 mailing list, and related repositories.
 
-The work is carried out in the open, following the **Apache Way** of collaborative,
-vendor-neutral development. Contributors from across the Foundation — and from the wider
-community — are welcome to take part.
+The work follows the **Apache Way** of collaborative, vendor-neutral development.
+Participation is through the discussion list, open to ASF Members, the **#ai-discuss**
+channel on the ASF Slack, and the initiative's public repositories.
 
 ## Areas of focus
 
@@ -34,6 +34,6 @@ Volunteers currently organize around four work streams:
 
 ## Contact
 
-- Mailing list: **discuss@rai.apache.org** — [archives](https://lists.apache.org/list.html?discuss@rai.apache.org)
+- Mailing list: **discuss@rai.apache.org**, open to ASF Members — [archives](https://lists.apache.org/list.html?discuss@rai.apache.org)
 - ASF Slack: **#ai-discuss** (ask to be invited)
 - Source and issues: <https://github.com/apache/rai-site>
