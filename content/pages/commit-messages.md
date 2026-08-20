@@ -1,14 +1,20 @@
-Title: Commit messages for AI-assisted code
+Title: Commit Messages for AI-Assisted Code
 license: https://www.apache.org/licenses/LICENSE-2.0
 
-## Documenting AI use in commit messages
+## DRAFT DOCUMENT
+
+**This document is an UNOFFICIAL DRAFT and should not be considered official
+policy.  Substantial changes may be made before being published as an official
+policy.  Direct any questions to discuss@rai.apache.org.**
+
+## Documenting AI Use in Commit Messages
 
 When AI tools assist in generating code for an Apache project, commit messages
 serve as the primary record of provenance. Good commit messages help future
 contributors understand what happened, and they provide the metadata that
 provenance-tracking tools need.
 
-## The `Generated-by:` token convention
+## The `Generated-by:` Token Convention
 
 The ASF's generative tooling guidance recommends the use of a `Generated-by:`
 token in commit messages to document AI-assisted code generation.
@@ -32,9 +38,9 @@ This token is a **convention** — it is not yet a formal, Foundation-wide
 requirement. Individual projects may adopt it, modify it, or create their own
 variants.
 
-## Example commit messages
+## Example Commit Messages
 
-### Simple: AI generated a function
+### Simple: AI Generated a Function
 
 ```
 feat(auth): add JWT token validation middleware
@@ -46,7 +52,7 @@ authentication pipeline. The function checks the token signature,
 extracts the subject claim, and attaches it to the request context.
 ```
 
-### Mixed: AI drafted code, human edited heavily
+### Mixed: AI Drafted Code, Human Edited Heavily
 
 ```
 fix(parser): correct handling of malformed JSON payloads
@@ -57,7 +63,7 @@ Manually added error cases for null inputs and truncated buffers.
 Fixes #1234.
 ```
 
-### Fully human, AI aided review
+### Fully Human, AI Aided Review
 
 ```
 docs: update contributing guide with AI tooling notes
@@ -66,7 +72,7 @@ Reviewed the draft using an AI assistant for clarity suggestions.
 All content written by the author.
 ```
 
-## Best practices
+## Best Practices
 
 1. **Be specific.** When using `Generated-by:`, name the actual tool you used
    (e.g., `Claude-3.5-Sonnet`, `GitHub Copilot`) rather than a generic label.
@@ -88,7 +94,7 @@ All content written by the author.
    and a brief description of what the AI produced and how you edited it is
    sufficient.
 
-## Sample commit with both tags
+## Sample Commit with Both Tags
 
 ```
 feat(config): add database connection pooling
@@ -103,13 +109,13 @@ Added configurable connection pooling to the database client.
 Supports connection limits, idle timeouts, and health checks.
 ```
 
-## Relationship to other pages
+## Relationship to Other Pages
 
-- See [Policy recommendations](policy-recommendations.html) for the full
+- See [Policy Recommendations](policy-recommendations.html) for the full
   Apache-ai tag guidance.
 - See ["Authored by" and "Co-authored" Tags](authored-by-tags.html) for
   attribution conventions.
-- See [AI-generated code in Apache projects](ai-generated-code.html) for
+- See [AI-Generated Code in Apache Projects](ai-generated-code.html) for
   broader guidance on contributing AI-generated code.
 
-*Back to [Best practices](best-practices.html).*
+*Back to [Best Practices](best-practices.html).*

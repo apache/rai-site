@@ -3,8 +3,6 @@
 *~
 site-generated/
 output/
-# local build only: copied from apache/infrastructure-pelican, never committed
-plugins/
 pelican.auto.py
 .DS_Store
 .venv

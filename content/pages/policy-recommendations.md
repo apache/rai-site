@@ -1,19 +1,25 @@
-Title: Policy recommendations
+Title: Policy Recommendations
 license: https://www.apache.org/licenses/LICENSE-2.0
 
-## Policy recommendations for AI-assisted contributions
+## DRAFT DOCUMENT
+
+**This document is an UNOFFICIAL DRAFT and should not be considered official
+policy.  Substantial changes may be made before being published as an official
+policy.  Direct any questions to discuss@rai.apache.org.**
+
+## Policy Recommendations for AI-Assisted Contributions
 
 This page summarizes the Apache Software Foundation's guidance and key
 recommendations for contributors who use AI tools when contributing code,
 documentation, or other material to Apache projects.
 
-## The Apache-ai commit tag
+## The Apache-ai Commit Tag
 
 The **Apache-ai** tag is a voluntary disclosure mechanism. When added to a
 commit, it signals that AI played a significant role in generating the
 contribution.
 
-### What it is
+### What It Is
 
 - A tag in the commit message body, following the conventional `key: value`
   format used by Git trailer tags.
@@ -22,10 +28,10 @@ contribution.
 - Recognized by the ASF as a best practice for transparency, but it is not yet
   a mandatory requirement across all projects.
 
-### When to use it
+### When to Use It
 
 | Situation | Recommendation |
-| --- | --- |
+|---|---|
 | AI generated significant portions of code (core logic, large functions) | **Use the tag** — it is strongly recommended |
 | AI helped generate documentation or prose | **Consider the tag** — use it if the AI substantially rewrote the text |
 | AI assisted incidentally (suggested a single fix you heavily edited) | **Optional** — use it if you want to be thorough |
@@ -38,7 +44,7 @@ Apache-ai: This contribution contains code significantly generated
 by an AI tool. See AI tagging policy for details.
 ```
 
-## Key recommendations
+## Key Recommendations
 
 1. **Be transparent about AI tooling used.** Name the tool in your commit
    message using the `Generated-by:` token (e.g., `Generated-by:
@@ -74,9 +80,9 @@ by an AI tool. See AI tagging policy for details.
    that reach EU audiences (e.g., public-facing chatbots, AI-drafted
    public-interest content), review the transparency obligations under
    Article 50 of Regulation (EU) 2024/1689. See
-   [EU AI Act and copyright](eu-ai-act.html) for details.
+   [EU AI Act and Copyright](eu-ai-act.html) for details.
 
-## This is guidance, not binding policy
+## This Is Guidance, Not Binding Policy
 
 The recommendations on this page are **guidance**, not binding policy.
 Individual Apache projects remain self-governing under the Apache Way and may
@@ -84,14 +90,14 @@ adopt, adapt, or ignore these recommendations as they see fit. The initiative
 offers these as shared good practices, and projects are encouraged to discuss
 them on the [mailing list](get-involved.html).
 
-## Cross-reference: all best practices pages
+## Cross-Reference: All Best Practices Pages
 
 | Topic | Page |
-| --- | --- |
-| Guidelines for contributing AI-generated code | [AI-generated code in Apache projects](ai-generated-code.html) |
-| US copyright law and AI | [US copyright law and AI](us-copyright-law.html) |
-| EU AI Act and copyright | [EU AI Act and copyright](eu-ai-act.html) |
+|---|---|
+| Guidelines for contributing AI-generated code | [AI-Generated Code in Apache Projects](ai-generated-code.html) |
+| US copyright law and AI | [US Copyright Law and AI](us-copyright-law.html) |
+| EU AI Act and copyright | [EU AI Act and Copyright](eu-ai-act.html) |
 | Attribution tags | ["Authored by" and "Co-authored" Tags](authored-by-tags.html) |
-| Commit message conventions | [Commit messages for AI-assisted code](commit-messages.html) |
+| Commit message conventions | [Commit Messages for AI-Assisted Code](commit-messages.html) |
 
-*Back to [Best practices](best-practices.html).*
+*Back to [Best Practices](best-practices.html).*
