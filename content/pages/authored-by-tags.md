@@ -1,7 +1,7 @@
-Title: "Authored by" and "Co-authored" Tags
+Title: "Authored by" and "Co-authored" tags
 license: https://www.apache.org/licenses/LICENSE-2.0
 
-## Attribution Tags When AI Assists in Creating Content
+## Attribution tags when AI assists in creating content
 
 Git commit messages support trailer tags that record who contributed to a piece of
 code. The two most common are:
@@ -14,7 +14,7 @@ asked: *How should I record that?*
 
 This page provides practical guidance for Apache contributors.
 
-## Understanding the Tags
+## Understanding the tags
 
 ### `authored-by: Person Name`
 
@@ -24,7 +24,7 @@ drafted by an AI tool but the human selected, edited, reviewed, and integrated
 it), the human is the author.
 
 This is the standard and safe approach. It is consistent with US copyright law
-(_Thaler v. Perlmutter_, 49 F.4th 611 (D.C. Cir. 2023)), which holds that only
+(*Thaler v. Perlmutter*, 49 F.4th 611 (D.C. Cir. 2023)), which holds that only
 natural persons can be authors.
 
 **Example:**
@@ -57,7 +57,7 @@ co-authored-by: Claude <noreply@anthropic.com>
 
 Both are acceptable conventions — choose what your project prefers.
 
-### A Proposed Convention: `ai-assisted-by`
+### A proposed convention: `ai-assisted-by`
 
 Some contributors have suggested a new trailer tag specifically for AI tools:
 
@@ -69,7 +69,7 @@ This tag is not yet a standard, but it has the advantage of being unambiguous:
 it clearly indicates that an AI tool assisted in creating the work, without
 implying that the AI is a legal author or a human co-author.
 
-## Best Practices
+## Best practices
 
 1. **Be transparent.** If AI assisted in creating a contribution, document it.
    This helps downstream users understand the provenance of the code.
@@ -85,18 +85,18 @@ implying that the AI is a legal author or a human co-author.
    convention, it provides clear, unambiguous attribution for AI assistance.
 
 5. **Use the `Apache-ai` commit tag** if AI played a significant role. See
-   [Policy Recommendations](policy-recommendations.html) for details on the
+   [Policy recommendations](policy-recommendations.html) for details on the
    Apache-ai tag.
 
 6. **These are conventions, not legal requirements.** Individual projects may
    adopt whatever attribution practices they find useful. The ASF does not
    mandate a specific convention.
 
-## Relationship to Other Pages
+## Relationship to other pages
 
-- See [Commit Messages for AI-Assisted Code](commit-messages.html) for conventions
+- See [Commit messages for AI-assisted code](commit-messages.html) for conventions
   on documenting AI use in commit messages.
-- See [AI-Generated Code in Apache Projects](ai-generated-code.html) for broader
+- See [AI-generated code in Apache projects](ai-generated-code.html) for broader
   guidance on contributing AI-generated code.
 
-*Back to [Best Practices](best-practices.html).*
+*Back to [Best practices](best-practices.html).*
