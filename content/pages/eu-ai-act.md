@@ -1,7 +1,7 @@
 Title: EU AI Act and Copyright
 license: https://www.apache.org/licenses/LICENSE-2.0
 
-## DRAFT DOCUMENT  {#DRAFT}
+## DRAFT DOCUMENT
 
 **This document is an UNOFFICIAL DRAFT and should not be considered official
 policy.  Substantial changes may be made before being published as an official
