@@ -1,6 +1,12 @@
 Title: Commit Messages for AI-Assisted Code
 license: https://www.apache.org/licenses/LICENSE-2.0
 
+## DRAFT DOCUMENT  {#DRAFT}
+
+**This document is an UNOFFICIAL DRAFT and should not be considered official
+policy.  Substantial changes may be made before being published as an official
+policy.  Direct any questions to discuss@rai.apache.org.**
+
 ## Documenting AI Use in Commit Messages
 
 When AI tools assist in generating code for an Apache project, commit messages

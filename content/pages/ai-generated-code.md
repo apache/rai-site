@@ -1,6 +1,12 @@
 Title: AI-Generated Code in Apache Projects
 license: https://www.apache.org/licenses/LICENSE-2.0
 
+## DRAFT DOCUMENT  {#DRAFT}
+
+**This document is an UNOFFICIAL DRAFT and should not be considered official
+policy.  Substantial changes may be made before being published as an official
+policy.  Direct any questions to discuss@rai.apache.org.**
+
 ## Contributing AI-Generated Code to Apache Projects
 
 Apache contributors increasingly use AI tools — such as GitHub Copilot, Claude,

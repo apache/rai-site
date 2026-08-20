@@ -1,6 +1,12 @@
 Title: EU AI Act and Copyright
 license: https://www.apache.org/licenses/LICENSE-2.0
 
+## DRAFT DOCUMENT  {#DRAFT}
+
+**This document is an UNOFFICIAL DRAFT and should not be considered official
+policy.  Substantial changes may be made before being published as an official
+policy.  Direct any questions to discuss@rai.apache.org.**
+
 ## The EU AI Act and Its Impact on Apache Projects
 
 The European Union's **Artificial Intelligence Act** (Regulation (EU) 2024/1689)
