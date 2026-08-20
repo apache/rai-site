@@ -1,34 +1,24 @@
-Title: Best Practices
+Title: Best practices
 license: https://www.apache.org/licenses/LICENSE-2.0
 
-## DRAFT DOCUMENT
+The following pages provide guidance on using AI in Apache projects. They cover copyright law,
+practical attribution conventions, commit message practices, and the Apache-ai tag policy.
 
-**This document is an UNOFFICIAL DRAFT and should not be considered official
-policy.  Substantial changes may be made before being published as an official
-policy.  Direct any questions to discuss@rai.apache.org.**
-
-## Guidance
-
-The following pages provide guidance on using AI in Apache projects. They cover
-copyright law, practical attribution conventions, commit message practices, and
-the Apache-ai tag policy.
+## Contributing with AI
 
 | Page | Description |
-|---|---|
-| [AI-Generated Code in Apache Projects](ai-generated-code.html) | Guidelines for contributing code generated with AI tools to an Apache project |
-| [US Copyright Law and AI](us-copyright-law.html) | Thaler v. Perlmutter, US Copyright Office guidance, and what they mean for Apache contributors |
-| [EU AI Act and Copyright](eu-ai-act.html) | EU AI Act timelines, transparency rules, and implications for ASF projects |
-| ["Authored by" and "Co-authored" Tags](authored-by-tags.html) | Best practices for attribution when AI assisted in creating content |
-| [Commit Messages for AI-Assisted Code](commit-messages.html) | Conventions for documenting AI use in commit messages |
-| [Policy Recommendations](policy-recommendations.html) | The Apache-ai tag and key recommendations for AI-assisted contributions |
+| --- | --- |
+| [AI-generated code in Apache projects](ai-generated-code.html) | Guidelines for contributing code generated with AI tools to an Apache project |
+| [Commit messages for AI-assisted code](commit-messages.html) | Conventions for documenting AI use in commit messages |
+| ["Authored by" and "Co-authored" tags](authored-by-tags.html) | Best practices for attribution when AI assisted in creating content |
+| [Policy recommendations](policy-recommendations.html) | The Apache-ai tag and key recommendations for AI-assisted contributions |
 
-## Related
+## Law and regulation
 
 | Page | Description |
-|---|---|
-| [FAQ](faq.html) | Common questions about the Responsible AI initiative |
-| [What We Do](what-we-do.html) | Our activities and guiding principles |
-| [Get Involved](get-involved.html) | Join the discussion and contribute |
+| --- | --- |
+| [US copyright law and AI](us-copyright-law.html) | Thaler v. Perlmutter, US Copyright Office guidance, and what they mean for Apache contributors |
+| [EU AI Act and copyright](eu-ai-act.html) | EU AI Act timelines, transparency rules, and implications for ASF projects |
 
-*These pages are guidance, not binding policy. Individual Apache projects
-remain self-governing and may adopt what is useful to them.*
+*These pages are guidance, not binding policy. Individual Apache projects remain self-governing
+and may adopt what is useful to them.*

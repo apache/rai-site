@@ -1,13 +1,7 @@
-Title: EU AI Act and Copyright
+Title: EU AI Act and copyright
 license: https://www.apache.org/licenses/LICENSE-2.0
 
-## DRAFT DOCUMENT
-
-**This document is an UNOFFICIAL DRAFT and should not be considered official
-policy.  Substantial changes may be made before being published as an official
-policy.  Direct any questions to discuss@rai.apache.org.**
-
-## The EU AI Act and Its Impact on Apache Projects
+## The EU AI Act and its impact on Apache projects
 
 The European Union's **Artificial Intelligence Act** (Regulation (EU) 2024/1689)
 is the first comprehensive AI law in the world. It has phased into effect over
@@ -16,12 +10,12 @@ time, and as of August 2026, several key provisions are already in force.
 This page summarizes the Act's relevance to the Apache Software Foundation and
 to Apache contributors who use AI tools.
 
-## The AI Act Timeline
+## The AI Act timeline
 
 The Act entered into force on **1 August 2024**. Obligations apply in phases:
 
 | Date | Provision | Status |
-|---|---|---|
+| --- | --- | --- |
 | **February 2025** | Prohibited AI practices (Article 5) and AI literacy requirements (Article 4) | In force |
 | **August 2025** | General-purpose AI (GPAI) model rules (Articles 51–56) | In force |
 | **2 August 2026** | Transparency obligations (Article 50) | **In force** |
@@ -31,20 +25,20 @@ The Act entered into force on **1 August 2024**. Obligations apply in phases:
 The Act also established enforcement powers for the AI Office as of 2 August
 2026.
 
-## Key Transparency Rules: Article 50
+## Key transparency rules: Article 50
 
 Article 50 is the most relevant provision for Apache contributors. It contains
 transparency obligations for both **providers** (those who build and distribute
 AI systems) and **deployers** (those who use AI systems).
 
-### What Providers Must Do
+### What providers must do
 
 Providers of generative AI systems must ensure that their outputs (synthetic text,
 images, audio, video) carry effective, **machine-readable marks** so they can be
 detected as AI-generated. There is a transition period until 2 December 2026 for
 systems that were already on the market before 2 August 2026.
 
-### What Deployers Must Do
+### What deployers must do
 
 Deployers (such as an organization that uses a third-party AI service) must:
 
@@ -56,7 +50,7 @@ Deployers (such as an organization that uses a third-party AI service) must:
   **not** undergone genuine human review or editorial control, and no natural or
   legal person assumes editorial responsibility for the publication.
 
-### The Human-Review Exception
+### The human-review exception
 
 This is an important exception: if the AI-generated text has gone through genuine
 human review and someone takes editorial responsibility for it, the labeling duty
@@ -67,7 +61,7 @@ AI-assisted writing.
 Artistic, creative, satirical, and fictional works also receive lighter or
 different treatment.
 
-## Article 50(4): The "Public Interest Text" Labeling Duty
+## Article 50(4): the "public interest text" labeling duty
 
 Article 50(4) is the specific paragraph that obligates deployers to label
 AI-generated or manipulated text. The labeling duty applies when **all three**
@@ -102,7 +96,7 @@ editorial responsibility for the publication.
   persons, objects, or events) require disclosure regardless of whether
   they relate to a public-interest topic.
 
-## How This Applies to the Apache Software Foundation
+## How this applies to the Apache Software Foundation
 
 The AI Act has **extraterritorial reach** (Article 2): it applies to non-EU
 providers and deployers if their AI output is used in the EU. Because the ASF is
@@ -125,7 +119,7 @@ transparency provisions is expected to be **low to negligible** for several reas
   third-party LLM APIs, the third-party company is the provider of the model.
   ASF is deploying those services, not selling them.
 
-### Where the AI Act Could Matter for ASF
+### Where the AI Act could matter for ASF
 
 There are limited scenarios where the AI Act could create obligations:
 
@@ -140,7 +134,7 @@ There are limited scenarios where the AI Act could create obligations:
    releases a generative AI model or tool that is made available in the EU,
    provider-side rules could apply.
 
-## The EU AI Act and Copyright for Contributors
+## The EU AI Act and copyright for contributors
 
 For individual Apache contributors using AI tools, the most relevant provisions
 are:
@@ -160,7 +154,7 @@ are:
   an Apache project is not treated the same way as AI-generated blog posts or
   news articles.
 
-## Bottom Line
+## Bottom line
 
 The EU AI Act has partially entered into force. The transparency rules that are
 live (Article 50) have a broad scope but important exceptions — particularly the
@@ -171,4 +165,4 @@ If your project uses AI in a novel way (e.g., a public chatbot, a generative
 AI tool, or AI-drafted public-interest content), those use cases should be
 reviewed against the specific Article 50 criteria.
 
-*Back to [Best Practices](best-practices.html).*
+*Back to [Best practices](best-practices.html).*
