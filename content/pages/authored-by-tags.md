@@ -3,11 +3,12 @@ license: https://www.apache.org/licenses/LICENSE-2.0
 
 ## Attribution tags when AI assists in creating content
 
-Git commit messages support trailer tags that record who contributed to a piece of
-code. The two most common are:
+Git commit messages support trailer tags that record who contributed to a piece
+of code. The two most common are:
 
 - **`Author:`** — the person who created the work
-- **`Co-authored-by:`** — another person who contributed meaningfully to the work
+- **`Co-authored-by:`** — another person who contributed meaningfully to the
+  work
 
 When AI tools have assisted in creating or modifying code, contributors have
 asked: *How should I record that?*
