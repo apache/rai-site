@@ -4,10 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"Authored by" and "Co-authored" tags - Apache Responsible AI</title>
-<link rel="icon" href="images/rai-mark.svg" type="image/svg+xml">
+    <title>"Authored by" and "Co-authored" Tags - Apache Responsible AI</title>
 <link rel="shortcut icon" href="https://apache.org/favicons/favicon.ico">
-<meta name="description" content="The Apache Software Foundation Responsible AI initiative">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/fontawesome.all.min.css" rel="stylesheet">
 <link href="css/headerlink.css" rel="stylesheet">
@@ -34,38 +32,65 @@
     startOnLoad: true,
     theme: "default"
   });
-</script>  </head>
+</script>
+<!-- pagefind search box styling -->
+<style>
+  body {
+      padding-top: 44px;
+  }
+  .search-form {
+      right: 0;
+      left: initial !important;
+      min-width: 25vw;
+      max-width: 90vw;
+      max-height: calc(95vh - 100px);
+      overflow: auto;
+      margin-top: 5px;
+  }
+  .mermaid {
+      margin: 1.2em 0;
+      padding: 1em;
+      background: #fff;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+  }
+</style>  </head>
   <body class="d-flex flex-column h-100">
 <!-- nav bar -->
-<nav class="navbar navbar-expand-lg navbar-light rai-nav fixed-top" aria-label="Responsible AI Navigation">
+<nav class="navbar navbar-expand-md navbar-light bg-info-light fixed-top" aria-label="Responsible AI Navigation">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.html">
-      <img src="images/rai-mark.svg" alt="" aria-hidden="true">
-      <span>Responsible AI</span>
+      <img src="https://apache.org/img/asf_logo.png" alt="The Apache Software Foundation" style="height: 42px; margin-left: 6px;">
+      <span style="font-weight: bold; position: relative; top: 5px; margin-left: 10px;">Responsible AI</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarADP" aria-controls="navbarADP" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarADP">
+    <div class="collapse navbar-collapse" id="navbarADP" style="position: relative; top: 4px; margin-left: 16px;">
       <ul class="navbar-nav me-auto">
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="what-we-do.html">What we do</a></li>
+        <li class="nav-item"><a class="nav-link" href="what-we-do.html">What We Do</a></li>
+        <li class="nav-item"><a class="nav-link" href="get-involved.html">Get Involved</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">Best practices</a>
+          <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">Best Practices</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="best-practices.html">Overview</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="ai-generated-code.html">AI-generated code</a></li>
-            <li><a class="dropdown-item" href="commit-messages.html">Commit messages</a></li>
-            <li><a class="dropdown-item" href="authored-by-tags.html">Authored-by tags</a></li>
-            <li><a class="dropdown-item" href="policy-recommendations.html">Policy recommendations</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="us-copyright-law.html">US copyright law</a></li>
+            <li><a class="dropdown-item" href="ai-generated-code.html">AI-Generated Code</a></li>
+            <li><a class="dropdown-item" href="us-copyright-law.html">US Copyright Law</a></li>
             <li><a class="dropdown-item" href="eu-ai-act.html">EU AI Act</a></li>
+            <li><a class="dropdown-item" href="authored-by-tags.html">Authored-by Tags</a></li>
+            <li><a class="dropdown-item" href="commit-messages.html">Commit Messages</a></li>
+            <li><a class="dropdown-item" href="policy-recommendations.html">Policy Recommendations</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="get-involved.html">Get involved</a></li>
-        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">Source</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://github.com/apache/rai-site/">Website repository</a></li>
+            <li><a class="dropdown-item" href="https://lists.apache.org/list.html?discuss@rai.apache.org">Mailing list archive</a></li>
+          </ul>
+        </li>
         <li class="nav-item dropdown">
           <a href="javascript:void(0)" class="nav-link dropdown-toggle hidden-xs" role="button" data-bs-toggle="dropdown"><span class="fa-solid fa-magnifying-glass" aria-hidden="true"></span> Search</a>
           <ul class="search-form dropdown-menu">
@@ -75,25 +100,20 @@
           </ul>
         </li>
       </ul>
-      <ul class="navbar-nav align-items-lg-center">
-        <li class="nav-item me-lg-3 my-2 my-lg-0">
-          <a class="rai-support" href="https://apache.org/foundation/initiatives/responsibleai">Support the initiative</a>
-        </li>
+      <ul class="navbar-nav">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            The ASF
+            About The ASF
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="https://www.apache.org/">Foundation</a></li>
-            <li><a class="dropdown-item" href="https://github.com/apache/rai-site/">Website repository</a></li>
-            <li><a class="dropdown-item" href="https://lists.apache.org/list.html?discuss@rai.apache.org">Mailing list archive</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="https://www.apache.org/licenses/">License</a></li>
             <li><a class="dropdown-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></li>
             <li><a class="dropdown-item" href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="https://www.apache.org/security/">Security</a></li>
-            <li><a class="dropdown-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a></li>
+            <li><a class="dropdown-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy Policy</a></li>
           </ul>
         </li>
       </ul>
@@ -103,10 +123,16 @@
       <div>
 <!-- page contents -->
 <div id="contents">
-  <div class="bg-white rounded">
-    <div class="mx-auto">
-      <h1>"Authored by" and "Co-authored" tags</h1>
-      <h2>Attribution tags when AI assists in creating content</h2>
+    <div class="bg-white p-5 rounded">
+        <div class="col-sm-12 mx-auto">
+          <h1>
+            "Authored by" and "Co-authored" Tags
+          </h1>
+          <h2>DRAFT DOCUMENT</h2>
+<p><strong>This document is an UNOFFICIAL DRAFT and should not be considered official
+policy.  Substantial changes may be made before being published as an official
+policy.  Direct any questions to <a href="mailto:discuss@rai.apache.org">discuss@rai.apache.org</a>.</strong></p>
+<h2>Attribution Tags When AI Assists in Creating Content</h2>
 <p>Git commit messages support trailer tags that record who contributed to a piece
 of code. The two most common are:</p>
 <ul>
@@ -117,15 +143,15 @@ work</li>
 <p>When AI tools have assisted in creating or modifying code, contributors have
 asked: <em>How should I record that?</em></p>
 <p>This page provides practical guidance for Apache contributors.</p>
-<h2>Understanding the tags</h2>
+<h2>Understanding the Tags</h2>
 <h3><code>authored-by: Person Name</code></h3>
 <p>Use this when <strong>the human made the substantive creative choices</strong> for the
 contribution. Even if AI helped generate parts of the code (e.g., a function was
 drafted by an AI tool but the human selected, edited, reviewed, and integrated
 it), the human is the author.</p>
 <p>This is the standard and safe approach. It is consistent with US copyright law
-(<em>Thaler v. Perlmutter</em>, 49 F.4th 611 (D.C. Cir. 2023)), which holds that only
-natural persons can be authors.</p>
+(<em>Thaler v. Perlmutter</em>, No. 23-5233, 2025 WL 839178 (D.C. Cir. Mar. 18, 2025)),
+which holds that only natural persons can be authors.</p>
 <p><strong>Example:</strong></p>
 <pre><code>authored-by: Jane Doe &lt;jane@example.com&gt;
 </code></pre>
@@ -146,14 +172,14 @@ co-authored-by: Jane Doe &lt;jane@example.com&gt;
 co-authored-by: Claude &lt;noreply@anthropic.com&gt;
 </code></pre>
 <p>Both are acceptable conventions &mdash; choose what your project prefers.</p>
-<h3>A proposed convention: <code>ai-assisted-by</code></h3>
+<h3>A Proposed Convention: <code>ai-assisted-by</code></h3>
 <p>Some contributors have suggested a new trailer tag specifically for AI tools:</p>
 <pre><code>ai-assisted-by: Claude-3.5-Sonnet
 </code></pre>
 <p>This tag is not yet a standard, but it has the advantage of being unambiguous:
 it clearly indicates that an AI tool assisted in creating the work, without
 implying that the AI is a legal author or a human co-author.</p>
-<h2>Best practices</h2>
+<h2>Best Practices</h2>
 <ol>
 <li>
 <p><strong>Be transparent.</strong> If AI assisted in creating a contribution, document it.
@@ -174,7 +200,7 @@ convention, it provides clear, unambiguous attribution for AI assistance.</p>
 </li>
 <li>
 <p><strong>Use the <code>Apache-ai</code> commit tag</strong> if AI played a significant role. See
-<a href="policy-recommendations.html">Policy recommendations</a> for details on the
+<a href="policy-recommendations.html">Policy Recommendations</a> for details on the
 Apache-ai tag.</p>
 </li>
 <li>
@@ -183,61 +209,26 @@ adopt whatever attribution practices they find useful. The ASF does not
 mandate a specific convention.</p>
 </li>
 </ol>
-<h2>Relationship to other pages</h2>
+<h2>Relationship to Other Pages</h2>
 <ul>
-<li>See <a href="commit-messages.html">Commit messages for AI-assisted code</a> for conventions
+<li>See <a href="commit-messages.html">Commit Messages for AI-Assisted Code</a> for conventions
 on documenting AI use in commit messages.</li>
-<li>See <a href="ai-generated-code.html">AI-generated code in Apache projects</a> for broader
+<li>See <a href="ai-generated-code.html">AI-Generated Code in Apache Projects</a> for broader
 guidance on contributing AI-generated code.</li>
 </ul>
-<p><em>Back to <a href="best-practices.html">Best practices</a>.</em></p>
+<p><em>Back to <a href="best-practices.html">Best Practices</a>.</em></p>
 
+        </div>
     </div>
-  </div>
 </div>    <!-- footer -->
-    <footer class="rai-footer">
-      <div class="rai-footer-inner">
-        <div>
-          <h4>Initiative</h4>
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="what-we-do.html">What we do</a></li>
-            <li><a href="best-practices.html">Best practices</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Participate</h4>
-          <ul>
-            <li><a href="get-involved.html">Get involved</a></li>
-            <li><a href="https://lists.apache.org/list.html?discuss@rai.apache.org">Mailing list</a></li>
-            <li><a href="https://infra.apache.org/slack.html">ASF Slack</a></li>
-            <li><a href="https://github.com/apache/rai-site">Source repository</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Support</h4>
-          <ul>
-            <li><a href="https://apache.org/foundation/initiatives/responsibleai">Support the initiative</a></li>
-            <li><a href="https://news.apache.org/foundation/entry/the-apache-software-foundation-launches-10m-responsible-ai-initiative-with-initial-1-75m-donation">Announcement</a></li>
-            <li><a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Foundation</h4>
-          <ul>
-            <li><a href="https://www.apache.org/">apache.org</a></li>
-            <li><a href="https://www.apache.org/licenses/">License</a></li>
-            <li><a href="https://www.apache.org/security/">Security</a></li>
-            <li><a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a></li>
-          </ul>
-        </div>
+    <div class="row">
+      <div class="large-12 medium-12 columns">
+        <p style="font-style: italic; font-size: 0.8rem; text-align: center;">
+          Copyright 2026, <a href="https://www.apache.org/">The Apache Software Foundation</a>, Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br>
+          Apache&reg; and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation.
+        </p>
       </div>
-      <div class="rai-legal">
-        Copyright 2026, <a href="https://www.apache.org/">The Apache Software Foundation</a>, licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br>
-        Apache&reg; and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation.
-      </div>
-    </footer>      </div>
+    </div>      </div>
     </main>
     <script src="js/bootstrap.bundle.min.js" integrity="sha384-TYMA+uAx4f43rilxPIhmlqA+Vi+xbyMe+YVR3BcL15NyHLqd+7WYNtyBPdayiOPx"></script>
     <script>
