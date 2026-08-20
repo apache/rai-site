@@ -5,7 +5,7 @@ The Responsible AI initiative is an Apache Software Foundation effort to strengt
 source technologies that underpin modern AI, and to support ASF projects and communities as they
 adopt AI responsibly.
 
-As Sally Khudairi of the Apache Software Foundation has put it:
+As Sally Khudairi, VP, Sponsor Relations, has stated:
 
 > AI runs on open infrastructure. AI systems worldwide depend on critical Apache
 > projects. Our new initiative ensures that those ASF projects that are deeply embedded
