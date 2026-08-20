@@ -29,7 +29,7 @@ github:
     merge:   false
     rebase:  false
   protected_branches:
-    main: {}
+#    main: {}
     asf-site: {}
 
 notifications:
