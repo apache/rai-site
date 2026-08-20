@@ -20,10 +20,11 @@ PLUGIN_PATHS = [
 PLUGINS = [
     "toc",
     "spu",
-    "gfm",
     "asfgenid",
     "asfrun",
 ]
+# Note: "gfm" removed — no .ezmd/.gfm content files exist; gfm needs
+# libcmark-gfm (C library) which isn't installed in this environment.
 # All content is located at '.' (aka content/ )
 PAGE_PATHS = ["pages"]
 STATIC_PATHS = [
