@@ -13,17 +13,21 @@ AI-generated and AI-assisted software.
 ## The Key Court Case: _Thaler v. Perlmutter_
 
 The controlling US authority is the decision of the US Court of Appeals for the
-DC Circuit in **_Thaler v. Perlmutter_, 49 F.4th 611 (2023)**.
+DC Circuit in **_Thaler v. Perlmutter_, No. 23-5233, 2025 WL 839178 (D.C. Cir.
+Mar. 18, 2025**.
 
-The case was brought by Dr. Stephen Thaler, who created an AI system called
-DABUS that generated artwork and patents. Thaler registered the copyright in
-works that the AI produced **without any human author listed**. The US Copyright
-Office refused registration, and the courts agreed: the Copyright Act requires a
-**human author**.
+Thaler v. Perlmutter involved Stephen Thaler’s attempt to copyright artwork
+created entirely by his AI system, the “Creativity Machine.” The courts held
+that U.S. copyright law **requires a human author**, so an AI-generated work with no
+human creative authorship cannot receive copyright protection.
 
-The court held that the Copyright Act's reference to "author" means **only
-natural persons** (i.e., human beings) can be authors of copyrighted works. This
-is the current legal standard.
+Thaler v. Perlmutter concerned whether an AI system could be legally recognized
+as the author of a copyrightable work. Stephen Thaler argued that his AI system,
+the “Creativity Machine,” created the artwork independently and should be listed
+as its author. The courts rejected that argument, holding that **U.S. copyright
+law requires human authorship**. The case is significant because it establishes
+that AI cannot itself be an author, while leaving open how much human
+involvement is needed for AI-assisted works to receive copyright protection.
 
 ## The US Copyright Office's Guidance
 
@@ -96,15 +100,17 @@ Factors that suggest limited control:
    to review, edit, and integrate it. This helps downstream users understand the
    provenance of the code.
 
-4. **Your representation and warranty still apply.** Under Section 4 of the
-   Apache License 2.0, you represent that your contribution is your original
-   work or that you have the right to submit it. Using AI does not change this
-   obligation — you are still responsible for what you commit.
+4. **Your representation and warranty still apply.** Under Section 4 and 5 of
+   the Individual Contributor License Agreement v2.2, you represent that your
+   contribution is your original work or that you have the right to submit it.
+   Using AI does not change this obligation — you are still responsible for what
+   you commit.
 
 ## Further Reading
 
-- [_Thaler v. Perlmutter_, 49 F.4th 611 (D.C. Cir. 2023)](https://cavc.appclmr.com/opinions/2023-1566)
-- [US Copyright Office, "Generation and Recognition of AI"](https://www.copyright.gov/rulings-filings/review-board/docs/ai-final-refusal-2023/)
+- [_Thaler v. Perlmutter_, No. 23-5233, 2025 WL 839178 (D.C. Cir. Mar. 18, 2025
+  ](https://law.justia.com/cases/federal/appellate-courts/cadc/23-5233/23-5233-2025-03-18.html)
+- [US Copyright Office, "Copyright and Artificial Intelligence"](https://https://www.copyright.gov/ai/)
 - See [AI-Generated Code in Apache Projects](ai-generated-code.html) for practical guidance on contributing.
 
 *Back to [Best Practices](best-practices.html).*
