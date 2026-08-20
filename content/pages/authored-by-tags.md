@@ -3,11 +3,12 @@ license: https://www.apache.org/licenses/LICENSE-2.0
 
 ## Attribution Tags When AI Assists in Creating Content
 
-Git commit messages support trailer tags that record who contributed to a piece of
-code. The two most common are:
+Git commit messages support trailer tags that record who contributed to a piece
+of code. The two most common are:
 
 - **`Author:`** — the person who created the work
-- **`Co-authored-by:`** — another person who contributed meaningfully to the work
+- **`Co-authored-by:`** — another person who contributed meaningfully to the
+  work
 
 When AI tools have assisted in creating or modifying code, contributors have
 asked: *How should I record that?*
@@ -24,8 +25,8 @@ drafted by an AI tool but the human selected, edited, reviewed, and integrated
 it), the human is the author.
 
 This is the standard and safe approach. It is consistent with US copyright law
-(_Thaler v. Perlmutter_, 49 F.4th 611 (D.C. Cir. 2023)), which holds that only
-natural persons can be authors.
+(_Thaler v. Perlmutter_, No. 23-5233, 2025 WL 839178 (D.C. Cir. Mar. 18, 2025)),
+which holds that only natural persons can be authors.
 
 **Example:**
 

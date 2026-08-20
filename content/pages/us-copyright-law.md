@@ -108,9 +108,11 @@ Factors that suggest limited control:
 
 ## Further Reading
 
-- [_Thaler v. Perlmutter_, No. 23-5233, 2025 WL 839178 (D.C. Cir. Mar. 18, 2025
+- [_Thaler v. Perlmutter_, No. 23-5233, 2025 WL 839178 (D.C. Cir. Mar. 18, 2025)
   ](https://law.justia.com/cases/federal/appellate-courts/cadc/23-5233/23-5233-2025-03-18.html)
-- [US Copyright Office, "Copyright and Artificial Intelligence"](https://https://www.copyright.gov/ai/)
-- See [AI-Generated Code in Apache Projects](ai-generated-code.html) for practical guidance on contributing.
+- [US Copyright Office, "Copyright and Artificial
+  Intelligence"](https://https://www.copyright.gov/ai/)
+- See [AI-Generated Code in Apache Projects](ai-generated-code.html) for
+  practical guidance on contributing.
 
 *Back to [Best Practices](best-practices.html).*

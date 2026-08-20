@@ -11,16 +11,28 @@ an AI tool, there are practical and legal considerations to keep in mind.
 
 ## Your Obligations as a Contributor
 
-Under the Apache Contributor License Agreement (CLA), you represent that your
+Under the Apache Contributor License Agreement (ICLA), you represent that your
 contribution is your **original creation** or that you have the right to submit
 it under the applicable license. Specifically, Section 7 of the CLA states:
 
-> *Except as expressly provided in your Contribution, You disclaim all warranties
-> any express or implied, including, without limitation, any warranties of title.*
+> *Should You wish to submit work that is not Your original creation, You may
+> submit it to the Foundation separately from any Contribution, identifying the
+> complete details of its source and of any license or other restriction
+> (including, but not limited to, related patents, trademarks, and license
+> agreements) of which you are personally aware, and conspicuously marking the
+> work as "Submitted on behalf of a third-party: [named here]".*
 
-This means you are responsible for the code you contribute — you should understand
-it, be able to explain it, and have the right to license it under the Apache
-License 2.0.
+What this means is, if you want to submit something you did not create yourself,
+you can still submit it, but you must submit it separately from your own work
+and clearly tell the Foundation:
+
+* Where the work came from (its source).
+* What legal restrictions apply to it that you know about—for example,
+  copyrights, patents, trademarks, or license agreements.
+* Clearly label it: “Submitted on behalf of a third-party: [name].”
+
+So, essentially: Don’t present someone else’s work as your own. If you submit
+it, identify the creator/source and disclose any restrictions you know about.
 
 ## How the US Copyright Office Views AI-Generated Material
 
@@ -30,9 +42,9 @@ three scenarios:
 ### Scenario 1: Purely AI-Generated
 
 If a work is generated entirely by an AI without any human creative input, it
-receives **no copyright protection**. The US Court of Appeals held in _Thaler
-v. Perlmutter_, 49 F.4th 611 (D.C. Cir. 2023) that only natural persons can be
-authors under the Copyright Act.
+receives **no copyright protection**. The US Court of Appeals held in _Thaler v.
+Perlmutter_, No. 23-5233, 2025 WL 839178 (D.C. Cir. Mar. 18, 2025) that only
+natural persons can be authors under the Copyright Act.
 
 **What this means for you:** You can still contribute purely AI-generated code
 to an Apache project — there is no legal barrier to contributing material that
