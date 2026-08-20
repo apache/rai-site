@@ -31,5 +31,6 @@ rooted in the Foundation's longstanding philosophy of *community over code*.
 
 - [About](about.html) — what the initiative is and how it is organized
 - [What We Do](what-we-do.html) — our activities and guiding principles
-- [Get Involved](get-involved.html) — join the discussion and contribute
+- [Best Practices](best-practices.html) — best practices and recommendations for AI use
 - [FAQ](faq.html) — common questions
+- [Get Involved](get-involved.html) — join the discussion and contribute
