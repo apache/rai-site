@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI-Generated Code in Apache Projects - Apache Responsible AI</title>
+    <title>AI-generated code in Apache projects - Apache Responsible AI</title>
+<link rel="icon" href="images/rai-mark.svg" type="image/svg+xml">
 <link rel="shortcut icon" href="https://apache.org/favicons/favicon.ico">
+<meta name="description" content="The Apache Software Foundation Responsible AI initiative">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/fontawesome.all.min.css" rel="stylesheet">
 <link href="css/headerlink.css" rel="stylesheet">
@@ -32,65 +34,38 @@
     startOnLoad: true,
     theme: "default"
   });
-</script>
-<!-- pagefind search box styling -->
-<style>
-  body {
-      padding-top: 44px;
-  }
-  .search-form {
-      right: 0;
-      left: initial !important;
-      min-width: 25vw;
-      max-width: 90vw;
-      max-height: calc(95vh - 100px);
-      overflow: auto;
-      margin-top: 5px;
-  }
-  .mermaid {
-      margin: 1.2em 0;
-      padding: 1em;
-      background: #fff;
-      border: 1px solid #d0d7de;
-      border-radius: 6px;
-  }
-</style>  </head>
+</script>  </head>
   <body class="d-flex flex-column h-100">
 <!-- nav bar -->
-<nav class="navbar navbar-expand-md navbar-light bg-info-light fixed-top" aria-label="Responsible AI Navigation">
+<nav class="navbar navbar-expand-lg navbar-light rai-nav fixed-top" aria-label="Responsible AI Navigation">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.html">
-      <img src="https://apache.org/img/asf_logo.png" alt="The Apache Software Foundation" style="height: 42px; margin-left: 6px;">
-      <span style="font-weight: bold; position: relative; top: 5px; margin-left: 10px;">Responsible AI</span>
+      <img src="images/rai-mark.svg" alt="" aria-hidden="true">
+      <span>Responsible AI</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarADP" aria-controls="navbarADP" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarADP" style="position: relative; top: 4px; margin-left: 16px;">
+    <div class="collapse navbar-collapse" id="navbarADP">
       <ul class="navbar-nav me-auto">
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="what-we-do.html">What We Do</a></li>
-        <li class="nav-item"><a class="nav-link" href="get-involved.html">Get Involved</a></li>
-        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="what-we-do.html">What we do</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">Best Practices</a>
+          <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">Best practices</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="best-practices.html">Overview</a></li>
-            <li><a class="dropdown-item" href="ai-generated-code.html">AI-Generated Code</a></li>
-            <li><a class="dropdown-item" href="us-copyright-law.html">US Copyright Law</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="ai-generated-code.html">AI-generated code</a></li>
+            <li><a class="dropdown-item" href="commit-messages.html">Commit messages</a></li>
+            <li><a class="dropdown-item" href="authored-by-tags.html">Authored-by tags</a></li>
+            <li><a class="dropdown-item" href="policy-recommendations.html">Policy recommendations</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="us-copyright-law.html">US copyright law</a></li>
             <li><a class="dropdown-item" href="eu-ai-act.html">EU AI Act</a></li>
-            <li><a class="dropdown-item" href="authored-by-tags.html">Authored-by Tags</a></li>
-            <li><a class="dropdown-item" href="commit-messages.html">Commit Messages</a></li>
-            <li><a class="dropdown-item" href="policy-recommendations.html">Policy Recommendations</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">Source</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://github.com/apache/rai-site/">Website repository</a></li>
-            <li><a class="dropdown-item" href="https://lists.apache.org/list.html?discuss@rai.apache.org">Mailing list archive</a></li>
-          </ul>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="get-involved.html">Get involved</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
         <li class="nav-item dropdown">
           <a href="javascript:void(0)" class="nav-link dropdown-toggle hidden-xs" role="button" data-bs-toggle="dropdown"><span class="fa-solid fa-magnifying-glass" aria-hidden="true"></span> Search</a>
           <ul class="search-form dropdown-menu">
@@ -100,20 +75,25 @@
           </ul>
         </li>
       </ul>
-      <ul class="navbar-nav">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item me-lg-3 my-2 my-lg-0">
+          <a class="rai-support" href="https://apache.org/foundation/initiatives/responsibleai">Support the initiative</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            About The ASF
+            The ASF
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="https://www.apache.org/">Foundation</a></li>
+            <li><a class="dropdown-item" href="https://github.com/apache/rai-site/">Website repository</a></li>
+            <li><a class="dropdown-item" href="https://lists.apache.org/list.html?discuss@rai.apache.org">Mailing list archive</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="https://www.apache.org/licenses/">License</a></li>
             <li><a class="dropdown-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></li>
             <li><a class="dropdown-item" href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="https://www.apache.org/security/">Security</a></li>
-            <li><a class="dropdown-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy Policy</a></li>
+            <li><a class="dropdown-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a></li>
           </ul>
         </li>
       </ul>
@@ -123,22 +103,20 @@
       <div>
 <!-- page contents -->
 <div id="contents">
-    <div class="bg-white p-5 rounded">
-        <div class="col-sm-12 mx-auto">
-          <h1>
-            AI-Generated Code in Apache Projects
-          </h1>
-          <h2>DRAFT DOCUMENT</h2>
+  <div class="bg-white rounded">
+    <div class="mx-auto">
+      <h1>AI-generated code in Apache projects</h1>
+      <h2>DRAFT DOCUMENT</h2>
 <p><strong>This document is an UNOFFICIAL DRAFT and should not be considered official
 policy.  Substantial changes may be made before being published as an official
 policy.  Direct any questions to <a href="mailto:discuss@rai.apache.org">discuss@rai.apache.org</a>.</strong></p>
-<h2>Contributing AI-Generated Code to Apache Projects</h2>
+<h2>Contributing AI-generated code to Apache projects</h2>
 <p>Apache contributors increasingly use AI tools &mdash; such as GitHub Copilot, Claude,
 Cursor, and other large language model (LLM) assistants &mdash; to help generate code,
 fix bugs, write documentation, and review pull requests. When the code you
 contribute to an Apache project has been significantly generated or modified by
 an AI tool, there are practical and legal considerations to keep in mind.</p>
-<h2>Your Obligations as a Contributor</h2>
+<h2>Your obligations as a contributor</h2>
 <p>Under the Apache Contributor License Agreement (ICLA), you represent that your
 contribution is your <strong>original creation</strong> or that you have the right to submit
 it under the applicable license. Specifically, Section 7 of the CLA states:</p>
@@ -161,10 +139,10 @@ copyrights, patents, trademarks, or license agreements.</li>
 </ul>
 <p>So, essentially: Don&rsquo;t present someone else&rsquo;s work as your own. If you submit
 it, identify the creator/source and disclose any restrictions you know about.</p>
-<h2>How the US Copyright Office Views AI-Generated Material</h2>
+<h2>How the US Copyright Office views AI-generated material</h2>
 <p>The US Copyright Office's guidance on AI-generated works distinguishes between
 three scenarios:</p>
-<h3>Scenario 1: Purely AI-Generated</h3>
+<h3>Scenario 1: purely AI-generated</h3>
 <p>If a work is generated entirely by an AI without any human creative input, it
 receives <strong>no copyright protection</strong>. The US Court of Appeals held in <em>Thaler v.
 Perlmutter</em>, No. 23-5233, 2025 WL 839178 (D.C. Cir. Mar. 18, 2025) that only
@@ -173,7 +151,7 @@ natural persons can be authors under the Copyright Act.</p>
 to an Apache project &mdash; there is no legal barrier to contributing material that
 is not copyrightable. The distinction matters mainly for downstream users who
 want to know what is protected.</p>
-<h3>Scenario 2: Human-Authored Work with Embedded AI Material</h3>
+<h3>Scenario 2: human-authored work with embedded AI material</h3>
 <p>If you wrote a substantial amount of code and the AI contributed some portions
 (e.g., you used it to generate a function but then edited, reorganized, and
 integrated it into a larger module), the <strong>human-authored portions</strong> are
@@ -181,14 +159,14 @@ copyrightable, while the AI-generated portions are not.</p>
 <p><strong>What this means for you:</strong> If you curate, edit, or substantially modify
 AI-generated code, the human contribution is protectable. Document what you
 did to make it your own creation.</p>
-<h3>Scenario 3: AI-Assisted (Human Uses AI as a Tool)</h3>
+<h3>Scenario 3: AI-assisted (human uses AI as a tool)</h3>
 <p>If you use AI as an assistive tool &mdash; much like using a compiler, a linter, or
 an IDE autocomplete &mdash; and you exercise creative control over the result, the
 work as a whole is copyrightable, and <strong>you</strong> are the author.</p>
 <p><strong>What this means for you:</strong> This is the most common scenario for Apache
 contributors. Using AI to suggest code, identify bugs, or generate a draft that
 you then review and integrate is generally safe.</p>
-<h2>Conditions for Contributing AI-Generated Code</h2>
+<h2>Conditions for contributing AI-generated code</h2>
 <p>Before contributing code that was significantly generated or modified by an AI
 tool, consider the following:</p>
 <ol>
@@ -211,11 +189,11 @@ it does.</p>
 </li>
 <li>
 <p><strong>Disclose AI use.</strong> Apply the <code>Apache-ai</code> tag to your commit if AI played a
-significant role. See <a href="policy-recommendations.html">Policy Recommendations</a>
+significant role. See <a href="policy-recommendations.html">Policy recommendations</a>
 for details.</p>
 </li>
 </ol>
-<h2>When to Use the Apache-ai Tag</h2>
+<h2>When to use the Apache-ai tag</h2>
 <ul>
 <li>
 <p><strong>Use it</strong> when a significant portion of your contribution was generated by AI
@@ -231,27 +209,62 @@ prose).</p>
 readers the story without imposing any additional obligations.</p>
 </li>
 </ul>
-<h2>Further Reading</h2>
+<h2>Further reading</h2>
 <ul>
-<li>See <a href="us-copyright-law.html">US Copyright Law and AI</a> for the full legal context.</li>
-<li>See <a href="policy-recommendations.html">Policy Recommendations</a> for a summary of
+<li>See <a href="us-copyright-law.html">US copyright law and AI</a> for the full legal context.</li>
+<li>See <a href="policy-recommendations.html">Policy recommendations</a> for a summary of
 the Apache-ai tag and key recommendations.</li>
-<li>See <a href="commit-messages.html">Commit Messages for AI-Assisted Code</a> for conventions
+<li>See <a href="commit-messages.html">Commit messages for AI-assisted code</a> for conventions
 on documenting AI use in commits.</li>
 </ul>
-<p><em>Back to <a href="best-practices.html">Best Practices</a>.</em></p>
+<p><em>Back to <a href="best-practices.html">Best practices</a>.</em></p>
 
-        </div>
     </div>
+  </div>
 </div>    <!-- footer -->
-    <div class="row">
-      <div class="large-12 medium-12 columns">
-        <p style="font-style: italic; font-size: 0.8rem; text-align: center;">
-          Copyright 2026, <a href="https://www.apache.org/">The Apache Software Foundation</a>, Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br>
-          Apache&reg; and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation.
-        </p>
+    <footer class="rai-footer">
+      <div class="rai-footer-inner">
+        <div>
+          <h4>Initiative</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="what-we-do.html">What we do</a></li>
+            <li><a href="best-practices.html">Best practices</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Participate</h4>
+          <ul>
+            <li><a href="get-involved.html">Get involved</a></li>
+            <li><a href="https://lists.apache.org/list.html?discuss@rai.apache.org">Mailing list</a></li>
+            <li><a href="https://infra.apache.org/slack.html">ASF Slack</a></li>
+            <li><a href="https://github.com/apache/rai-site">Source repository</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="https://apache.org/foundation/initiatives/responsibleai">Support the initiative</a></li>
+            <li><a href="https://news.apache.org/foundation/entry/the-apache-software-foundation-launches-10m-responsible-ai-initiative-with-initial-1-75m-donation">Announcement</a></li>
+            <li><a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Foundation</h4>
+          <ul>
+            <li><a href="https://www.apache.org/">apache.org</a></li>
+            <li><a href="https://www.apache.org/licenses/">License</a></li>
+            <li><a href="https://www.apache.org/security/">Security</a></li>
+            <li><a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a></li>
+          </ul>
+        </div>
       </div>
-    </div>      </div>
+      <div class="rai-legal">
+        Copyright 2026, <a href="https://www.apache.org/">The Apache Software Foundation</a>, licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br>
+        Apache&reg; and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation.
+      </div>
+    </footer>      </div>
     </main>
     <script src="js/bootstrap.bundle.min.js" integrity="sha384-TYMA+uAx4f43rilxPIhmlqA+Vi+xbyMe+YVR3BcL15NyHLqd+7WYNtyBPdayiOPx"></script>
     <script>
