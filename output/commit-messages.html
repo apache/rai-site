@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Involved - Apache Responsible AI</title>
+    <title>Commit Messages for AI-Assisted Code - Apache Responsible AI</title>
 <link rel="shortcut icon" href="https://apache.org/favicons/favicon.ico">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/fontawesome.all.min.css" rel="stylesheet">
@@ -126,38 +126,102 @@
     <div class="bg-white p-5 rounded">
         <div class="col-sm-12 mx-auto">
           <h1>
-            Get Involved
+            Commit Messages for AI-Assisted Code
           </h1>
-          <p>Everyone interested in the responsible use of AI at the ASF is welcome to follow the work
-and take part. The initiative follows the Apache Way, and its discussion list is open to
-ASF Members.</p>
-<h2>Join the discussion</h2>
+          <h2>Documenting AI Use in Commit Messages</h2>
+<p>When AI tools assist in generating code for an Apache project, commit messages
+serve as the primary record of provenance. Good commit messages help future
+contributors understand what happened, and they provide the metadata that
+provenance-tracking tools need.</p>
+<h2>The <code>Generated-by:</code> Token Convention</h2>
+<p>The ASF's generative tooling guidance recommends the use of a <code>Generated-by:</code>
+token in commit messages to document AI-assisted code generation.</p>
+<p><strong>Format:</strong></p>
+<pre><code>Generated-by: &lt;tool-name&gt;
+</code></pre>
+<p><strong>Examples:</strong></p>
+<pre><code>Generated-by: Claude-3.5-Sonnet
+Generated-by: GitHub Copilot
+Generated-by: Cursor
+Generated-by: Gemini-2.0
+</code></pre>
+<p>This token is a <strong>convention</strong> &mdash; it is not yet a formal, Foundation-wide
+requirement. Individual projects may adopt it, modify it, or create their own
+variants.</p>
+<h2>Example Commit Messages</h2>
+<h3>Simple: AI Generated a Function</h3>
+<pre><code>feat(auth): add JWT token validation middleware
+
+Generated-by: Claude-3.5-Sonnet
+
+Added a middleware function that validates JSON Web Tokens in the
+authentication pipeline. The function checks the token signature,
+extracts the subject claim, and attaches it to the request context.
+</code></pre>
+<h3>Mixed: AI Drafted Code, Human Edited Heavily</h3>
+<pre><code>fix(parser): correct handling of malformed JSON payloads
+
+Reviewed and edited code generated with GitHub Copilot.
+Manually added error cases for null inputs and truncated buffers.
+
+Fixes #1234.
+</code></pre>
+<h3>Fully Human, AI Aided Review</h3>
+<pre><code>docs: update contributing guide with AI tooling notes
+
+Reviewed the draft using an AI assistant for clarity suggestions.
+All content written by the author.
+</code></pre>
+<h2>Best Practices</h2>
+<ol>
+<li>
+<p><strong>Be specific.</strong> When using <code>Generated-by:</code>, name the actual tool you used
+(e.g., <code>Claude-3.5-Sonnet</code>, <code>GitHub Copilot</code>) rather than a generic label.
+This helps future tooling and provenance analysis.</p>
+</li>
+<li>
+<p><strong>Explain what AI did and what you did.</strong> If AI generated the code but you
+reviewed and edited it, say so. This provides context for reviewers and
+downstream users.</p>
+</li>
+<li>
+<p><strong>The commit message is your representation.</strong> Even if AI helped write the
+code, the commit message is your word as the committer. You are responsible
+for what you commit, regardless of whether AI generated any part of it.</p>
+</li>
+<li>
+<p><strong>Use the Apache-ai tag alongside <code>Generated-by:</code>.</strong> If AI played a
+significant role, add both the <code>Apache-ai</code> tag (for policy transparency)
+and the <code>Generated-by:</code> token (for provenance tracking).</p>
+</li>
+<li>
+<p><strong>Keep it readable.</strong> Don't over-annotate. A single <code>Generated-by:</code> line
+and a brief description of what the AI produced and how you edited it is
+sufficient.</p>
+</li>
+</ol>
+<h2>Sample Commit with Both Tags</h2>
+<pre><code>feat(config): add database connection pooling
+
+Generated-by: Cursor
+Apache-ai: This contribution contains code significantly generated
+by an AI tool. The function signature and connection logic were
+drafted by the AI; error handling and integration were written
+manually.
+
+Added configurable connection pooling to the database client.
+Supports connection limits, idle timeouts, and health checks.
+</code></pre>
+<h2>Relationship to Other Pages</h2>
 <ul>
-<li><strong>Mailing list:</strong> <strong><a href="mailto:discuss@rai.apache.org">discuss@rai.apache.org</a></strong>, open to ASF Members. Send an email to
-<strong><a href="mailto:discuss-subscribe@rai.apache.org">discuss-subscribe@rai.apache.org</a></strong> to subscribe, or browse the
-<a href="https://lists.apache.org/list.html?discuss@rai.apache.org">archives</a>.</li>
-<li><strong>Chat:</strong> ask to be invited to the <strong>#ai-discuss</strong> channel on the <a href="https://infra.apache.org/slack.html">ASF Slack</a>.</li>
+<li>See <a href="policy-recommendations.html">Policy Recommendations</a> for the full
+Apache-ai tag guidance.</li>
+<li>See <a href="authored-by-tags.html">"Authored by" and "Co-authored" Tags</a> for
+attribution conventions.</li>
+<li>See <a href="ai-generated-code.html">AI-Generated Code in Apache Projects</a> for
+broader guidance on contributing AI-generated code.</li>
 </ul>
-<p>Introduce yourself, share what your project is doing with AI, and tell us where expanded
-model access or tooling would help. Volunteers are currently organizing around four work
-streams &mdash; <strong>Security</strong>, <strong>Innovation</strong>, <strong>Policy</strong>, and <strong>Education, Adoption &amp; Outreach</strong> &mdash;
-reply on the mailing list if you'd like to join one.</p>
-<h2>Contribute to this website</h2>
-<p>This site lives in the <a href="https://github.com/apache/rai-site">apache/rai-site</a> repository.
-Pages are written in <strong>Markdown</strong> under <code>content/pages/</code>, and the site is built with
-Pelican.</p>
-<ul>
-<li>For a small fix, edit a page directly on GitHub (the pencil icon) and open a pull
-request.</li>
-<li>For larger changes, open a branch or a GitHub issue to discuss first.</li>
-</ul>
-<h2>Help build the initiative</h2>
-<p>The initiative brings together contributors from across the Foundation &mdash; Infrastructure,
-Security, Tooling, the Incubator, and individual projects. If you would like to help with
-a specific area, say hello on the mailing list and we will point you to where the work is
-happening.</p>
-<p><em>More detailed contribution guidance will be added here as the initiative's processes
-take shape.</em></p>
+<p><em>Back to <a href="best-practices.html">Best Practices</a>.</em></p>
 
         </div>
     </div>

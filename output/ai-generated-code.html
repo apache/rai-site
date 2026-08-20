@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Involved - Apache Responsible AI</title>
+    <title>AI-Generated Code in Apache Projects - Apache Responsible AI</title>
 <link rel="shortcut icon" href="https://apache.org/favicons/favicon.ico">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/fontawesome.all.min.css" rel="stylesheet">
@@ -126,38 +126,104 @@
     <div class="bg-white p-5 rounded">
         <div class="col-sm-12 mx-auto">
           <h1>
-            Get Involved
+            AI-Generated Code in Apache Projects
           </h1>
-          <p>Everyone interested in the responsible use of AI at the ASF is welcome to follow the work
-and take part. The initiative follows the Apache Way, and its discussion list is open to
-ASF Members.</p>
-<h2>Join the discussion</h2>
+          <h2>Contributing AI-Generated Code to Apache Projects</h2>
+<p>Apache contributors increasingly use AI tools &mdash; such as GitHub Copilot, Claude,
+Cursor, and other large language model (LLM) assistants &mdash; to help generate code,
+fix bugs, write documentation, and review pull requests. When the code you
+contribute to an Apache project has been significantly generated or modified by
+an AI tool, there are practical and legal considerations to keep in mind.</p>
+<h2>Your Obligations as a Contributor</h2>
+<p>Under the Apache Contributor License Agreement (CLA), you represent that your
+contribution is your <strong>original creation</strong> or that you have the right to submit
+it under the applicable license. Specifically, Section 7 of the CLA states:</p>
+<blockquote>
+<p><em>Except as expressly provided in your Contribution, You disclaim all warranties
+any express or implied, including, without limitation, any warranties of title.</em></p>
+</blockquote>
+<p>This means you are responsible for the code you contribute &mdash; you should understand
+it, be able to explain it, and have the right to license it under the Apache
+License 2.0.</p>
+<h2>How the US Copyright Office Views AI-Generated Material</h2>
+<p>The US Copyright Office's guidance on AI-generated works distinguishes between
+three scenarios:</p>
+<h3>Scenario 1: Purely AI-Generated</h3>
+<p>If a work is generated entirely by an AI without any human creative input, it
+receives <strong>no copyright protection</strong>. The US Court of Appeals held in <em>Thaler
+v. Perlmutter</em>, 49 F.4th 611 (D.C. Cir. 2023) that only natural persons can be
+authors under the Copyright Act.</p>
+<p><strong>What this means for you:</strong> You can still contribute purely AI-generated code
+to an Apache project &mdash; there is no legal barrier to contributing material that
+is not copyrightable. The distinction matters mainly for downstream users who
+want to know what is protected.</p>
+<h3>Scenario 2: Human-Authored Work with Embedded AI Material</h3>
+<p>If you wrote a substantial amount of code and the AI contributed some portions
+(e.g., you used it to generate a function but then edited, reorganized, and
+integrated it into a larger module), the <strong>human-authored portions</strong> are
+copyrightable, while the AI-generated portions are not.</p>
+<p><strong>What this means for you:</strong> If you curate, edit, or substantially modify
+AI-generated code, the human contribution is protectable. Document what you
+did to make it your own creation.</p>
+<h3>Scenario 3: AI-Assisted (Human Uses AI as a Tool)</h3>
+<p>If you use AI as an assistive tool &mdash; much like using a compiler, a linter, or
+an IDE autocomplete &mdash; and you exercise creative control over the result, the
+work as a whole is copyrightable, and <strong>you</strong> are the author.</p>
+<p><strong>What this means for you:</strong> This is the most common scenario for Apache
+contributors. Using AI to suggest code, identify bugs, or generate a draft that
+you then review and integrate is generally safe.</p>
+<h2>Conditions for Contributing AI-Generated Code</h2>
+<p>Before contributing code that was significantly generated or modified by an AI
+tool, consider the following:</p>
+<ol>
+<li>
+<p><strong>Verify the tool's terms of service.</strong> Some AI tools grant the provider broad
+rights over your input (your code) and output (the generated code). Make sure
+these terms are compatible with contributing under the Apache License 2.0.</p>
+</li>
+<li>
+<p><strong>Check for third-party material.</strong> AI models are trained on vast corpora
+that may include open source code from other projects. If the AI generates
+code that closely resembles a file from a copyrighted project, there is a
+(currently small) risk that the output could be a derivative work. This risk
+is low for typical use but something to be aware of.</p>
+</li>
+<li>
+<p><strong>Review and understand the output.</strong> You are responsible for what you commit.
+Read the AI-generated code, verify it is correct, and be able to explain what
+it does.</p>
+</li>
+<li>
+<p><strong>Disclose AI use.</strong> Apply the <code>Apache-ai</code> tag to your commit if AI played a
+significant role. See <a href="policy-recommendations.html">Policy Recommendations</a>
+for details.</p>
+</li>
+</ol>
+<h2>When to Use the Apache-ai Tag</h2>
 <ul>
-<li><strong>Mailing list:</strong> <strong><a href="mailto:discuss@rai.apache.org">discuss@rai.apache.org</a></strong>, open to ASF Members. Send an email to
-<strong><a href="mailto:discuss-subscribe@rai.apache.org">discuss-subscribe@rai.apache.org</a></strong> to subscribe, or browse the
-<a href="https://lists.apache.org/list.html?discuss@rai.apache.org">archives</a>.</li>
-<li><strong>Chat:</strong> ask to be invited to the <strong>#ai-discuss</strong> channel on the <a href="https://infra.apache.org/slack.html">ASF Slack</a>.</li>
+<li>
+<p><strong>Use it</strong> when a significant portion of your contribution was generated by AI
+and you want to signal transparency to downstream users and the community.</p>
+</li>
+<li>
+<p><strong>You may skip it</strong> when AI was used only incidentally (e.g., it suggested a
+single function that you heavily edited, or you used it only for documentation
+prose).</p>
+</li>
+<li>
+<p><strong>When in doubt, use it.</strong> The tag is a disclosure, not a warranty. It tells
+readers the story without imposing any additional obligations.</p>
+</li>
 </ul>
-<p>Introduce yourself, share what your project is doing with AI, and tell us where expanded
-model access or tooling would help. Volunteers are currently organizing around four work
-streams &mdash; <strong>Security</strong>, <strong>Innovation</strong>, <strong>Policy</strong>, and <strong>Education, Adoption &amp; Outreach</strong> &mdash;
-reply on the mailing list if you'd like to join one.</p>
-<h2>Contribute to this website</h2>
-<p>This site lives in the <a href="https://github.com/apache/rai-site">apache/rai-site</a> repository.
-Pages are written in <strong>Markdown</strong> under <code>content/pages/</code>, and the site is built with
-Pelican.</p>
+<h2>Further Reading</h2>
 <ul>
-<li>For a small fix, edit a page directly on GitHub (the pencil icon) and open a pull
-request.</li>
-<li>For larger changes, open a branch or a GitHub issue to discuss first.</li>
+<li>See <a href="us-copyright-law.html">US Copyright Law and AI</a> for the full legal context.</li>
+<li>See <a href="policy-recommendations.html">Policy Recommendations</a> for a summary of
+the Apache-ai tag and key recommendations.</li>
+<li>See <a href="commit-messages.html">Commit Messages for AI-Assisted Code</a> for conventions
+on documenting AI use in commits.</li>
 </ul>
-<h2>Help build the initiative</h2>
-<p>The initiative brings together contributors from across the Foundation &mdash; Infrastructure,
-Security, Tooling, the Incubator, and individual projects. If you would like to help with
-a specific area, say hello on the mailing list and we will point you to where the work is
-happening.</p>
-<p><em>More detailed contribution guidance will be added here as the initiative's processes
-take shape.</em></p>
+<p><em>Back to <a href="best-practices.html">Best Practices</a>.</em></p>
 
         </div>
     </div>

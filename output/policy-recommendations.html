@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Involved - Apache Responsible AI</title>
+    <title>Policy Recommendations - Apache Responsible AI</title>
 <link rel="shortcut icon" href="https://apache.org/favicons/favicon.ico">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/fontawesome.all.min.css" rel="stylesheet">
@@ -126,38 +126,135 @@
     <div class="bg-white p-5 rounded">
         <div class="col-sm-12 mx-auto">
           <h1>
-            Get Involved
+            Policy Recommendations
           </h1>
-          <p>Everyone interested in the responsible use of AI at the ASF is welcome to follow the work
-and take part. The initiative follows the Apache Way, and its discussion list is open to
-ASF Members.</p>
-<h2>Join the discussion</h2>
+          <h2>Policy Recommendations for AI-Assisted Contributions</h2>
+<p>This page summarizes the Apache Software Foundation's guidance and key
+recommendations for contributors who use AI tools when contributing code,
+documentation, or other material to Apache projects.</p>
+<h2>The Apache-ai Commit Tag</h2>
+<p>The <strong>Apache-ai</strong> tag is a voluntary disclosure mechanism. When added to a
+commit, it signals that AI played a significant role in generating the
+contribution.</p>
+<h3>What It Is</h3>
 <ul>
-<li><strong>Mailing list:</strong> <strong><a href="mailto:discuss@rai.apache.org">discuss@rai.apache.org</a></strong>, open to ASF Members. Send an email to
-<strong><a href="mailto:discuss-subscribe@rai.apache.org">discuss-subscribe@rai.apache.org</a></strong> to subscribe, or browse the
-<a href="https://lists.apache.org/list.html?discuss@rai.apache.org">archives</a>.</li>
-<li><strong>Chat:</strong> ask to be invited to the <strong>#ai-discuss</strong> channel on the <a href="https://infra.apache.org/slack.html">ASF Slack</a>.</li>
+<li>A tag in the commit message body, following the conventional <code>key: value</code>
+format used by Git trailer tags.</li>
+<li>A <strong>disclosure</strong>, not a warranty or a restriction. It tells downstream users
+the story without imposing additional legal obligations.</li>
+<li>Recognized by the ASF as a best practice for transparency, but it is not yet
+a mandatory requirement across all projects.</li>
 </ul>
-<p>Introduce yourself, share what your project is doing with AI, and tell us where expanded
-model access or tooling would help. Volunteers are currently organizing around four work
-streams &mdash; <strong>Security</strong>, <strong>Innovation</strong>, <strong>Policy</strong>, and <strong>Education, Adoption &amp; Outreach</strong> &mdash;
-reply on the mailing list if you'd like to join one.</p>
-<h2>Contribute to this website</h2>
-<p>This site lives in the <a href="https://github.com/apache/rai-site">apache/rai-site</a> repository.
-Pages are written in <strong>Markdown</strong> under <code>content/pages/</code>, and the site is built with
-Pelican.</p>
-<ul>
-<li>For a small fix, edit a page directly on GitHub (the pencil icon) and open a pull
-request.</li>
-<li>For larger changes, open a branch or a GitHub issue to discuss first.</li>
-</ul>
-<h2>Help build the initiative</h2>
-<p>The initiative brings together contributors from across the Foundation &mdash; Infrastructure,
-Security, Tooling, the Incubator, and individual projects. If you would like to help with
-a specific area, say hello on the mailing list and we will point you to where the work is
-happening.</p>
-<p><em>More detailed contribution guidance will be added here as the initiative's processes
-take shape.</em></p>
+<h3>When to Use It</h3>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI generated significant portions of code (core logic, large functions)</td>
+<td><strong>Use the tag</strong> &mdash; it is strongly recommended</td>
+</tr>
+<tr>
+<td>AI helped generate documentation or prose</td>
+<td><strong>Consider the tag</strong> &mdash; use it if the AI substantially rewrote the text</td>
+</tr>
+<tr>
+<td>AI assisted incidentally (suggested a single fix you heavily edited)</td>
+<td><strong>Optional</strong> &mdash; use it if you want to be thorough</td>
+</tr>
+<tr>
+<td>You are unsure</td>
+<td><strong>Use it</strong> &mdash; it is a disclosure, not a liability</td>
+</tr></tbody></table>
+<h3>Example</h3>
+<pre><code>Apache-ai: This contribution contains code significantly generated
+by an AI tool. See AI tagging policy for details.
+</code></pre>
+<h2>Key Recommendations</h2>
+<ol>
+<li>
+<p><strong>Be transparent about AI tooling used.</strong> Name the tool in your commit
+message using the <code>Generated-by:</code> token (e.g., <code>Generated-by: Claude-3.5-Sonnet</code>). This helps future provenance-tracking tools.</p>
+</li>
+<li>
+<p><strong>Verify tool terms are compatible with Apache License 2.0.</strong> Check the
+terms of service for your AI tool. Some tools grant the provider broad
+rights over your input (your code) and output (the generated code). Make
+sure these terms do not conflict with contributing under the Apache License
+2.0.</p>
+</li>
+<li>
+<p><strong>Understand that AI-generated-only content may not be copyrightable.</strong>
+Under US law, only natural persons can be authors. Purely AI-generated
+material may not receive copyright protection. This does not prevent you
+from contributing it &mdash; but it is important for downstream users to know
+what is protected.</p>
+</li>
+<li>
+<p><strong>Maintain human oversight and editorial control.</strong> You are responsible
+for what you commit. Review AI-generated code, understand it, and be able
+to explain what it does. The <code>authored-by:</code> tag for the human who made
+the creative decisions is the standard and safe approach.</p>
+</li>
+<li>
+<p><strong>Use attribution tags consistently.</strong> Use <code>authored-by:</code> for the human
+author, <code>co-authored-by:</code> for other humans, and consider <code>ai-assisted-by:</code>
+for AI tools. Consistency helps the community understand how AI is being
+used.</p>
+</li>
+<li>
+<p><strong>Document AI use in commit messages.</strong> Use the <code>Generated-by:</code> token and
+describe what the AI produced and how you reviewed or edited it. This
+provides the provenance record that future tooling and reviewers need.</p>
+</li>
+<li>
+<p><strong>Be aware of the EU AI Act.</strong> If you or your project uses AI in ways
+that reach EU audiences (e.g., public-facing chatbots, AI-drafted
+public-interest content), review the transparency obligations under
+Article 50 of Regulation (EU) 2024/1689. See
+<a href="eu-ai-act.html">EU AI Act and Copyright</a> for details.</p>
+</li>
+</ol>
+<h2>This Is Guidance, Not Binding Policy</h2>
+<p>The recommendations on this page are <strong>guidance</strong>, not binding policy.
+Individual Apache projects remain self-governing under the Apache Way and may
+adopt, adapt, or ignore these recommendations as they see fit. The initiative
+offers these as shared good practices, and projects are encouraged to discuss
+them on the <a href="get-involved.html">mailing list</a>.</p>
+<h2>Cross-Reference: All Best Practices Pages</h2>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Guidelines for contributing AI-generated code</td>
+<td><a href="ai-generated-code.html">AI-Generated Code in Apache Projects</a></td>
+</tr>
+<tr>
+<td>US copyright law and AI</td>
+<td><a href="us-copyright-law.html">US Copyright Law and AI</a></td>
+</tr>
+<tr>
+<td>EU AI Act and copyright</td>
+<td><a href="eu-ai-act.html">EU AI Act and Copyright</a></td>
+</tr>
+<tr>
+<td>Attribution tags</td>
+<td><a href="authored-by-tags.html">"Authored by" and "Co-authored" Tags</a></td>
+</tr>
+<tr>
+<td>Commit message conventions</td>
+<td><a href="commit-messages.html">Commit Messages for AI-Assisted Code</a></td>
+</tr></tbody></table>
+<p><em>Back to <a href="best-practices.html">Best Practices</a>.</em></p>
 
         </div>
     </div>
