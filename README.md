@@ -28,6 +28,7 @@ pyproject.toml  Python dependencies (managed with uv)
   `content/theme/templates/menu.html`.
 - Changes go through a pull request (fork, branch, PR) - for small fixes, GitHub's
   pencil icon on a file is a quick way to start one straight from the file view.
+- **Note** when making any substantive changes run `make check` before committing. This will surface any potential CI/CD failures in your PR.
 
 ## Local build (optional)
 
