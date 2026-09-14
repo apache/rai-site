@@ -107,6 +107,52 @@ attributes the call to the right project, and selects a model appropriate to the
 models the Foundation hosts itself, so that sensitive material need never leave ASF
 infrastructure.
 
+<svg viewBox="0 0 720 152" width="100%" role="img" aria-label="Projects call llm.apache.org, which routes to available model classes" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;margin:1.5rem 0">
+  <defs>
+    <marker id="s-in" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M0 1 L6.5 4 L0 7 z" fill="#b21326"/></marker>
+    <marker id="s-out" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 1 L6.5 4 L0 7 z" fill="#9aa3ac"/></marker>
+  </defs>
+  <g>
+    <text x="0" y="10" font-size="7.6" fill="#6a737d" letter-spacing="1.4">PROJECTS</text>
+    <rect x="0" y="21" width="134" height="26" rx="4" fill="#f7f8fa" stroke="#d7dbe1"/>
+    <text x="67" y="37.5" font-size="8.6" fill="#3d4652" font-weight="600" text-anchor="middle">CI pipelines</text>
+    <rect x="0" y="54" width="134" height="26" rx="4" fill="#f7f8fa" stroke="#d7dbe1"/>
+    <text x="67" y="70.5" font-size="8.6" fill="#3d4652" font-weight="600" text-anchor="middle">committer tools</text>
+    <rect x="0" y="87" width="134" height="26" rx="4" fill="#f7f8fa" stroke="#d7dbe1"/>
+    <text x="67" y="103.5" font-size="8.6" fill="#3d4652" font-weight="600" text-anchor="middle">agents</text>
+    <rect x="0" y="120" width="134" height="26" rx="4" fill="#f7f8fa" stroke="#d7dbe1"/>
+    <text x="67" y="136.5" font-size="8.6" fill="#3d4652" font-weight="600" text-anchor="middle">committees</text>
+    <g stroke="#b21326" stroke-width="1.3" fill="none" marker-end="url(#s-in)">
+      <path d="M134 33 C170 33 176 64 208 70"/><path d="M134 66 C172 66 176 72 208 74"/>
+      <path d="M134 99 C172 99 176 84 208 78"/><path d="M134 132 C170 132 176 90 208 82"/>
+    </g>
+    <text x="170" y="21" font-size="7.2" fill="#b21326" font-weight="600" text-anchor="middle">one address</text>
+    <rect x="210" y="24" width="180" height="106" rx="7" fill="#fdf2f4" stroke="#b21326" stroke-width="1.6"/>
+    <text x="300" y="43" font-size="10.5" fill="#8c0a22" font-weight="700" text-anchor="middle">llm.apache.org</text>
+    <line x1="226" y1="51" x2="374" y2="51" stroke="#e8c3c9"/>
+    <g font-size="8.4" fill="#6a0d28" text-anchor="middle">
+      <text x="300" y="66">Apache identity</text><text x="300" y="82">per-project budget</text>
+      <text x="300" y="98">metered &amp; attributed</text><text x="300" y="114">routed to best fit</text>
+    </g>
+    <g stroke="#9aa3ac" stroke-width="1.3" fill="none" marker-end="url(#s-out)">
+      <path d="M390 52 C428 52 434 36 472 34"/><path d="M390 77 C428 77 434 77 472 77"/>
+      <path d="M390 102 C428 102 434 118 472 120"/>
+    </g>
+    <text x="474" y="10" font-size="7.6" fill="#6a737d" letter-spacing="1.4">MODELS</text>
+    <rect x="474" y="22" width="246" height="26" rx="4" fill="#f7f8fa" stroke="#d7dbe1"/>
+    <text x="486" y="38.5" font-size="8.8" fill="#15181d" font-weight="600">first-party providers</text>
+    <text x="708" y="38.5" font-size="7.4" fill="#5a6472" text-anchor="end">best capability</text>
+    <rect x="474" y="65" width="246" height="26" rx="4" fill="#f7f8fa" stroke="#d7dbe1"/>
+    <text x="486" y="81.5" font-size="8.8" fill="#15181d" font-weight="600">hosted under ASF terms</text>
+    <text x="708" y="81.5" font-size="7.4" fill="#5a6472" text-anchor="end">safer terms</text>
+    <rect x="474" y="108" width="246" height="26" rx="4" fill="#fdf6ec" stroke="#edc98f"/>
+    <text x="486" y="124.5" font-size="8.8" fill="#96590a" font-weight="700">ASF-hosted models</text>
+    <text x="708" y="124.5" font-size="7.4" fill="#96590a" text-anchor="end">private · low cost</text>
+  </g>
+</svg>
+
 Tokens reach that pool from several directions: providers donate them, the Foundation procures
 capacity, and we run open-weight models on our own rented hardware. A project asks for what it
 needs; the Foundation decides where it comes from.
