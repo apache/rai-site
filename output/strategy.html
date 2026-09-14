@@ -122,8 +122,7 @@ employer's.</p>
 </div>
 <div class="rai-card">
 <h2>Governed by default</h2>
-<p>Every call is authorized against Apache identity, metered, and attributed to the project that
-made it.</p>
+<p>Every call is matched to a committer, metered, and charged to their project.</p>
 </div>
 <div class="rai-card">
 <h2>Private where it matters</h2>
@@ -185,10 +184,10 @@ the classes of model available behind the gateway.</p>
 <p>The dividing line matters. Projects contribute at the agents layer; the Foundation is responsible
 for keeping the services underneath them running.</p>
 <h2>One governed path to models</h2>
-<p><code>llm.apache.org</code> is the address AI calls go to. It checks who is asking against Apache identity,
-attributes the call to the right project, and selects a model appropriate to the work &mdash; including
-models the Foundation hosts itself, so that sensitive material need never leave ASF
-infrastructure.</p>
+<p><code>llm.apache.org</code> is the address AI calls go to. It matches the caller to an Apache committer and
+their project, then picks a model that fits the job, metering the call against that project's
+budget. Some of those models run on the Foundation's own hardware, so sensitive material need
+never leave ASF infrastructure.</p>
 <svg aria-label="Projects call llm.apache.org, which routes to available model classes" role="img" style="max-width:100%;height:auto;margin:1.5rem 0" viewbox="0 0 720 152" width="100%" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <marker id="s-in" markerheight="6.5" markerwidth="6.5" orient="auto" refx="6.5" refy="4" viewbox="0 0 8 8">
