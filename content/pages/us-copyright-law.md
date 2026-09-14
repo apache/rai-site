@@ -38,7 +38,7 @@ involvement is needed for AI-assisted works to receive copyright protection.
 ## The US Copyright Office's Guidance
 
 The **U.S. Copyright Office** has released its multi-part report titled
-*Copyright and Artificial Intelligence* to address the legal and policy
+_Copyright and Artificial Intelligence_ to address the legal and policy
 implications of generative AI. The key portion of the report are summarized
 below, specifically Part 2 (Copyrightability of Generative AI Outputs) which has
 the greatest impacts on code contribution.
@@ -63,7 +63,6 @@ protection.
 - **Recommendation:** The Office advises **against creating any new intellectual
   property frameworks** or laws for AI-generated outputs, stating that existing
   copyright laws are fully equipped to handle these variations.
-
 
 ### Scenario 1: Purely AI-generated
 
