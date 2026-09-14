@@ -25,8 +25,7 @@ employer's.
 
 ## Governed by default
 
-Every call is authorized against Apache identity, metered, and attributed to the project that
-made it.
+Every call is matched to a committer, metered, and charged to their project.
 
 </div>
 
@@ -102,10 +101,10 @@ for keeping the services underneath them running.
 
 ## One governed path to models
 
-`llm.apache.org` is the address AI calls go to. It checks who is asking against Apache identity,
-attributes the call to the right project, and selects a model appropriate to the work — including
-models the Foundation hosts itself, so that sensitive material need never leave ASF
-infrastructure.
+`llm.apache.org` is the address AI calls go to. It matches the caller to an Apache committer and
+their project, then picks a model that fits the job, metering the call against that project's
+budget. Some of those models run on the Foundation's own hardware, so sensitive material need
+never leave ASF infrastructure.
 
 <svg viewBox="0 0 720 152" width="100%" role="img" aria-label="Projects call llm.apache.org, which routes to available model classes" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;margin:1.5rem 0">
   <defs>
