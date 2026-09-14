@@ -62,6 +62,7 @@ the four active work streams.
 | --- | --- |
 | [About](about.html) | What the initiative is, who leads it, and how it is organized |
 | [What we do](what-we-do.html) | Activities, guiding principles, and work streams |
+| [Strategy](strategy.html) | How the technical pieces fit together and where the work is heading |
 | [Best practices](best-practices.html) | Guidance on AI use in Apache projects |
 | [Get involved](get-involved.html) | Mailing list, chat, and how to contribute |
 | [FAQ](faq.html) | Short answers to common questions |

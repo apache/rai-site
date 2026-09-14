@@ -21,7 +21,8 @@ repositories.
 
 The work follows the **Apache Way** of collaborative, vendor-neutral development. Volunteers
 organize around four work streams, described on [What we do](what-we-do.html); anyone can take
-part through the channels listed on [Get involved](get-involved.html).
+part through the channels listed on [Get involved](get-involved.html). The technical
+direction is set out on [Strategy](strategy.html).
 
 ## Background and support
 

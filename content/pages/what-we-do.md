@@ -57,4 +57,7 @@ Volunteers currently organize around four work streams, each complementing the a
 
 To join one, say so on the mailing list — see [Get involved](get-involved.html).
 
+The technical shape of the Innovation work — the platform the Foundation is building and the
+order it arrives in — is described on [Strategy](strategy.html).
+
 *This page describes the initiative's current activities and will evolve as the work progresses.*
