@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"Authored by" and "Co-authored" tags - Apache Responsible AI</title>
+    <title>Strategy - Apache Responsible AI</title>
 <link rel="icon" href="images/rai-mark.svg" type="image/svg+xml">
 <link rel="shortcut icon" href="https://apache.org/favicons/favicon.ico">
 <meta name="description" content="The Apache Software Foundation Responsible AI initiative">
@@ -106,96 +106,129 @@
 <div id="contents">
   <div class="bg-white rounded">
     <div class="mx-auto">
-      <h1>"Authored by" and "Co-authored" tags</h1>
-      <h2>DRAFT DOCUMENT</h2>
-<p><strong>This document is an UNOFFICIAL DRAFT and should not be considered official
-policy.  Substantial changes may be made before being published as an official
-policy.  Direct any questions to <a href="mailto:discuss@rai.apache.org">discuss@rai.apache.org</a>.</strong></p>
-<h2>Attribution tags when AI assists in creating content</h2>
-<p>Git commit messages support trailer tags that record who contributed to a piece
-of code. The two most common are:</p>
+      <h1>Strategy</h1>
+      <p>Apache projects are adopting AI the way everyone else is: quickly, and one account at a time. A
+committer signs up with a provider, pays out of pocket or through an employer, and wires the
+result into a project workflow. That works for one project. At the scale of hundreds of projects
+it leaves the Foundation with no view of what is being spent, no shared catalog of what is
+approved, and no way to extend a donated pool of tokens across communities fairly.</p>
+<p>The Responsible AI initiative is building a Foundation-managed alternative. Committers remain
+free to use whatever tools they like; this is the path the ASF runs and can account for.</p>
+<div class="rai-cards">
+<div class="rai-card">
+<h2>Free to projects</h2>
+<p>A project draws on a budget the Foundation allocates, rather than a personal account or an
+employer's.</p>
+</div>
+<div class="rai-card">
+<h2>Governed by default</h2>
+<p>Every call is authorized against Apache identity, metered, and attributed to the project that
+made it.</p>
+</div>
+<div class="rai-card">
+<h2>Private where it matters</h2>
+<p>Sensitive work runs on models the Foundation hosts itself, so the content never leaves ASF
+infrastructure.</p>
+</div>
+</div>
+<p><a id="how-it-fits-together"></a></p>
+<h2>How the pieces fit together</h2>
+<p>The work divides into four layers. A project asks for work; agents do it; shared services run
+those agents and govern every model call; models answer.</p>
+<svg aria-label="Four layers: workloads, agents, services, models" role="img" style="max-width:100%;height:auto;margin:1.5rem 0" viewbox="0 0 720 178" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="s-ar" markerheight="6" markerwidth="6" orient="auto" refx="6.5" refy="4" viewbox="0 0 8 8">
+<path d="M0 1 L6.5 4 L0 7 z" fill="#9aa3ac"></path></marker>
+</defs>
+<g>
+<g fill="#6a737d" font-size="7.6" letter-spacing="1.4">
+<text x="0" y="14">WORKLOADS</text><text x="0" y="60">AGENTS</text>
+<text x="0" y="106">SERVICES</text><text x="0" y="166">MODELS</text>
+</g>
+<rect fill="#fdf2f4" height="25" rx="5" stroke="#e8c3c9" width="638" x="82" y="0"></rect>
+<text fill="#8c0a22" font-size="9.2" font-weight="600" text-anchor="middle" x="401" y="16.5">define &middot; schedule &middot; report runs</text>
+<path d="M401 25 L401 42" marker-end="url(#s-ar)" stroke="#9aa3ac" stroke-width="1.2"></path>
+<rect fill="#fdf6ec" height="27" rx="5" stroke="#edc98f" width="152" x="82" y="44"></rect>
+<rect fill="#fdf6ec" height="27" rx="5" stroke="#edc98f" width="152" x="244" y="44"></rect>
+<rect fill="#fdf6ec" height="27" rx="5" stroke="#edc98f" width="152" x="406" y="44"></rect>
+<rect fill="#f7f8fa" height="27" rx="5" stroke="#d7dbe1" stroke-dasharray="3 2" width="152" x="568" y="44"></rect>
+<g fill="#96590a" font-size="8.6" font-weight="600" text-anchor="middle">
+<text x="158" y="61.5">security scans</text><text x="320" y="61.5">issue triage</text><text x="482" y="61.5">CI/CD review</text>
+</g>
+<text fill="#5a6472" font-size="8.6" font-weight="600" text-anchor="middle" x="644" y="61.5">what projects build</text>
+<path d="M401 71 L401 88" marker-end="url(#s-ar)" stroke="#9aa3ac" stroke-width="1.2"></path>
+<rect fill="#f7f8fa" height="46" rx="5" stroke="#d7dbe1" width="638" x="82" y="90"></rect>
+<rect fill="#fff" height="29" rx="4" stroke="#bfc6d0" width="148" x="94" y="99"></rect>
+<text fill="#15181d" font-size="8.8" font-weight="700" text-anchor="middle" x="168" y="111">agent workbench</text>
+<text fill="#5a6472" font-size="7" text-anchor="middle" x="168" y="121.5">build and run agents</text>
+<rect fill="#fff" height="29" rx="4" stroke="#bfc6d0" width="148" x="252" y="99"></rect>
+<text fill="#15181d" font-size="8.8" font-weight="700" text-anchor="middle" x="326" y="111">MCP federation</text>
+<text fill="#5a6472" font-size="7" text-anchor="middle" x="326" y="121.5">governed tool access</text>
+<rect fill="#fdf2f4" height="29" rx="4" stroke="#b21326" stroke-width="1.4" width="148" x="410" y="99"></rect>
+<text fill="#8c0a22" font-size="8.8" font-weight="700" text-anchor="middle" x="484" y="111">llm.apache.org</text>
+<text fill="#8c0a22" font-size="7" text-anchor="middle" x="484" y="121.5">metered model access</text>
+<rect fill="#fff" height="29" rx="4" stroke="#bfc6d0" width="140" x="568" y="99"></rect>
+<text fill="#15181d" font-size="8.8" font-weight="700" text-anchor="middle" x="638" y="111">advisor</text>
+<text fill="#5a6472" font-size="7" text-anchor="middle" x="638" y="121.5">cost &middot; quality &middot; policy</text>
+<path d="M484 136 L484 150" marker-end="url(#s-ar)" stroke="#9aa3ac" stroke-width="1.2"></path>
+<rect fill="#f7f8fa" height="25" rx="5" stroke="#e6e8ec" width="638" x="82" y="152"></rect>
+<g fill="#3d4652" font-size="8.6" font-weight="600" text-anchor="middle">
+<text x="188" y="168.5">first-party providers</text><text x="401" y="168.5">hosted under ASF terms</text><text x="614" y="168.5">ASF-hosted models</text>
+</g>
+<line stroke="#e6e8ec" x1="295" x2="295" y1="156" y2="173"></line><line stroke="#e6e8ec" x1="507" x2="507" y1="156" y2="173"></line>
+</g>
+</svg>
+<p><strong>Workloads</strong> is what a project asks for: which job to run, on what schedule, reported where.
+<strong>Agents</strong> are the implementations that do the work, and the layer where projects contribute their
+own. <strong>Services</strong> are the shared infrastructure the Foundation builds and operates. <strong>Models</strong> are
+the classes of model available behind the gateway.</p>
+<p>The dividing line matters. Projects contribute at the agents layer; the Foundation is responsible
+for keeping the services underneath them running.</p>
+<h2>One governed path to models</h2>
+<p><code>llm.apache.org</code> is the address AI calls go to. It checks who is asking against Apache identity,
+attributes the call to the right project, and selects a model appropriate to the work &mdash; including
+models the Foundation hosts itself, so that sensitive material need never leave ASF
+infrastructure.</p>
+<p>Tokens reach that pool from several directions: providers donate them, the Foundation procures
+capacity, and we run open-weight models on our own rented hardware. A project asks for what it
+needs; the Foundation decides where it comes from.</p>
+<h2>Where this is going</h2>
+<p>The initiative is early, and this page describes direction rather than finished work.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Running now</strong></td>
+<td>Automated security scanning across Apache projects, with findings delivered to maintainers through the Foundation's standard disclosure process</td>
+</tr>
+<tr>
+<td><strong>In development</strong></td>
+<td>The model gateway at <code>llm.apache.org</code>, and the agent workbench the scanning pipelines already run on</td>
+</tr>
+<tr>
+<td><strong>In design</strong></td>
+<td>Tool federation, and the advisor layer that tracks cost, quality, and routing policy</td>
+</tr>
+<tr>
+<td><strong>Ahead</strong></td>
+<td>Self-serve access for any project that wants it, and open-weight models the Foundation controls</td>
+</tr></tbody></table>
+<p>Each piece is being built in the open. As they land, this page will say so.</p>
+<h2>Take part</h2>
+<p>The initiative works in public on the <a href="get-involved.html">discussion list</a>, and welcomes
+participation from any Apache committer &mdash; on the technical work, on policy, or on the questions
+projects are facing right now.</p>
 <ul>
-<li><strong><code>Author:</code></strong> &mdash; the person who created the work</li>
-<li><strong><code>Co-authored-by:</code></strong> &mdash; another person who contributed meaningfully to the
-work</li>
+<li><a href="get-involved.html">Get involved</a> &mdash; the mailing list and how to join in</li>
+<li><a href="what-we-do.html">What we do</a> &mdash; the initiative's wider activities</li>
+<li><a href="best-practices.html">Best practices</a> &mdash; guidance for projects using AI today</li>
 </ul>
-<p>When AI tools have assisted in creating or modifying code, contributors have
-asked: <em>How should I record that?</em></p>
-<p>This page provides practical guidance for Apache contributors.</p>
-<h2>Understanding the tags</h2>
-<h3><code>authored-by: Person Name</code></h3>
-<p>Use this when <strong>the human made the substantive creative choices</strong> for the
-contribution. Even if AI helped generate parts of the code (e.g., a function was
-drafted by an AI tool but the human selected, edited, reviewed, and integrated
-it), the human is the author.</p>
-<p>This is the standard and safe approach. It is consistent with US copyright law
-(<em>Thaler v. Perlmutter</em>, No. 23-5233, 2025 WL 839178 (D.C. Cir. Mar. 18, 2025)),
-which holds that only natural persons can be authors.</p>
-<p><strong>Example:</strong></p>
-<pre><code>authored-by: Jane Doe &lt;jane@example.com&gt;
-</code></pre>
-<h3><code>co-authored-by: Person Name</code></h3>
-<p>Use this when <strong>another person</strong> contributed meaningfully to the work &mdash; for
-example, they reviewed, provided the design, or wrote a section of code that you
-integrated. The <code>co-authored-by</code> trailer is a convention originated by GitHub and
-is widely supported by project management tools.</p>
-<p>What about using <code>co-authored-by</code> for the AI tool itself? This is a developing
-area. Legally, AI cannot be an author under US law. But conventionally, some
-projects use this tag as a <strong>provenance record</strong> rather than a legal assertion.</p>
-<p><strong>Examples:</strong></p>
-<pre><code># As a provenance record (not a legal assertion):
-co-authored-by: Claude &lt;noreply@anthropic.com&gt;
-
-# When another person also contributed:
-co-authored-by: Jane Doe &lt;jane@example.com&gt;
-co-authored-by: Claude &lt;noreply@anthropic.com&gt;
-</code></pre>
-<p>Both are acceptable conventions &mdash; choose what your project prefers.</p>
-<h3>A proposed convention: <code>ai-assisted-by</code></h3>
-<p>Some contributors have suggested a new trailer tag specifically for AI tools:</p>
-<pre><code>ai-assisted-by: Claude-3.5-Sonnet
-</code></pre>
-<p>This tag is not yet a standard, but it has the advantage of being unambiguous:
-it clearly indicates that an AI tool assisted in creating the work, without
-implying that the AI is a legal author or a human co-author.</p>
-<h2>Best practices</h2>
-<ol>
-<li>
-<p><strong>Be transparent.</strong> If AI assisted in creating a contribution, document it.
-This helps downstream users understand the provenance of the code.</p>
-</li>
-<li>
-<p><strong>Use <code>authored-by</code> for the human.</strong> The human who exercised creative control
-over the contribution is the author, regardless of whether AI helped generate
-parts of the code.</p>
-</li>
-<li>
-<p><strong>Use <code>co-authored-by</code> for people.</strong> If another person contributed, use the
-standard <code>co-authored-by</code> trailer.</p>
-</li>
-<li>
-<p><strong>Consider <code>ai-assisted-by</code> for AI tools.</strong> If your project adopts this
-convention, it provides clear, unambiguous attribution for AI assistance.</p>
-</li>
-<li>
-<p><strong>Use the <code>Apache-ai</code> commit tag</strong> if AI played a significant role. See
-<a href="policy-recommendations.html">Policy recommendations</a> for details on the
-Apache-ai tag.</p>
-</li>
-<li>
-<p><strong>These are conventions, not legal requirements.</strong> Individual projects may
-adopt whatever attribution practices they find useful. The ASF does not
-mandate a specific convention.</p>
-</li>
-</ol>
-<h2>Relationship to other pages</h2>
-<ul>
-<li>See <a href="commit-messages.html">Commit messages for AI-assisted code</a> for conventions
-on documenting AI use in commit messages.</li>
-<li>See <a href="ai-generated-code.html">AI-generated code in Apache projects</a> for broader
-guidance on contributing AI-generated code.</li>
-</ul>
-<p><em>Back to <a href="best-practices.html">Best practices</a>.</em></p>
+<p><em>This page describes work in progress and will be updated as the work develops.</em></p>
 
     </div>
   </div>
