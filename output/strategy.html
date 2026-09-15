@@ -172,7 +172,7 @@ those agents and govern every model call; models answer.</p>
 <path d="M484 136 L484 150" marker-end="url(#s-ar)" stroke="#9aa3ac" stroke-width="1.2"></path>
 <rect fill="#f7f8fa" height="25" rx="5" stroke="#e6e8ec" width="638" x="82" y="152"></rect>
 <g fill="#3d4652" font-size="8.6" font-weight="600" text-anchor="middle">
-<text x="188" y="168.5">first-party providers</text><text x="401" y="168.5">hosted under ASF terms</text><text x="614" y="168.5">ASF-hosted models</text>
+<text x="188" y="168.5">frontier providers</text><text x="401" y="168.5">enterprise terms</text><text x="614" y="168.5">ASF-hosted models</text>
 </g>
 <line stroke="#e6e8ec" x1="295" x2="295" y1="156" y2="173"></line><line stroke="#e6e8ec" x1="507" x2="507" y1="156" y2="173"></line>
 </g>
@@ -223,16 +223,19 @@ never leave ASF infrastructure.</p>
 </g>
 <text fill="#6a737d" font-size="7.6" letter-spacing="1.4" x="474" y="10">MODELS</text>
 <rect fill="#f7f8fa" height="26" rx="4" stroke="#d7dbe1" width="246" x="474" y="22"></rect>
-<text fill="#15181d" font-size="8.8" font-weight="600" x="486" y="38.5">first-party providers</text>
+<text fill="#15181d" font-size="8.8" font-weight="600" x="486" y="38.5">frontier providers</text>
 <text fill="#5a6472" font-size="7.4" text-anchor="end" x="708" y="38.5">best capability</text>
 <rect fill="#f7f8fa" height="26" rx="4" stroke="#d7dbe1" width="246" x="474" y="65"></rect>
-<text fill="#15181d" font-size="8.8" font-weight="600" x="486" y="81.5">hosted under ASF terms</text>
-<text fill="#5a6472" font-size="7.4" text-anchor="end" x="708" y="81.5">safer terms</text>
+<text fill="#15181d" font-size="8.8" font-weight="600" x="486" y="81.5">enterprise terms</text>
+<text fill="#5a6472" font-size="7.4" text-anchor="end" x="708" y="81.5">not used for training</text>
 <rect fill="#fdf6ec" height="26" rx="4" stroke="#edc98f" width="246" x="474" y="108"></rect>
 <text fill="#96590a" font-size="8.8" font-weight="700" x="486" y="124.5">ASF-hosted models</text>
-<text fill="#96590a" font-size="7.4" text-anchor="end" x="708" y="124.5">private &middot; low cost</text>
+<text fill="#96590a" font-size="7.4" text-anchor="end" x="708" y="124.5">never leaves our infrastructure</text>
 </g>
 </svg>
+<p>The three classes differ in what happens to a prompt: frontier providers offer the most capability
+but the prompt leaves ASF control; enterprise terms keep it from being used to train a provider's
+models; Foundation-hosted models never see it leave our infrastructure at all.</p>
 <p>Tokens reach that pool from several directions: providers donate them, the Foundation procures
 capacity, and we run open-weight models on our own rented hardware. A project asks for what it
 needs; the Foundation decides where it comes from.</p>
