@@ -19,7 +19,9 @@ others are limited to ASF Members.
 - **Mailing list:** **discuss@rai.apache.org**, open to ASF Members. Send an email to
   **discuss-subscribe@rai.apache.org** to subscribe, or browse the
   [archives](https://lists.apache.org/list.html?discuss@rai.apache.org).
-- **Chat:** ask to be invited to the **#rai-discuss** channel on the [ASF Slack](https://infra.apache.org/slack.html).
+- **Chat:** Use the `/qbot addme #rai-discuss` command to join the
+  **#rai-discuss** channel on the [ASF
+  Slack](https://infra.apache.org/slack.html).
 
 Introduce yourself, share what your project is doing with AI, and tell us where expanded
 model access or tooling would help. Volunteers are currently organizing around four work
