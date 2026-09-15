@@ -11,7 +11,7 @@ others are limited to ASF Members.
 ### For All
 
 - **Mailing list:** **general@rai.apache.org**, open to the Public. Send an email to
-  **general@rai.apache.org** to subscribe, or browse the
+  **general-subscribe@rai.apache.org** to subscribe, or browse the
   [archives](https://lists.apache.org/list.html?general@rai.apache.org).
 
 ### For ASF Members
@@ -37,6 +37,8 @@ Pelican.
 - For a small fix, edit a page directly on GitHub (the pencil icon) and open a pull
   request.
 - For larger changes, open a branch or a GitHub issue to discuss first.
+
+Changes are sent to the **site-notify@rai.apache.org** mailing list.
 
 ## Help build the initiative
 
