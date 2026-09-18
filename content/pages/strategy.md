@@ -14,7 +14,7 @@ free to use whatever tools they like; this is the path the ASF runs and can acco
 
 <div class="rai-card">
 
-## Free to projects
+<h3>Free to projects</h3>
 
 A project draws on a budget the Foundation allocates, rather than a personal account or an
 employer's.
@@ -23,7 +23,7 @@ employer's.
 
 <div class="rai-card">
 
-## Governed by default
+<h3>Governed by default</h3>
 
 Every call is matched to a committer, metered, and charged to their project.
 
@@ -31,7 +31,7 @@ Every call is matched to a committer, metered, and charged to their project.
 
 <div class="rai-card">
 
-## Private where it matters
+<h3>Private where it matters</h3>
 
 Sensitive work runs on models the Foundation hosts itself, so the content never leaves ASF
 infrastructure.
