@@ -88,14 +88,14 @@ clearly allow it. This is independent of cases 1 and 2.
 
 ## What a compete-style AUP does *not* do
 
-- It does not place a field-of-use on software that later ships under ALv2.
-- It does not mean "someone could use this Apache release to compete,
+* It does not place a field-of-use on software that later ships under ALv2.
+* It does not mean "someone could use this Apache release to compete,
   therefore the original assistant use was a breach." Third parties have
   always been free to take Apache software and compete with anyone. That is
   the license.
-- It does not oblige downstream recipients to hold an account with the
+* It does not oblige downstream recipients to hold an account with the
   vendor, accept the vendor's terms, or refrain from competing.
-- It does not change because the vendor later acquires an unrelated company
+* It does not change because the vendor later acquires an unrelated company
   or launches an unrelated product. If the *project you are editing today*
   is not in their lane today, case 1 still applies. RAI can update this
   page if a named project clearly moves into case 2.
@@ -128,14 +128,14 @@ ALv2 software is not that act.
 
 ## Practical advice for PMCs
 
-- Do not treat a contributor's vendor AUP as a third-party license on the
+* Do not treat a contributor's vendor AUP as a third-party license on the
   tree.
-- If the project is in case 2 for a named vendor, say so in the project's
+* If the project is in case 2 for a named vendor, say so in the project's
   contributor docs ("don't use vendor X to generate patches for this
   repo; use Y or write it"). That is enough.
-- Vendor neutrality for *runtime* support (calling many models) is separate
+* Vendor neutrality for *runtime* support (calling many models) is separate
   from which model a committer used to write a patch.
-- Point people at this page rather than opening a Legal category fight over
+* Point people at this page rather than opening a Legal category fight over
   an account-holder rule.
 
 ## How this relates to Legal's A/B/X rows
