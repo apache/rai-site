@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apache Responsible AI</title>
+    <title>Tool-use risk for AI assistants - Apache Responsible AI</title>
 <link rel="icon" href="images/rai-mark.svg" type="image/svg+xml">
 <link rel="shortcut icon" href="https://apache.org/favicons/favicon.ico">
 <meta name="description" content="The Apache Software Foundation Responsible AI initiative">
@@ -110,71 +110,162 @@
 <div id="contents">
   <div class="bg-white rounded">
     <div class="mx-auto">
-      <div class="rai-hero">
-<p class="rai-eyebrow">Apache Software Foundation initiative</p>
-<h1>AI runs on open infrastructure</h1>
-<p class="rai-lede">The ASF launched the Responsible AI initiative to strengthen the open source
-technologies that underpin modern artificial intelligence, and to help Apache communities adopt
-AI in a way that is open, transparent, and aligned with the Foundation's values.</p>
-<p class="rai-actions">
-<a class="rai-btn rai-btn-primary" href="get-involved.html">Get involved</a>
-<a class="rai-btn" href="https://news.apache.org/foundation/entry/the-apache-software-foundation-launches-10m-responsible-ai-initiative-with-initial-1-75m-donation">Read the announcement</a>
-</p>
-</div>
-<p>AI systems worldwide depend on critical Apache projects. The initiative works to ensure that the
-ASF projects embedded in AI systems have expanded access to the models and resources they need to
-remain secure, transparent, and governed in the public interest.</p>
-<div class="rai-cards">
-<div class="rai-card">
-<h2>Leveraging</h2>
-<p>Expanded access to AI models, tooling, and resources for the Apache projects already embedded in
-the AI ecosystem.</p>
-</div>
-<div class="rai-card">
-<h2>Innovating</h2>
-<p>Foundation-led programs and emerging AI projects growing under open, community governance and the
-Apache License 2.0.</p>
-</div>
-<div class="rai-card">
-<h2>Educating</h2>
-<p>Shared guidance on licensing, provenance, security, and attribution for communities adopting AI.</p>
-</div>
-</div>
-<p><a href="what-we-do.html">Read more about what we do</a> &mdash; including the principles that guide the work and
-the four active work streams.</p>
-<h2>Where to go next</h2>
+      <h1>Tool-use risk for AI assistants</h1>
+      <h2>DRAFT DOCUMENT</h2>
+<p><strong>This document is an UNOFFICIAL DRAFT and should not be considered official
+policy.  Substantial changes may be made before being published as an official
+policy.  Direct any questions to <a href="mailto:discuss@rai.apache.org">discuss@rai.apache.org</a>.</strong></p>
+<h2>What this page is (and is not)</h2>
+<p>This page is about <strong>tool-use risk</strong>: conditions a vendor places on the
+<em>person using the tool</em> (the account holder). Those conditions can include
+acceptable-use rules, compete clauses, rate limits, account termination, and
+indemnity in the vendor's terms.</p>
+<p>This page is <strong>not</strong> about whether generated output can be contributed under
+the Apache License 2.0, and it is not a row in the Legal Affairs
+<a href="https://www.apache.org/legal/generative-tooling-terms-reviewed.html">generative-tooling terms review</a>.
+Those pages ask whether a restriction <strong>travels with the output</strong> into a
+release. Tool-use risk does not travel with the output. A breach, if any, sits
+with the contributor's vendor account.</p>
+<p>Keep the two questions separate:</p>
 <table>
 <thead>
 <tr>
-<th>Page</th>
-<th>What you'll find</th>
+<th>Question</th>
+<th>Who it binds</th>
+<th>Where it lives</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="about.html">About</a></td>
-<td>What the initiative is, who leads it, and how it is organized</td>
+<td>Can this output be contributed and released under ALv2?</td>
+<td>The contribution / the release</td>
+<td>Legal guidance and the terms-review A/B/X rows</td>
 </tr>
 <tr>
-<td><a href="what-we-do.html">What we do</a></td>
-<td>Activities, guiding principles, and work streams</td>
-</tr>
-<tr>
-<td><a href="strategy.html">Strategy</a></td>
-<td>How the technical pieces fit together and where the work is heading</td>
-</tr>
-<tr>
-<td><a href="best-practices.html">Best practices</a></td>
-<td>Guidance on AI use in Apache projects</td>
-</tr>
-<tr>
-<td><a href="get-involved.html">Get involved</a></td>
-<td>Mailing list, chat, and how to contribute</td>
-</tr>
-<tr>
-<td><a href="faq.html">FAQ</a></td>
-<td>Short answers to common questions</td>
+<td>Can <em>I</em> use this vendor while working on <em>this</em> project without picking a fight with my vendor account?</td>
+<td>The account holder</td>
+<td>This page (RAI best practices)</td>
 </tr></tbody></table>
+<p>A vendor shutting off someone's login does not change the license of
+<code>httpd</code>, Spark, or any other Apache tree. Downstream users of an ALv2
+release do not inherit the contributor's vendor AUP.</p>
+<h2>Why this is a RAI topic</h2>
+<p>Vendor catalogs move. Acceptable-use policies change without a license change
+on any Apache artifact. RAI can keep a short, living note of "this tool is a
+poor fit for that kind of work" without turning every vendor mood swing into a
+Foundation-wide license reclassification.</p>
+<p>Individual projects remain self-governing. Nothing here vetoes a commit or
+replaces PMC review.</p>
+<h2>Three kinds of work</h2>
+<p>When you pick an assistant, look at what you are building, not only at the
+tool's marketing page.</p>
+<h3>1. Ordinary Apache software</h3>
+<p>Most ASF work is libraries, servers, formats, data systems, build tools, and
+the like. Using an AI coding assistant on that work is ordinary tool use,
+same family as an IDE or a compiler. A vendor "don't compete with us" clause
+does not turn that output into a restricted artifact, and it does not reach
+through ALv2 to later users of the release.</p>
+<p>Examples: Spark, HTTP Server, Kafka, Flink (the engine, not an
+agent-product overlay), Tomcat, Maven.</p>
+<h3>2. Work in a vendor's product lane</h3>
+<p>Some vendors forbid using their <em>service or outputs</em> to develop (or help
+anyone develop) machine-learning models or products that compete with them,
+directly or indirectly. That rule binds the account holder.</p>
+<p>If the Apache project you are touching is itself a general assistant, a
+coding-agent workspace, a hosted chatbot, or another product that a
+reasonable reader would put in that vendor's current catalog, <strong>do not use
+that vendor as the assistant for that work.</strong> Use a different model or write
+the change by hand.</p>
+<p>This is a "pick another tool" problem, not a "this file cannot enter the
+tree" problem. The project can still take the patch. The contributor should
+not generate it with the vendor they would be competing with.</p>
+<p>Examples that <em>may</em> sit in this bucket, depending on the vendor's current
+catalog: incubating agent workspaces, general-purpose coding agents, hosted
+ASF-operated assistants. A harness that <em>calls</em> many vendors, including the
+one in question, is usually the opposite of competing with that vendor.</p>
+<h3>3. Training, distillation, and synthetic corpora</h3>
+<p>Using a vendor's outputs as training data, preference data, or distillation
+targets for another model is the clause almost every frontier vendor already
+writes down. Do not do that with vendor outputs unless that vendor's terms
+clearly allow it. This is independent of cases 1 and 2.</p>
+<h2>What a compete-style AUP does <em>not</em> do</h2>
+<ul>
+<li>It does not place a field-of-use on software that later ships under ALv2.</li>
+<li>It does not mean "someone could use this Apache release to compete,
+therefore the original assistant use was a breach." Third parties have
+always been free to take Apache software and compete with anyone. That is
+the license.</li>
+<li>It does not oblige downstream recipients to hold an account with the
+vendor, accept the vendor's terms, or refrain from competing.</li>
+<li>It does not change because the vendor later acquires an unrelated company
+or launches an unrelated product. If the <em>project you are editing today</em>
+is not in their lane today, case 1 still applies. RAI can update this
+page if a named project clearly moves into case 2.</li>
+</ul>
+<p>"Indirectly" and "assist anyone" in vendor AUPs are read here as the act of
+using <em>that service</em> to help build a competing product. Publishing ordinary
+ALv2 software is not that act.</p>
+<h2>Practical advice for contributors</h2>
+<ol>
+<li><strong>Read the terms that govern your own login</strong> (consumer vs API vs
+enterprise often differ). The public row on the Legal review page is a
+snapshot; your click-through may be newer.</li>
+<li><strong>Match the tool to the work.</strong> Case 1: use whatever assistant you
+already trust and can review. Case 2: switch vendors or do not use an
+assistant. Case 3: do not use vendor outputs as training data.</li>
+<li><strong>You still own the commit.</strong> Review the output. Do not commit what you
+cannot explain. Follow the project's usual review rules.</li>
+<li><strong>Disclose as the project asks.</strong> See
+<a href="commit-messages.html">Commit messages for AI-assisted code</a> and
+<a href="policy-recommendations.html">Policy recommendations</a>. Attribution
+(Generated-by / Co-authored-by) is documentation of how the patch was
+made. It is not an admission that the vendor's AUP rides with the file.</li>
+<li><strong>Secrets and private lists stay out of prompts.</strong> Tool-use risk includes
+sending project-private or embargoed material to a vendor. That is
+operational, not a license category.</li>
+<li><strong>Account loss is personal.</strong> Termination or indemnity in a vendor ToS is
+a risk to the person who clicked "agree." It is not a defect in the
+Apache release. If that risk is unacceptable to you, use another tool.</li>
+</ol>
+<h2>Practical advice for PMCs</h2>
+<ul>
+<li>Do not treat a contributor's vendor AUP as a third-party license on the
+tree.</li>
+<li>If the project is in case 2 for a named vendor, say so in the project's
+contributor docs ("don't use vendor X to generate patches for this
+repo; use Y or write it"). That is enough.</li>
+<li>Vendor neutrality for <em>runtime</em> support (calling many models) is separate
+from which model a committer used to write a patch.</li>
+<li>Point people at this page rather than opening a Legal category fight over
+an account-holder rule.</li>
+</ul>
+<h2>How this relates to Legal's A/B/X rows</h2>
+<p>The draft
+<a href="https://www.apache.org/legal/generative-tooling-terms-categories.html">What to Look For</a>
+page is about terms that restrict <strong>output</strong> or impose duties on
+<strong>recipients of the code</strong>. Its own text draws the line this page relies on:</p>
+<blockquote>
+<p>Rules about your use of the service are not the issue; rules that travel
+with the output are.</p>
+</blockquote>
+<p>A compete-style acceptable-use rule is a rule about use of the service. If
+Legal records a handling note on a review row ("account holders should not
+use this vendor to build products in the vendor's lane"), that note can
+point here. It should not, by itself, move an ordinary coding assistant to
+Category X for the whole Foundation.</p>
+<p>Updates to this page belong on <code>discuss@rai.apache.org</code> (and
+<code>general@rai.apache.org</code> where the RAI team uses that list). Questions
+about whether a given output is contributable under ALv2 belong on
+<code>legal-discuss@apache.org</code>.</p>
+<h2>Further reading</h2>
+<ul>
+<li><a href="ai-generated-code.html">AI-generated code in Apache projects</a></li>
+<li><a href="commit-messages.html">Commit messages for AI-assisted code</a></li>
+<li><a href="https://www.apache.org/legal/generative-tooling.html">Generative Tooling Guidance</a></li>
+<li><a href="https://www.apache.org/legal/generative-tooling-terms-reviewed.html">Generative AI tool terms: review results (draft)</a></li>
+<li><a href="https://www.apache.org/legal/generative-tooling-terms-categories.html">Generative AI tool terms: what to look for (draft)</a></li>
+</ul>
+<p><em>Back to <a href="best-practices.html">Best practices</a>.</em></p>
 
     </div>
   </div>
