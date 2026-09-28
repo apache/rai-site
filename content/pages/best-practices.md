@@ -21,6 +21,7 @@ the Apache-ai tag policy.
 | ["Authored by" and "Co-authored" Tags](authored-by-tags.html) | Best practices for attribution when AI assisted in creating content |
 | [Commit messages for AI-assisted code](commit-messages.html) | Conventions for documenting AI use in commit messages |
 | [Policy recommendations](policy-recommendations.html) | The Apache-ai tag and key recommendations for AI-assisted contributions |
+| [Tool-use risk for AI assistants](tool-use-risk.html) | Account-holder vendor rules vs what a release can carry |
 
 ## Related
 
