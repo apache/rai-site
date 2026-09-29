@@ -7,6 +7,27 @@ license: https://www.apache.org/licenses/LICENSE-2.0
 policy.  Substantial changes may be made before being published as an official
 policy.  Direct any questions to discuss@rai.apache.org.**
 
+## Official legal policies live at Legal Affairs
+
+The normative documents on legal risk for the Foundation and its PMCs are
+published by Legal Affairs at [apache.org/legal](https://www.apache.org/legal/),
+not on this site. For generative AI tooling, and for what may go into a
+release, the relevant documents are:
+
+* [Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html)
+* [ASF 3rd Party License Policy](https://www.apache.org/legal/resolved.html)
+* [ASF Release Policy](https://www.apache.org/legal/release-policy.html)
+* [Generative AI tool terms: review results (draft)](https://www.apache.org/legal/generative-tooling-terms-reviewed.html)
+* [Generative AI tool terms: what to look for (draft)](https://www.apache.org/legal/generative-tooling-terms-categories.html)
+
+The best practices on this page are not legal policy. Verify them against the
+Legal Affairs documents before acting on them, rather than following them as
+written. The two can be at odds, and where they are, the Legal Affairs
+documents apply. This site is maintained under commit-then-review, so anyone
+with commit access can change this page at any time; do not treat its
+current wording as a stable reference. Questions about legal risk belong on
+`legal-discuss@apache.org`.
+
 ## What this page is (and is not)
 
 This page is about **tool-use risk**: conditions a vendor places on the
