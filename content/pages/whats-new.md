@@ -3,6 +3,8 @@ license: https://www.apache.org/licenses/LICENSE-2.0
 
 News items will be shared on the [general@rai.apache.org](https://lists.apache.org/list.html?general@rai.apache.org) list — [subscribe](mailto:general-subscribe@rai.apache.org) today!
 
+- Triumphs, Tooling, TLPs, and talks: [What the ASF Responsible AI Initiative Has
+  Built So Far](https://news.apache.org/foundation/entry/what-the-asf-responsible-ai-initiative-has-built-so-far)
 - [Security scanning at Foundation scale](https://news.apache.org/foundation/entry/security-scanning-at-foundation-scale) with ASF Tooling and ASF Security
 - [Join the RAI Hackathon](https://www.linkedin.com/posts/sallykhudairi_responsibleai-opensource-apache-activity-7510391983547301889-7aa4)
   at Community Over Code / Glasgow.  Come and learn how to connect to [LLMAO](https://llm.apache.org) and get involved in the RAI community!
