@@ -1,5 +1,12 @@
 {% set root = root|default('') %}
-<!-- shared list of posts, used by the blog index and the taxonomy pages -->
+{#
+  Shared list of posts, used by the blog index and the taxonomy pages.
+
+  Byline and Topics are deliberately not Pelican's Author and Tags: the ASF
+  build reads Markdown through the gfm plugin, which never runs Pelican's
+  metadata processors, so those two arrive as plain strings where Pelican
+  expects objects and the build dies. See AGENTS.md.
+#}
 {% if articles %}
 <ul class="rai-postlist">
   {% for article in articles %}
@@ -7,12 +14,12 @@
     <h2><a href="{{ root }}blog/{{ article.slug }}.html">{{ article.title }}</a></h2>
     <p class="rai-meta">
       <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%d %B %Y') }}</time>
-      {%- if article.author %} · {{ article.author }}{% endif %}
+      {%- if article.byline %} · {{ article.byline }}{% endif %}
     </p>
     {% if article.summary %}<div class="rai-summary">{{ article.summary }}</div>{% endif %}
-    {% if article.tags %}
+    {% if article.topics %}
     <p class="rai-tags">
-      {% for tag in article.tags %}<span class="rai-tag">{{ tag.name }}</span>{% endfor %}
+      {% for topic in article.topics.split(',') %}<span class="rai-tag">{{ topic.strip() }}</span>{% endfor %}
     </p>
     {% endif %}
     <p><a class="rai-more" href="{{ root }}blog/{{ article.slug }}.html">Continue reading &rarr;</a></p>

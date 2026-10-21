@@ -60,20 +60,32 @@ before opening or updating a PR.
   Pelican metadata block — at least `Title:` and `license:`; the home page also sets
   `Template: index`. Mermaid code blocks render as diagrams.
 - Blog posts live in `content/blog/*.md` and need `Date:` as well (plus optional
-  `Author:`, `Tags:`, `Summary:`). They publish to `/blog/<slug>.html`. See README.md for
-  the front matter.
+  `Byline:`, `Topics:`, `Summary:`). They publish to `/blog/<slug>.html`. See README.md
+  for the front matter.
+- **Never use `Author:`, `Tags:` or `Category:` in front matter.** The ASF build reads
+  Markdown through the `gfm` plugin, whose reader builds its own metadata dict and
+  **never calls Pelican's metadata processors**. Pelican expects those three fields to be
+  `Author`/`Tag`/`Category` objects; from `gfm` they arrive as plain strings, and the
+  build dies in `Content.url_format`, which does `self.author.slug`. The failure is
+  `CRITICAL: 'str' object has no attribute 'slug'`, it names no file, and it happens for
+  any post carrying either field — verified by bisecting the front matter. Use the custom
+  `Byline:` and `Topics:` fields instead; they are plain strings and the theme renders
+  them (`postlist.html`, `generic.html`). This also means per-tag and per-author pages
+  can never be generated here.
 - **The blog index is a page, not a direct template.** `content/pages/blog.md` carries
   `Template: blog`, `Save_as: blog/index.html` and `URL: blog/`, and holds no content of
   its own. It is done this way because `DIRECT_TEMPLATES` can only be set in Pelican
   settings, and the generated settings aren't ours to change (see above).
-- **`tag.html`, `category.html` and `author.html` must exist.** The generated settings set
-  only the plural switches (`TAGS_SAVE_AS` and friends) and leave the singular ones at
-  their defaults, so Pelican writes one page per tag, category and author for every post
-  whether we want them or not. With no template of our own it falls back to Pelican's
-  built-in simple theme, which extends `index.html`, which expects a `page` — and the
-  whole build dies with something unhelpful like `'str' object has no attribute 'slug'`.
-  The three thin templates and the shared `taxonomy.html` exist to catch that. **Removing
-  them breaks every build that has a post in it**, not just the taxonomy pages.
+- **`category.html` must exist** (with `tag.html` and `author.html` kept beside it). The
+  generated settings set only the plural switches (`TAGS_SAVE_AS` and friends) and leave
+  the singular ones at their defaults, so Pelican writes a page per category for every
+  post whether we want one or not — every post gets a category even with no `Category:`
+  line, because `USE_FOLDER_AS_CATEGORY` derives it from `content/blog/`. With no
+  template of our own, Pelican falls back to its built-in simple theme, which extends
+  `index.html`, which expects a `page`, and the build dies with `'page' is undefined`.
+  The thin templates and the shared `taxonomy.html` exist to catch that; they are marked
+  `noindex`. `tag.html` and `author.html` are unreachable today (see the metadata rule
+  above) and are kept so that a future fix upstream doesn't reintroduce the crash.
 - Adding a page does **not** add it to the navigation. Update the nav by hand in
   `content/theme/templates/menu.html`.
 - **Links are deliberately relative** (`about.html`, `css/…`, not `/about.html`,

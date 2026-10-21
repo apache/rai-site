@@ -1,7 +1,7 @@
 Title: Responsible AI at Community Over Code, Glasgow
 Date: 2026-10-21
-Author: Andrew Musselman
-Tags: events, llmao, community
+Byline: Andrew Musselman
+Topics: events, llmao, community
 Summary: The Responsible AI initiative brought two sessions and a hackathon slot to Community Over Code in Glasgow — a working session on llm.apache.org, and a roundtable on what AI is doing to open source maintainership.
 license: https://www.apache.org/licenses/LICENSE-2.0
 

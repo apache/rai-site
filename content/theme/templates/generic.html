@@ -7,12 +7,12 @@
       <h1>{{ article.title }}</h1>
       <p class="rai-meta">
         <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%d %B %Y') }}</time>
-        {%- if article.author %} · {{ article.author }}{% endif %}
+        {%- if article.byline %} · {{ article.byline }}{% endif %}
       </p>
       {{ article.content }}
-      {% if article.tags %}
+      {% if article.topics %}
       <p class="rai-tags">
-        {% for tag in article.tags %}<span class="rai-tag">{{ tag.name }}</span>{% endfor %}
+        {% for topic in article.topics.split(',') %}<span class="rai-tag">{{ topic.strip() }}</span>{% endfor %}
       </p>
       {% endif %}
       <p class="rai-backlink"><a href="{{ root }}blog/">&larr; All posts</a></p>

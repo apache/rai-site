@@ -39,17 +39,22 @@ at [`/blog/`](https://rai.apache.org/blog/). The filename becomes the slug.
 ```
 Title: Responsible AI at Community Over Code, Glasgow
 Date: 2026-10-21
-Author: Andrew Musselman
-Tags: events, llmao, community
+Byline: Andrew Musselman
+Topics: events, llmao, community
 Summary: One or two sentences, shown on the blog index.
 license: https://www.apache.org/licenses/LICENSE-2.0
 ```
 
-`Title`, `Date` and `license` are required; `Author`, `Tags` and `Summary` are optional
-(without a `Summary`, Pelican uses the opening of the post). Posts with a future `Date`
-are not published.
+`Title`, `Date` and `license` are required; `Byline`, `Topics` and `Summary` are
+optional.
 
-Two things to watch:
+> **Use `Byline` and `Topics`, never `Author`, `Tags` or `Category`.** The ASF build
+> reads Markdown through a plugin that hands those three to Pelican as plain strings
+> where it expects objects, and the build fails with
+> `CRITICAL: 'str' object has no attribute 'slug'` — which names no file and is horrible
+> to track down. `Byline` and `Topics` are plain strings the theme renders itself.
+
+Three things to watch:
 
 - **Don't repeat the title as an H1** — the template renders it from `Title:`. Start the
   body at `##`, as pages do.
