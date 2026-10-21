@@ -1,36 +1,33 @@
+{% set root = root|default('') %}
+<!-- blog index -->
 <div id="contents">
-    <div class="bg-white p-5 rounded">
-        <div class="col-sm-12 mx-auto">
+  <div class="bg-white rounded">
+    <div class="mx-auto">
+      <h1>Blog</h1>
+      <p class="rai-lede">News and updates from the Responsible AI initiative at The Apache Software Foundation.</p>
 
-            <h3>Welcome to the RAI blog!</h3>
-            <p><i>We post news and updates here about the Responsible AI (RAI) initiative at The ASF.</i></p>
-
-
-{% for article in articles %}
-    <!-- Post -->
-    <div class="row">
-        <div class="callout">
-            <article class="post">
-                <header>
-                    <div class="title">
-                        <h2><a href="/blog/{{ article.slug }}.html">{{ article.title }}</a></h2>
-                        <p>Posted on: {{ article.date }}</p>
-                        <p>{{ article.summary }}</p>
-                        <footer>
-                            <ul class="actions">
-                                <div style="text-align: right"><a href="/blog/{{ article.slug }}.html" class="button medium">Continue reading</a></div>
-                            </ul>
-                            <ul class="stats">
-                                {% for tag in article.tags %}
-                                    <li><a href="#">{{ tag.name }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </footer>
-            </article>
-        </div>
+      {% if articles %}
+      <ul class="rai-postlist">
+        {% for article in articles %}
+        <li class="rai-postlist-item">
+          <h2><a href="{{ root }}blog/{{ article.slug }}.html">{{ article.title }}</a></h2>
+          <p class="rai-meta">
+            <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%d %B %Y') }}</time>
+            {%- if article.author %} · {{ article.author }}{% endif %}
+          </p>
+          {% if article.summary %}<div class="rai-summary">{{ article.summary }}</div>{% endif %}
+          {% if article.tags %}
+          <p class="rai-tags">
+            {% for tag in article.tags %}<span class="rai-tag">{{ tag.name }}</span>{% endfor %}
+          </p>
+          {% endif %}
+          <p><a class="rai-more" href="{{ root }}blog/{{ article.slug }}.html">Continue reading &rarr;</a></p>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>No posts yet.</p>
+      {% endif %}
     </div>
-{% endfor %}
-
-        </div>
-    </div>
+  </div>
 </div>

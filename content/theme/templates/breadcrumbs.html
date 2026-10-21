@@ -1,12 +1,19 @@
+{% set root = root|default('') %}
 <!-- breadcrumbs -->
 <div class="card" style="height: 34px;">
   <nav aria-label="breadcrumb"  style="padding-left: 12px; padding-top: 4px;">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-      <li class="breadcrumb-item active"><a href="{%if article%}blog/{{article.slug}}.html{%else%}{{page.slug}}.html{%endif%}">
-          {%if article%}{{article.title}}{%else%}{{page.title}}{%endif%}
-      </a></li>
-      <li class="breadcrumb-item active">(<a href="https://github.com/apache/rai-site/tree/main/content/{%if article%}blog/{{article.slug}}.md{%else%}pages/{{page.slug}}.md{%endif%}">edit</a>)</li>
+      <li class="breadcrumb-item"><a href="{{ root }}index.html">Home</a></li>
+      {% if article or articles is defined %}
+      <li class="breadcrumb-item"><a href="{{ root }}blog/">Blog</a></li>
+      {% endif %}
+      {% if article %}
+      <li class="breadcrumb-item active"><a href="{{ root }}blog/{{ article.slug }}.html">{{ article.title }}</a></li>
+      <li class="breadcrumb-item active">(<a href="https://github.com/apache/rai-site/tree/main/content/blog/{{ article.slug }}.md">edit</a>)</li>
+      {% elif page %}
+      <li class="breadcrumb-item active"><a href="{{ root }}{{ page.slug }}.html">{{ page.title }}</a></li>
+      <li class="breadcrumb-item active">(<a href="https://github.com/apache/rai-site/tree/main/content/pages/{{ page.slug }}.md">edit</a>)</li>
+      {% endif %}
     </ol>
   </nav>
 </div>

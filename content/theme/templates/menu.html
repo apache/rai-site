@@ -1,8 +1,9 @@
+{% set root = root|default('') %}
 <!-- nav bar -->
 <nav class="navbar navbar-expand-lg navbar-light rai-nav fixed-top" aria-label="Responsible AI Navigation">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">
-      <img src="images/rai-mark.svg" alt="" aria-hidden="true">
+    <a class="navbar-brand" href="{{ root }}index.html">
+      <img src="{{ root }}images/rai-mark.svg" alt="" aria-hidden="true">
       <span>Responsible AI</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarADP" aria-controls="navbarADP" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,29 +11,30 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarADP">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="what-we-do.html">What we do</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="strategy.html">Strategy</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ root }}about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ root }}what-we-do.html">What we do</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ root }}projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ root }}strategy.html">Strategy</a></li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">Best practices</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="best-practices.html">Overview</a></li>
+            <li><a class="dropdown-item" href="{{ root }}best-practices.html">Overview</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="ai-generated-code.html">AI-generated code</a></li>
-            <li><a class="dropdown-item" href="commit-messages.html">Commit messages</a></li>
-            <li><a class="dropdown-item" href="authored-by-tags.html">Authored-by tags</a></li>
-            <li><a class="dropdown-item" href="policy-recommendations.html">Policy recommendations</a></li>
-            <li><a class="dropdown-item" href="tool-use-risk.html">Tool-use risk</a></li>
+            <li><a class="dropdown-item" href="{{ root }}ai-generated-code.html">AI-generated code</a></li>
+            <li><a class="dropdown-item" href="{{ root }}commit-messages.html">Commit messages</a></li>
+            <li><a class="dropdown-item" href="{{ root }}authored-by-tags.html">Authored-by tags</a></li>
+            <li><a class="dropdown-item" href="{{ root }}policy-recommendations.html">Policy recommendations</a></li>
+            <li><a class="dropdown-item" href="{{ root }}tool-use-risk.html">Tool-use risk</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="us-copyright-law.html">US copyright law</a></li>
-            <li><a class="dropdown-item" href="eu-ai-act.html">EU AI Act</a></li>
+            <li><a class="dropdown-item" href="{{ root }}us-copyright-law.html">US copyright law</a></li>
+            <li><a class="dropdown-item" href="{{ root }}eu-ai-act.html">EU AI Act</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="get-involved.html">Get involved</a></li>
-        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-        <li class="nav-item"><a class="nav-link" href="whats-new.html">What's
+        <li class="nav-item"><a class="nav-link" href="{{ root }}get-involved.html">Get involved</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ root }}faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ root }}whats-new.html">What's
             New</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ root }}blog/">Blog</a></li>
         <li class="nav-item dropdown">
           <a href="javascript:void(0)" class="nav-link dropdown-toggle hidden-xs" role="button" data-bs-toggle="dropdown"><span class="fa-solid fa-magnifying-glass" aria-hidden="true"></span> Search</a>
           <ul class="search-form dropdown-menu">

@@ -44,11 +44,25 @@ before opening or updating a PR.
 - Pages live in `content/pages/*.md`, one Markdown file per page. Each starts with a
   Pelican metadata block — at least `Title:` and `license:`; the home page also sets
   `Template: index`. Mermaid code blocks render as diagrams.
+- Blog posts live in `content/blog/*.md` and need `Date:` as well (plus optional
+  `Author:`, `Tags:`, `Summary:`). They publish to `/blog/<slug>.html` with an index at
+  `/blog/index.html`, rendered by `blog.html` as a Pelican `DIRECT_TEMPLATES` entry. Tag,
+  category and author pages are deliberately not generated (`TAG_SAVE_AS` and friends are
+  `""`); tags are labels only. See README.md for the post front matter.
 - Adding a page does **not** add it to the navigation. Update the nav by hand in
   `content/theme/templates/menu.html`.
 - **Links are deliberately relative** (`about.html`, `css/…`, not `/about.html`,
-  `/css/…`). The site is flat (all pages at the root); keep new links relative — if a
-  subdirectory page is ever added, revisit this.
+  `/css/…`). Pages are all at the root; blog posts are the one exception and live one
+  level down, under `/blog/`. Templates handle that with a `root` variable: `article.html`
+  and `blog.html` set `{% set root = '../' %}`, every other template defaults it to `''`,
+  and the shared includes (`menu.html`, `footer.html`, `styles.html`, `post.html`,
+  `breadcrumbs.html`, `generic.html`, `blogindex.html`) prefix internal links with
+  `{{ root }}`. **Any new internal link in a shared template needs that prefix**, or it
+  breaks on post pages. In post *Markdown*, link to pages with `../` (`../faq.html`).
+- **The navigation bar is full.** `--rai-nav-h` (62px) sets the body's top padding, so if
+  a nav item wraps onto a second line the bar grows taller than that and page content
+  slides underneath it. Adding another nav item means re-checking the bar's height from
+  992px up, not just eyeballing it on a wide screen.
 - Branding lives in `pelicanconf.py` / `pelicanconf.yaml` (site name, domain, URL,
   repository) and `content/theme/templates/menu.html` + `styles.html`.
 - `generic.html` (used by most pages) already renders an `<h1>` from the page's
