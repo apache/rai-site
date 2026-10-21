@@ -477,14 +477,42 @@ hr { border: none; border-top: 1px solid var(--rai-rule); margin: 2.5rem 0; }
   color: var(--rai-muted);
 }
 
-.rai-backlink {
+/* A single quiet step back up, above the title and inside the text column.
+   The site is flat apart from /blog/, so a breadcrumb trail would be three
+   words of chrome to express one level of depth. */
+.rai-crumb {
+  font-size: 0.875rem;
+  margin-bottom: 0.7rem;
+}
+.rai-crumb a { color: var(--rai-faint); text-decoration: none; }
+.rai-crumb a:hover { color: var(--rai-ink); text-decoration: underline; }
+
+/* On a post the rule belongs under the whole header — title and date together —
+   rather than between them, which is where the shared h1 border would put it. */
+.rai-posthead {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--rai-rule);
+  margin-bottom: 1.75rem;
+}
+#contents .rai-posthead h1 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0.4rem;
+}
+.rai-posthead .rai-meta { margin-top: 0; margin-bottom: 0; }
+
+.rai-postfoot {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
   margin-top: 2.5rem;
   padding-top: 1.25rem;
   border-top: 1px solid var(--rai-rule-soft);
   font-size: 0.9375rem;
 }
-.rai-backlink a { color: var(--rai-muted); text-decoration: none; }
-.rai-backlink a:hover { color: var(--rai-ink); text-decoration: underline; }
+.rai-postfoot a { color: var(--rai-muted); text-decoration: none; }
+.rai-postfoot a:hover { color: var(--rai-ink); text-decoration: underline; }
 
 /* --------------------------------------------------------------------------
    Search + misc

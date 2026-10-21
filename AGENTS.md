@@ -93,7 +93,7 @@ before opening or updating a PR.
   level down, under `/blog/`. Templates handle that with a `root` variable: `article.html`
   and `blog.html` set `{% set root = '../' %}`, every other template defaults it to `''`,
   and the shared includes (`menu.html`, `footer.html`, `styles.html`, `post.html`,
-  `breadcrumbs.html`, `generic.html`, `blogindex.html`) prefix internal links with
+  `generic.html`, `blogindex.html`, `postlist.html`) prefix internal links with
   `{{ root }}`. **Any new internal link in a shared template needs that prefix**, or it
   breaks on post pages. In post *Markdown*, link to pages with `../` (`../faq.html`).
 - **The navigation bar is full.** `--rai-nav-h` (62px) sets the body's top padding, so if

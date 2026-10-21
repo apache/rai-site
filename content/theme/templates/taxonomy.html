@@ -24,22 +24,14 @@
   <body class="d-flex flex-column h-100">
     {% include "menu.html" %}
     <main class="flex-shrink-0">
-      <div class="card" style="height: 34px;">
-        <nav aria-label="breadcrumb" style="padding-left: 12px; padding-top: 4px;">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ root }}index.html">Home</a></li>
-            <li class="breadcrumb-item"><a href="{{ root }}blog/">Blog</a></li>
-            <li class="breadcrumb-item active">{{ taxonomy_label }}: {{ taxonomy_name }}</li>
-          </ol>
-        </nav>
-      </div>
       <div id="contents">
         <div class="bg-white rounded">
           <div class="mx-auto">
+            <p class="rai-crumb"><a href="{{ root }}blog/">&larr; Blog</a></p>
             <h1>{{ taxonomy_name }}</h1>
             <p class="rai-lede">Posts filed under this {{ taxonomy_label|lower }}.</p>
             {% include "postlist.html" %}
-            <p class="rai-backlink"><a href="{{ root }}blog/">&larr; All posts</a></p>
+            <div class="rai-postfoot"><a href="{{ root }}blog/">&larr; All posts</a></div>
           </div>
         </div>
       </div>
