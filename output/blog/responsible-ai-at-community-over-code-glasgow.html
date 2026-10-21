@@ -1,0 +1,290 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsible AI at Community Over Code, Glasgow - Apache Responsible AI</title>
+<link rel="icon" href="../images/rai-mark.svg" type="image/svg+xml">
+<link rel="shortcut icon" href="https://apache.org/favicons/favicon.ico">
+<meta name="description" content="The Responsible AI initiative brought two sessions and a hackathon slot to Community Over Code in Glasgow — a working session on llm.apache.org, and a roundtable on what AI is...">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/fontawesome.all.min.css" rel="stylesheet">
+<link href="../css/headerlink.css" rel="stylesheet">
+<link href="../css/app.css" rel="stylesheet">
+<link href="../highlight/github.min.css" rel="stylesheet">
+<script src="../highlight/highlight.min.js"></script>
+<script src="../js/mermaid.min.js"></script>
+<!-- pagefind search -->
+<link href="../_pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="../_pagefind/pagefind-ui.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+      new PagefindUI({ element: "#pagefind-search", bundlePath: "../_pagefind/" });
+  });
+  var pageTitle = '';
+  if(pageTitle === '404'){
+      window.addEventListener('DOMContentLoaded', (event) => {
+          new PagefindUI({ element: "#page-404-search", bundlePath: "../_pagefind/" });
+      });
+  }
+</script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: "default"
+  });
+</script>  </head>
+  <body class="d-flex flex-column h-100">
+<!-- nav bar -->
+<nav class="navbar navbar-expand-lg navbar-light rai-nav fixed-top" aria-label="Responsible AI Navigation">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../index.html">
+      <img src="../images/rai-mark.svg" alt="" aria-hidden="true">
+      <span>Responsible AI</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarADP" aria-controls="navbarADP" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarADP">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="../what-we-do.html">What we do</a></li>
+        <li class="nav-item"><a class="nav-link" href="../projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="../strategy.html">Strategy</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">Best practices</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../best-practices.html">Overview</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../ai-generated-code.html">AI-generated code</a></li>
+            <li><a class="dropdown-item" href="../commit-messages.html">Commit messages</a></li>
+            <li><a class="dropdown-item" href="../authored-by-tags.html">Authored-by tags</a></li>
+            <li><a class="dropdown-item" href="../policy-recommendations.html">Policy recommendations</a></li>
+            <li><a class="dropdown-item" href="../tool-use-risk.html">Tool-use risk</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../us-copyright-law.html">US copyright law</a></li>
+            <li><a class="dropdown-item" href="../eu-ai-act.html">EU AI Act</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../get-involved.html">Get involved</a></li>
+        <li class="nav-item"><a class="nav-link" href="../faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="../whats-new.html">What's
+            New</a></li>
+        <li class="nav-item"><a class="nav-link" href="../blog/">Blog</a></li>
+        <li class="nav-item dropdown">
+          <a href="javascript:void(0)" class="nav-link dropdown-toggle hidden-xs" role="button" data-bs-toggle="dropdown"><span class="fa-solid fa-magnifying-glass" aria-hidden="true"></span> Search</a>
+          <ul class="search-form dropdown-menu">
+            <li>
+              <div id="pagefind-search" class="input-group" style="width: 100%; padding: 0 5px;"></div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item me-lg-3 my-2 my-lg-0">
+          <a class="rai-support" href="https://apache.org/foundation/initiatives/responsibleai">Support the initiative</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            The ASF
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="https://www.apache.org/">Foundation</a></li>
+            <li><a class="dropdown-item" href="https://github.com/apache/rai-site/">Website repository</a></li>
+            <li><a class="dropdown-item" href="https://lists.apache.org/list.html?discuss@rai.apache.org">Mailing list archive</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://www.apache.org/licenses/">License</a></li>
+            <li><a class="dropdown-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></li>
+            <li><a class="dropdown-item" href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://www.apache.org/security/">Security</a></li>
+            <li><a class="dropdown-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>    <main class="flex-shrink-0">
+<!-- breadcrumbs -->
+<div class="card" style="height: 34px;">
+  <nav aria-label="breadcrumb"  style="padding-left: 12px; padding-top: 4px;">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="../blog/">Blog</a></li>
+      <li class="breadcrumb-item active"><a href="../blog/responsible-ai-at-community-over-code-glasgow.html">Responsible AI at Community Over Code, Glasgow</a></li>
+      <li class="breadcrumb-item active">(<a href="https://github.com/apache/rai-site/tree/main/content/blog/responsible-ai-at-community-over-code-glasgow.md">edit</a>)</li>
+    </ol>
+  </nav>
+</div><!-- page contents -->
+<div id="contents">
+  <div class="bg-white rounded">
+    <div class="mx-auto">
+      <h1>Responsible AI at Community Over Code, Glasgow</h1>
+      <p class="rai-meta">
+        <time datetime="2026-10-21T00:00:00+00:00">21 October 2026</time> · Andrew Musselman      </p>
+      <p>Community Over Code ran from 11 to 14 October at the Hilton Glasgow, and the Responsible AI
+initiative was there with two sessions on the Monday and a slot in the hackathon room alongside
+them. This is a short account of what we did, what we heard, and what happens next.</p>
+<h2>The hackathon: getting people onto llm.apache.org</h2>
+<p>The RAI hackathon session was built around one practical goal: get committers signed in to
+<a href="https://llm.apache.org">llm.apache.org</a> and making their first model call before they left the
+room.</p>
+<p>LLMAO is the Foundation's LLM gateway. It exists because the alternative &mdash; every project signing
+up for its own provider account and holding its own keys &mdash; scales badly and leaves the Foundation
+with no way to see what is being spent, on whose behalf, or against which model. The gateway gives
+the ASF a single sanctioned path to inference: you authenticate with your Apache identity, you get
+a credential scoped to a project, and the usage is attributed to that project and to you. Projects
+do not need their own vendor relationship to get useful work done, and the Foundation can answer
+for the cost and the policy in one place.</p>
+<p>For anyone who did not make it to Glasgow, the sign-up path is the same one we walked through in
+the room, and the gateway is OpenAI-compatible &mdash; in most cases pointing an existing client at a new
+base URL and key is the whole integration.</p>
+<p>The hackathon ran Monday through Wednesday in the Wee Dram Room, with projects claiming half-day
+slots across the three days. Responsible AI shared the schedule with ASF Tooling, Apache Magpie,
+Apache Sourcelume, Apache Search and a long list of others &mdash; see the
+<a href="https://events.apache.org/events/2026/community-over-code/hackathon.html">hackathon page</a> for how
+the time was carved up.</p>
+<h2>The roundtable: what AI is doing to maintainership</h2>
+<p>The Responsible AI Roundtable put six people on a panel &mdash; David Fisher, Jeff Genender, Holden
+Karau, Andrew Musselman, Jarek Potiuk and Tim Storer &mdash; and opened the floor.</p>
+<p>The questions on the table were the uncomfortable ones rather than the promotional ones:</p>
+<ul>
+<li>How do you attract and keep committers when automated shortcuts are available for the work that
+used to be how people earned their way in?</li>
+<li>What does meritocracy mean under the Apache Way when a contribution's provenance is harder to
+read than it used to be?</li>
+<li>How do you re-engage maintainers staring down a large legacy refactor that a model could attempt
+but not be accountable for?</li>
+<li>What do projects do about the rising volume of automated vulnerability reports and low-quality
+submissions, which cost real maintainer attention whether or not they are valid?</li>
+<li>And underneath all of it: what is the risk to open source innovation if the answer to each of
+these is handled badly?</li>
+</ul>
+<p>These are not questions the initiative is in a position to answer on anyone's behalf, and the
+session was not structured to produce a verdict. It was structured to get the problems stated
+plainly by the people living them, in a room where the Foundation's own tooling people were
+present to hear it.</p>
+<h2>Where the platform actually is</h2>
+<p>The sessions were grounded in work that already exists rather than a roadmap, so it is worth
+saying plainly what runs today and what does not.</p>
+<p><strong>LLMAO</strong> is the gateway described above: metered, attributed model access for Apache projects, at
+<a href="https://llm.apache.org">llm.apache.org</a>.</p>
+<p><strong>Gofannon</strong> is an agent workbench for the Foundation, based on the project of the same name that
+originated at the AI Alliance. It is where agents get built and run, so that a project can get
+useful work done without standing up its own infrastructure.</p>
+<p><strong>Memory</strong> is the newest piece, and the least built. The problem it addresses is that agents start
+every run empty: a scan run this month has no idea what last month's scan found or what the project
+already fixed. Memory gives agents somewhere to write down what is worth keeping and somewhere to
+read what an earlier run learned, with provenance attached so a human can see where a claim came
+from. It is being built at pilot scope, on the services the platform already runs.</p>
+<p>Alongside the platform, Foundation-scale security scanning has continued &mdash; a recent pass covered
+230 repositories across 75 project management committees in three days. The results of that work
+are what the memory pilot is being tested against first.</p>
+<p>Two adjacent projects came up repeatedly in the hallway track as well:
+<a href="../projects.html">Apache Magpie</a>, agent-assisted infrastructure for maintaining open source
+repositories, and <a href="../projects.html">Apache Sourcelume</a>, instrumentation for tracking the provenance
+of AI training data.</p>
+<h2>Coming up: FeatherCast</h2>
+<p>We recorded with <a href="https://feathercast.apache.org/">FeatherCast</a>, the ASF's podcast, while we were
+in Glasgow. The episode is not out yet &mdash; we will link it here and on
+<a href="../whats-new.html">What's New</a> when it lands.</p>
+<h2>Getting involved</h2>
+<p>The initiative does its work in public and the easiest way in is to show up on the list.</p>
+<ul>
+<li>Mailing list: <a href="https://lists.apache.org/list.html?discuss@rai.apache.org">discuss@rai.apache.org</a></li>
+<li>ASF Slack: <code>#rai-discuss</code></li>
+<li>The gateway: <a href="https://llm.apache.org">llm.apache.org</a></li>
+<li>More ways in: <a href="../get-involved.html">Get involved</a></li>
+</ul>
+<!--
+  TO FILL IN BEFORE PUBLISHING — things only someone who was in the room knows:
+  * Hackathon: how many people signed up for gateway access, which projects,
+    anything notable that got built or unblocked in the session.
+  * Roundtable: the two or three points that actually landed with the room,
+    and anything the audience raised that we had not anticipated.
+  * FeatherCast: host, recording date, and the episode link once published.
+  * Photos: the ASF blog recap will have some; add one or two here if useful
+    (put files in content/images/ and reference them as ../images/<name>).
+  Everything else on this page is checkable against the sources linked above.
+-->
+
+      <p class="rai-tags">
+<span class="rai-tag">events</span><span class="rai-tag">llmao</span><span class="rai-tag">community</span>      </p>
+      <p class="rai-backlink"><a href="../blog/">&larr; All posts</a></p>
+    </div>
+  </div>
+</div>    <!-- footer -->
+    <footer class="rai-footer">
+      <div class="rai-footer-inner">
+        <div>
+          <h4>Initiative</h4>
+          <ul>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../what-we-do.html">What we do</a></li>
+            <li><a href="../best-practices.html">Best practices</a></li>
+            <li><a href="../faq.html">FAQ</a></li>
+            <li><a href="../blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Participate</h4>
+          <ul>
+            <li><a href="../get-involved.html">Get involved</a></li>
+            <li><a href="https://lists.apache.org/list.html?discuss@rai.apache.org">Mailing list</a></li>
+            <li><a href="https://infra.apache.org/slack.html">ASF Slack</a></li>
+            <li><a href="https://github.com/apache/rai-site">Source repository</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="https://apache.org/foundation/initiatives/responsibleai">Support the initiative</a></li>
+            <li><a href="https://news.apache.org/foundation/entry/the-apache-software-foundation-launches-10m-responsible-ai-initiative-with-initial-1-75m-donation">Announcement</a></li>
+            <li><a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Foundation</h4>
+          <ul>
+            <li><a href="https://www.apache.org/">apache.org</a></li>
+            <li><a href="https://www.apache.org/licenses/">License</a></li>
+            <li><a href="https://www.apache.org/security/">Security</a></li>
+            <li><a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="rai-legal">
+        Copyright 2026, <a href="https://www.apache.org/">The Apache Software Foundation</a>, licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br>
+        Apache&reg; and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation.
+      </div>
+    </footer>    </main>
+    <script src="../js/bootstrap.bundle.min.js" integrity="sha384-TYMA+uAx4f43rilxPIhmlqA+Vi+xbyMe+YVR3BcL15NyHLqd+7WYNtyBPdayiOPx"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+      function decodeHtmlEntities(str) {
+        const txt = document.createElement("textarea");
+        txt.innerHTML = str;
+        return txt.value;
+      }
+      document.querySelectorAll("pre > code.language-mermaid").forEach((code, i) => {
+        let decoded = decodeHtmlEntities(code.innerHTML);
+        // Normalize whitespace
+        decoded = decoded.replace(/\t/g, "    ");
+        decoded = decoded.replace(/^\s*\n/, "").replace(/\n\s*$/, "");
+        const div = document.createElement("div");
+        div.className = "mermaid";
+        div.textContent = decoded;
+        code.parentElement.replaceWith(div);
+        console.log(`=== Mermaid block ${i} ===`);
+        console.log(decoded);
+      });
+      // Mermaid v10+ runs asynchronously
+      mermaid.run({ querySelector: ".mermaid" })
+        .catch(err => {
+          console.error("Mermaid rendering failed:", err);
+        });
+      });
+    </script>
+    <script>hljs.highlightAll();</script>  </body>
+</html>

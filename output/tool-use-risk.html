@@ -1,0 +1,347 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool-use risk for AI assistants - Apache Responsible AI</title>
+<link rel="icon" href="images/rai-mark.svg" type="image/svg+xml">
+<link rel="shortcut icon" href="https://apache.org/favicons/favicon.ico">
+<meta name="description" content="The Apache Software Foundation Responsible AI initiative">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/fontawesome.all.min.css" rel="stylesheet">
+<link href="css/headerlink.css" rel="stylesheet">
+<link href="css/app.css" rel="stylesheet">
+<link href="highlight/github.min.css" rel="stylesheet">
+<script src="highlight/highlight.min.js"></script>
+<script src="js/mermaid.min.js"></script>
+<!-- pagefind search -->
+<link href="_pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="_pagefind/pagefind-ui.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+      new PagefindUI({ element: "#pagefind-search", bundlePath: "_pagefind/" });
+  });
+  var pageTitle = '';
+  if(pageTitle === '404'){
+      window.addEventListener('DOMContentLoaded', (event) => {
+          new PagefindUI({ element: "#page-404-search", bundlePath: "_pagefind/" });
+      });
+  }
+</script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: "default"
+  });
+</script>  </head>
+  <body class="d-flex flex-column h-100">
+<!-- nav bar -->
+<nav class="navbar navbar-expand-lg navbar-light rai-nav fixed-top" aria-label="Responsible AI Navigation">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/rai-mark.svg" alt="" aria-hidden="true">
+      <span>Responsible AI</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarADP" aria-controls="navbarADP" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarADP">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="what-we-do.html">What we do</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="strategy.html">Strategy</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">Best practices</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="best-practices.html">Overview</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="ai-generated-code.html">AI-generated code</a></li>
+            <li><a class="dropdown-item" href="commit-messages.html">Commit messages</a></li>
+            <li><a class="dropdown-item" href="authored-by-tags.html">Authored-by tags</a></li>
+            <li><a class="dropdown-item" href="policy-recommendations.html">Policy recommendations</a></li>
+            <li><a class="dropdown-item" href="tool-use-risk.html">Tool-use risk</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="us-copyright-law.html">US copyright law</a></li>
+            <li><a class="dropdown-item" href="eu-ai-act.html">EU AI Act</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="get-involved.html">Get involved</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="whats-new.html">What's
+            New</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog/">Blog</a></li>
+        <li class="nav-item dropdown">
+          <a href="javascript:void(0)" class="nav-link dropdown-toggle hidden-xs" role="button" data-bs-toggle="dropdown"><span class="fa-solid fa-magnifying-glass" aria-hidden="true"></span> Search</a>
+          <ul class="search-form dropdown-menu">
+            <li>
+              <div id="pagefind-search" class="input-group" style="width: 100%; padding: 0 5px;"></div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item me-lg-3 my-2 my-lg-0">
+          <a class="rai-support" href="https://apache.org/foundation/initiatives/responsibleai">Support the initiative</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            The ASF
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="https://www.apache.org/">Foundation</a></li>
+            <li><a class="dropdown-item" href="https://github.com/apache/rai-site/">Website repository</a></li>
+            <li><a class="dropdown-item" href="https://lists.apache.org/list.html?discuss@rai.apache.org">Mailing list archive</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://www.apache.org/licenses/">License</a></li>
+            <li><a class="dropdown-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></li>
+            <li><a class="dropdown-item" href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://www.apache.org/security/">Security</a></li>
+            <li><a class="dropdown-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>    <main class="flex-shrink-0">
+      <div>
+<!-- page contents -->
+<div id="contents">
+  <div class="bg-white rounded">
+    <div class="mx-auto">
+      <h1>Tool-use risk for AI assistants</h1>
+      <h2>DRAFT DOCUMENT</h2>
+<p><strong>This document is an UNOFFICIAL DRAFT and should not be considered official
+policy.  Substantial changes may be made before being published as an official
+policy.  Direct any questions to <a href="mailto:discuss@rai.apache.org">discuss@rai.apache.org</a>.</strong></p>
+<h2>What this page is (and is not)</h2>
+<p>This page is about <strong>tool-use risk</strong>: conditions a vendor places on the
+<em>person using the tool</em> (the account holder). Those conditions can include
+acceptable-use rules, compete clauses, rate limits, account termination, and
+indemnity in the vendor's terms.</p>
+<p>This page is <strong>not</strong> about whether generated output can be contributed under
+the Apache License 2.0, and it is not a row in the Legal Affairs
+<a href="https://www.apache.org/legal/generative-tooling-terms-reviewed.html">generative-tooling terms review</a>.
+Those pages ask whether a restriction <strong>travels with the output</strong> into a
+release. Tool-use risk does not travel with the output. A breach, if any, sits
+with the contributor's vendor account.</p>
+<p>Keep the two questions separate:</p>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Who it binds</th>
+<th>Where it lives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Can this output be contributed and released under ALv2?</td>
+<td>The contribution / the release</td>
+<td>Legal guidance and the terms-review A/B/X rows</td>
+</tr>
+<tr>
+<td>Can <em>I</em> use this vendor while working on <em>this</em> project without picking a fight with my vendor account?</td>
+<td>The account holder</td>
+<td>This page (RAI best practices)</td>
+</tr></tbody></table>
+<p>A vendor shutting off someone's login does not change the license of
+<code>httpd</code>, Spark, or any other Apache tree. Downstream users of an ALv2
+release do not inherit the contributor's vendor AUP.</p>
+<h2>Why this is a RAI topic</h2>
+<p>Vendor catalogs move. Acceptable-use policies change without a license change
+on any Apache artifact. RAI can keep a short, living note of "this tool is a
+poor fit for that kind of work" without turning every vendor mood swing into a
+Foundation-wide license reclassification.</p>
+<p>Individual projects remain self-governing. Nothing here vetoes a commit or
+replaces PMC review.</p>
+<h2>Three kinds of work</h2>
+<p>When you pick an assistant, look at what you are building, not only at the
+tool's marketing page.</p>
+<h3>1. Ordinary Apache software</h3>
+<p>Most ASF work is libraries, servers, formats, data systems, build tools, and
+the like. Using an AI coding assistant on that work is ordinary tool use,
+same family as an IDE or a compiler. A vendor "don't compete with us" clause
+does not turn that output into a restricted artifact, and it does not reach
+through ALv2 to later users of the release.</p>
+<p>Examples: Spark, HTTP Server, Kafka, Flink (the engine, not an
+agent-product overlay), Tomcat, Maven.</p>
+<h3>2. Work in a vendor's product lane</h3>
+<p>Some vendors forbid using their <em>service or outputs</em> to develop (or help
+anyone develop) machine-learning models or products that compete with them,
+directly or indirectly. That rule binds the account holder.</p>
+<p>If the Apache project you are touching is itself a general assistant, a
+coding-agent workspace, a hosted chatbot, or another product that a
+reasonable reader would put in that vendor's current catalog, <strong>do not use
+that vendor as the assistant for that work.</strong> Use a different model or write
+the change by hand.</p>
+<p>This is a "pick another tool" problem, not a "this file cannot enter the
+tree" problem. The project can still take the patch. The contributor should
+not generate it with the vendor they would be competing with.</p>
+<p>Examples that <em>may</em> sit in this bucket, depending on the vendor's current
+catalog: incubating agent workspaces, general-purpose coding agents, hosted
+ASF-operated assistants. A harness that <em>calls</em> many vendors, including the
+one in question, is usually the opposite of competing with that vendor.</p>
+<h3>3. Training, distillation, and synthetic corpora</h3>
+<p>Using a vendor's outputs as training data, preference data, or distillation
+targets for another model is the clause almost every frontier vendor already
+writes down. Do not do that with vendor outputs unless that vendor's terms
+clearly allow it. This is independent of cases 1 and 2.</p>
+<h2>What a compete-style AUP does <em>not</em> do</h2>
+<ul>
+<li>It does not place a field-of-use on software that later ships under ALv2.</li>
+<li>It does not mean "someone could use this Apache release to compete,
+therefore the original assistant use was a breach." Third parties have
+always been free to take Apache software and compete with anyone. That is
+the license.</li>
+<li>It does not oblige downstream recipients to hold an account with the
+vendor, accept the vendor's terms, or refrain from competing.</li>
+<li>It does not change because the vendor later acquires an unrelated company
+or launches an unrelated product. If the <em>project you are editing today</em>
+is not in their lane today, case 1 still applies. RAI can update this
+page if a named project clearly moves into case 2.</li>
+</ul>
+<p>"Indirectly" and "assist anyone" in vendor AUPs are read here as the act of
+using <em>that service</em> to help build a competing product. Publishing ordinary
+ALv2 software is not that act.</p>
+<h2>Practical advice for contributors</h2>
+<ol>
+<li><strong>Read the terms that govern your own login</strong> (consumer vs API vs
+enterprise often differ). The public row on the Legal review page is a
+snapshot; your click-through may be newer.</li>
+<li><strong>Match the tool to the work.</strong> Case 1: use whatever assistant you
+already trust and can review. Case 2: switch vendors or do not use an
+assistant. Case 3: do not use vendor outputs as training data.</li>
+<li><strong>You still own the commit.</strong> Review the output. Do not commit what you
+cannot explain. Follow the project's usual review rules.</li>
+<li><strong>Disclose as the project asks.</strong> See
+<a href="commit-messages.html">Commit messages for AI-assisted code</a> and
+<a href="policy-recommendations.html">Policy recommendations</a>. Attribution
+(Generated-by / Co-authored-by) is documentation of how the patch was
+made. It is not an admission that the vendor's AUP rides with the file.</li>
+<li><strong>Secrets and private lists stay out of prompts.</strong> Tool-use risk includes
+sending project-private or embargoed material to a vendor. That is
+operational, not a license category.</li>
+<li><strong>Account loss is personal.</strong> Termination or indemnity in a vendor ToS is
+a risk to the person who clicked "agree." It is not a defect in the
+Apache release. If that risk is unacceptable to you, use another tool.</li>
+</ol>
+<h2>Practical advice for PMCs</h2>
+<ul>
+<li>Do not treat a contributor's vendor AUP as a third-party license on the
+tree.</li>
+<li>If the project is in case 2 for a named vendor, say so in the project's
+contributor docs ("don't use vendor X to generate patches for this
+repo; use Y or write it"). That is enough.</li>
+<li>Vendor neutrality for <em>runtime</em> support (calling many models) is separate
+from which model a committer used to write a patch.</li>
+<li>Point people at this page rather than opening a Legal category fight over
+an account-holder rule.</li>
+</ul>
+<h2>How this relates to Legal's A/B/X rows</h2>
+<p>The draft
+<a href="https://www.apache.org/legal/generative-tooling-terms-categories.html">What to Look For</a>
+page is about terms that restrict <strong>output</strong> or impose duties on
+<strong>recipients of the code</strong>. Its own text draws the line this page relies on:</p>
+<blockquote>
+<p>Rules about your use of the service are not the issue; rules that travel
+with the output are.</p>
+</blockquote>
+<p>A compete-style acceptable-use rule is a rule about use of the service. If
+Legal records a handling note on a review row ("account holders should not
+use this vendor to build products in the vendor's lane"), that note can
+point here. It should not, by itself, move an ordinary coding assistant to
+Category X for the whole Foundation.</p>
+<p>Updates to this page belong on <code>discuss@rai.apache.org</code> (and
+<code>general@rai.apache.org</code> where the RAI team uses that list). Questions
+about whether a given output is contributable under ALv2 belong on
+<code>legal-discuss@apache.org</code>.</p>
+<h2>Further reading</h2>
+<ul>
+<li><a href="ai-generated-code.html">AI-generated code in Apache projects</a></li>
+<li><a href="commit-messages.html">Commit messages for AI-assisted code</a></li>
+<li><a href="https://www.apache.org/legal/generative-tooling.html">Generative Tooling Guidance</a></li>
+<li><a href="https://www.apache.org/legal/generative-tooling-terms-reviewed.html">Generative AI tool terms: review results (draft)</a></li>
+<li><a href="https://www.apache.org/legal/generative-tooling-terms-categories.html">Generative AI tool terms: what to look for (draft)</a></li>
+</ul>
+<p><em>Back to <a href="best-practices.html">Best practices</a>.</em></p>
+
+    </div>
+  </div>
+</div>    <!-- footer -->
+    <footer class="rai-footer">
+      <div class="rai-footer-inner">
+        <div>
+          <h4>Initiative</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="what-we-do.html">What we do</a></li>
+            <li><a href="best-practices.html">Best practices</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Participate</h4>
+          <ul>
+            <li><a href="get-involved.html">Get involved</a></li>
+            <li><a href="https://lists.apache.org/list.html?discuss@rai.apache.org">Mailing list</a></li>
+            <li><a href="https://infra.apache.org/slack.html">ASF Slack</a></li>
+            <li><a href="https://github.com/apache/rai-site">Source repository</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="https://apache.org/foundation/initiatives/responsibleai">Support the initiative</a></li>
+            <li><a href="https://news.apache.org/foundation/entry/the-apache-software-foundation-launches-10m-responsible-ai-initiative-with-initial-1-75m-donation">Announcement</a></li>
+            <li><a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Foundation</h4>
+          <ul>
+            <li><a href="https://www.apache.org/">apache.org</a></li>
+            <li><a href="https://www.apache.org/licenses/">License</a></li>
+            <li><a href="https://www.apache.org/security/">Security</a></li>
+            <li><a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="rai-legal">
+        Copyright 2026, <a href="https://www.apache.org/">The Apache Software Foundation</a>, licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br>
+        Apache&reg; and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation.
+      </div>
+    </footer>      </div>
+    </main>
+    <script src="js/bootstrap.bundle.min.js" integrity="sha384-TYMA+uAx4f43rilxPIhmlqA+Vi+xbyMe+YVR3BcL15NyHLqd+7WYNtyBPdayiOPx"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+      function decodeHtmlEntities(str) {
+        const txt = document.createElement("textarea");
+        txt.innerHTML = str;
+        return txt.value;
+      }
+      document.querySelectorAll("pre > code.language-mermaid").forEach((code, i) => {
+        let decoded = decodeHtmlEntities(code.innerHTML);
+        // Normalize whitespace
+        decoded = decoded.replace(/\t/g, "    ");
+        decoded = decoded.replace(/^\s*\n/, "").replace(/\n\s*$/, "");
+        const div = document.createElement("div");
+        div.className = "mermaid";
+        div.textContent = decoded;
+        code.parentElement.replaceWith(div);
+        console.log(`=== Mermaid block ${i} ===`);
+        console.log(decoded);
+      });
+      // Mermaid v10+ runs asynchronously
+      mermaid.run({ querySelector: ".mermaid" })
+        .catch(err => {
+          console.error("Mermaid rendering failed:", err);
+        });
+      });
+    </script>
+    <script>hljs.highlightAll();</script>  </body>
+</html>

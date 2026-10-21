@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Responsible AI - blog</title><link href="https://rai.apache.org/" rel="alternate"></link><link href="https://rai.apache.org/feeds/blog.atom.xml" rel="self"></link><id>https://rai.apache.org/</id><updated>2026-10-21T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Responsible AI at Community Over Code, Glasgow</title><link href="https://rai.apache.org/blog/responsible-ai-at-community-over-code-glasgow.html" rel="alternate"></link><published>2026-10-21T00:00:00+00:00</published><updated>2026-10-21T00:00:00+00:00</updated><author><name></name></author><id>tag:rai.apache.org,2026-10-21:/blog/responsible-ai-at-community-over-code-glasgow.html</id><summary type="html">The Responsible AI initiative brought two sessions and a hackathon slot to Community Over Code in Glasgow — a working session on llm.apache.org, and a roundtable on what AI is doing to open source maintainership.</summary><content type="html">&lt;p&gt;Community Over Code ran from 11 to 14 October at the Hilton Glasgow, and the Responsible AI
+initiative was there with two sessions on the Monday and a slot in the hackathon room alongside
+them. This is a short account of what we did, what we heard, and what happens next.&lt;/p&gt;
+&lt;h2&gt;The hackathon: getting people onto llm.apache.org&lt;/h2&gt;
+&lt;p&gt;The RAI hackathon session was built around one practical goal: get committers signed in to
+&lt;a href="https://llm.apache.org"&gt;llm.apache.org&lt;/a&gt; and making their first model call before they left the
+room.&lt;/p&gt;
+&lt;p&gt;LLMAO is the Foundation's LLM gateway. It exists because the alternative &amp;mdash; every project signing
+up for its own provider account and holding its own keys &amp;mdash; scales badly and leaves the Foundation
+with no way to see what is being spent, on whose behalf, or against which model. The gateway gives
+the ASF a single sanctioned path to inference: you authenticate with your Apache identity, you get
+a credential scoped to a project, and the usage is attributed to that project and to you. Projects
+do not need their own vendor relationship to get useful work done, and the Foundation can answer
+for the cost and the policy in one place.&lt;/p&gt;
+&lt;p&gt;For anyone who did not make it to Glasgow, the sign-up path is the same one we walked through in
+the room, and the gateway is OpenAI-compatible &amp;mdash; in most cases pointing an existing client at a new
+base URL and key is the whole integration.&lt;/p&gt;
+&lt;p&gt;The hackathon ran Monday through Wednesday in the Wee Dram Room, with projects claiming half-day
+slots across the three days. Responsible AI shared the schedule with ASF Tooling, Apache Magpie,
+Apache Sourcelume, Apache Search and a long list of others &amp;mdash; see the
+&lt;a href="https://events.apache.org/events/2026/community-over-code/hackathon.html"&gt;hackathon page&lt;/a&gt; for how
+the time was carved up.&lt;/p&gt;
+&lt;h2&gt;The roundtable: what AI is doing to maintainership&lt;/h2&gt;
+&lt;p&gt;The Responsible AI Roundtable put six people on a panel &amp;mdash; David Fisher, Jeff Genender, Holden
+Karau, Andrew Musselman, Jarek Potiuk and Tim Storer &amp;mdash; and opened the floor.&lt;/p&gt;
+&lt;p&gt;The questions on the table were the uncomfortable ones rather than the promotional ones:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How do you attract and keep committers when automated shortcuts are available for the work that
+used to be how people earned their way in?&lt;/li&gt;
+&lt;li&gt;What does meritocracy mean under the Apache Way when a contribution's provenance is harder to
+read than it used to be?&lt;/li&gt;
+&lt;li&gt;How do you re-engage maintainers staring down a large legacy refactor that a model could attempt
+but not be accountable for?&lt;/li&gt;
+&lt;li&gt;What do projects do about the rising volume of automated vulnerability reports and low-quality
+submissions, which cost real maintainer attention whether or not they are valid?&lt;/li&gt;
+&lt;li&gt;And underneath all of it: what is the risk to open source innovation if the answer to each of
+these is handled badly?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These are not questions the initiative is in a position to answer on anyone's behalf, and the
+session was not structured to produce a verdict. It was structured to get the problems stated
+plainly by the people living them, in a room where the Foundation's own tooling people were
+present to hear it.&lt;/p&gt;
+&lt;h2&gt;Where the platform actually is&lt;/h2&gt;
+&lt;p&gt;The sessions were grounded in work that already exists rather than a roadmap, so it is worth
+saying plainly what runs today and what does not.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LLMAO&lt;/strong&gt; is the gateway described above: metered, attributed model access for Apache projects, at
+&lt;a href="https://llm.apache.org"&gt;llm.apache.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Gofannon&lt;/strong&gt; is an agent workbench for the Foundation, based on the project of the same name that
+originated at the AI Alliance. It is where agents get built and run, so that a project can get
+useful work done without standing up its own infrastructure.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Memory&lt;/strong&gt; is the newest piece, and the least built. The problem it addresses is that agents start
+every run empty: a scan run this month has no idea what last month's scan found or what the project
+already fixed. Memory gives agents somewhere to write down what is worth keeping and somewhere to
+read what an earlier run learned, with provenance attached so a human can see where a claim came
+from. It is being built at pilot scope, on the services the platform already runs.&lt;/p&gt;
+&lt;p&gt;Alongside the platform, Foundation-scale security scanning has continued &amp;mdash; a recent pass covered
+230 repositories across 75 project management committees in three days. The results of that work
+are what the memory pilot is being tested against first.&lt;/p&gt;
+&lt;p&gt;Two adjacent projects came up repeatedly in the hallway track as well:
+&lt;a href="../projects.html"&gt;Apache Magpie&lt;/a&gt;, agent-assisted infrastructure for maintaining open source
+repositories, and &lt;a href="../projects.html"&gt;Apache Sourcelume&lt;/a&gt;, instrumentation for tracking the provenance
+of AI training data.&lt;/p&gt;
+&lt;h2&gt;Coming up: FeatherCast&lt;/h2&gt;
+&lt;p&gt;We recorded with &lt;a href="https://feathercast.apache.org/"&gt;FeatherCast&lt;/a&gt;, the ASF's podcast, while we were
+in Glasgow. The episode is not out yet &amp;mdash; we will link it here and on
+&lt;a href="../whats-new.html"&gt;What's New&lt;/a&gt; when it lands.&lt;/p&gt;
+&lt;h2&gt;Getting involved&lt;/h2&gt;
+&lt;p&gt;The initiative does its work in public and the easiest way in is to show up on the list.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mailing list: &lt;a href="https://lists.apache.org/list.html?discuss@rai.apache.org"&gt;discuss@rai.apache.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ASF Slack: &lt;code&gt;#rai-discuss&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The gateway: &lt;a href="https://llm.apache.org"&gt;llm.apache.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;More ways in: &lt;a href="../get-involved.html"&gt;Get involved&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--
+  TO FILL IN BEFORE PUBLISHING — things only someone who was in the room knows:
+  * Hackathon: how many people signed up for gateway access, which projects,
+    anything notable that got built or unblocked in the session.
+  * Roundtable: the two or three points that actually landed with the room,
+    and anything the audience raised that we had not anticipated.
+  * FeatherCast: host, recording date, and the episode link once published.
+  * Photos: the ASF blog recap will have some; add one or two here if useful
+    (put files in content/images/ and reference them as ../images/&lt;name&gt;).
+  Everything else on this page is checkable against the sources linked above.
+--&gt;
+</content><category term="blog"></category></entry></feed>
