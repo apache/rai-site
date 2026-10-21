@@ -1,4 +1,6 @@
 {% set root = '../' %}
+{# the Blog crumb is already the last one here, so don't repeat the page #}
+{% set hide_page_crumb = true %}
 {% block head %}
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">

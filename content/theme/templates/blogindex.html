@@ -5,29 +5,7 @@
     <div class="mx-auto">
       <h1>Blog</h1>
       <p class="rai-lede">News and updates from the Responsible AI initiative at The Apache Software Foundation.</p>
-
-      {% if articles %}
-      <ul class="rai-postlist">
-        {% for article in articles %}
-        <li class="rai-postlist-item">
-          <h2><a href="{{ root }}blog/{{ article.slug }}.html">{{ article.title }}</a></h2>
-          <p class="rai-meta">
-            <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%d %B %Y') }}</time>
-            {%- if article.author %} · {{ article.author }}{% endif %}
-          </p>
-          {% if article.summary %}<div class="rai-summary">{{ article.summary }}</div>{% endif %}
-          {% if article.tags %}
-          <p class="rai-tags">
-            {% for tag in article.tags %}<span class="rai-tag">{{ tag.name }}</span>{% endfor %}
-          </p>
-          {% endif %}
-          <p><a class="rai-more" href="{{ root }}blog/{{ article.slug }}.html">Continue reading &rarr;</a></p>
-        </li>
-        {% endfor %}
-      </ul>
-      {% else %}
-      <p>No posts yet.</p>
-      {% endif %}
+      {% include "postlist.html" %}
     </div>
   </div>
 </div>

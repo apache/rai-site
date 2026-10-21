@@ -10,8 +10,8 @@
       {% if article %}
       <li class="breadcrumb-item active"><a href="{{ root }}blog/{{ article.slug }}.html">{{ article.title }}</a></li>
       <li class="breadcrumb-item active">(<a href="https://github.com/apache/rai-site/tree/main/content/blog/{{ article.slug }}.md">edit</a>)</li>
-      {% elif page %}
-      <li class="breadcrumb-item active"><a href="{{ root }}{{ page.slug }}.html">{{ page.title }}</a></li>
+      {% elif page and not hide_page_crumb %}
+      <li class="breadcrumb-item active"><a href="{{ root }}{{ page.url }}">{{ page.title }}</a></li>
       <li class="breadcrumb-item active">(<a href="https://github.com/apache/rai-site/tree/main/content/pages/{{ page.slug }}.md">edit</a>)</li>
       {% endif %}
     </ol>

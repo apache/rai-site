@@ -14,17 +14,32 @@ There is **no simple local build**. The authoritative build runs on **ASF
 infrastructure**, driven by `.asf.yaml`: the `pelican`/`publish` configuration builds
 the `main` branch and publishes the generated HTML to the `asf-site` branch, which is
 served at `rai.apache.org` (see [`apache/infrastructure-asfyaml`](https://github.com/apache/infrastructure-asfyaml#deploy)
-for how that mechanism works). In CI this is mirrored by
-`apache/infrastructure-actions/pelican` (`.github/workflows/build-pelican.yml`).
+for how that mechanism works). The build runs on **ASF BuildBot**
+([ci2.apache.org](https://ci2.apache.org)) — commits on `asf-site` are labelled
+"Automatic Site Publish by Buildbot". There is **no GitHub Actions build**: the only
+workflow in this repo is `pre-commit.yml`, so the Actions tab will never show a site
+build, and build results arrive by email instead (`notifications.jobs` in `.asf.yaml`,
+plus the pushing committer's `@apache.org` address).
 
-That action — not `pyproject.toml` — supplies the ASF Pelican plugins the config
-requires (`asfgenid`, `asfrun`, plus `toc`, `spu`, `gfm`). `pyproject.toml` lists only
-`pelican` + helpers, so `pelican` alone will **not** reproduce the real build. To build
-outside the ASF action you need the plugins from
-[`apache/infrastructure-pelican`](https://github.com/apache/infrastructure-pelican).
+> **`pelicanconf.py` is not what the build reads.** `buildsite.py` in
+> [`apache/infrastructure-pelican`](https://github.com/apache/infrastructure-pelican)
+> checks for `pelicanconf.yaml` first, and when it exists — it does here — it
+> *generates* `pelican.auto.py` from that YAML via `bin/pelican.auto.ezt` and passes
+> that to Pelican. `pelicanconf.py` is only a fallback for repositories with no YAML,
+> and the copy in this repository is a stale snapshot of the generated file, kept for
+> local builds. **Editing `pelicanconf.py` has no effect on the published site**, and
+> the YAML schema is fixed: it accepts the keys in
+> [`pelicanconf.md`](https://github.com/apache/infrastructure-pelican/blob/master/pelicanconf.md)
+> and offers no way to set arbitrary Pelican settings. Anything the generated settings
+> don't give you has to be solved in the theme or in content metadata.
 
-`pagefind.sh` (referenced as `ASF_POSTRUN` in `pelicanconf.py`) downloads the `pagefind`
-binary at build time and generates the search index into `_pagefind/`.
+The ASF plugins the config requires (`asfgenid`, `asfrun`, plus `toc`, `spu`, `gfm`) come
+from `infrastructure-pelican`, not `pyproject.toml`, which lists only `pelican` + helpers.
+So `pelican` alone will **not** reproduce the real build.
+
+`pagefind.sh` (`postrun` in `pelicanconf.yaml`, `ASF_POSTRUN` in the generated settings)
+downloads the `pagefind` binary at build time and generates the search index into
+`_pagefind/`.
 
 ## Build and test commands
 
@@ -45,10 +60,20 @@ before opening or updating a PR.
   Pelican metadata block — at least `Title:` and `license:`; the home page also sets
   `Template: index`. Mermaid code blocks render as diagrams.
 - Blog posts live in `content/blog/*.md` and need `Date:` as well (plus optional
-  `Author:`, `Tags:`, `Summary:`). They publish to `/blog/<slug>.html` with an index at
-  `/blog/index.html`, rendered by `blog.html` as a Pelican `DIRECT_TEMPLATES` entry. Tag,
-  category and author pages are deliberately not generated (`TAG_SAVE_AS` and friends are
-  `""`); tags are labels only. See README.md for the post front matter.
+  `Author:`, `Tags:`, `Summary:`). They publish to `/blog/<slug>.html`. See README.md for
+  the front matter.
+- **The blog index is a page, not a direct template.** `content/pages/blog.md` carries
+  `Template: blog`, `Save_as: blog/index.html` and `URL: blog/`, and holds no content of
+  its own. It is done this way because `DIRECT_TEMPLATES` can only be set in Pelican
+  settings, and the generated settings aren't ours to change (see above).
+- **`tag.html`, `category.html` and `author.html` must exist.** The generated settings set
+  only the plural switches (`TAGS_SAVE_AS` and friends) and leave the singular ones at
+  their defaults, so Pelican writes one page per tag, category and author for every post
+  whether we want them or not. With no template of our own it falls back to Pelican's
+  built-in simple theme, which extends `index.html`, which expects a `page` — and the
+  whole build dies with something unhelpful like `'str' object has no attribute 'slug'`.
+  The three thin templates and the shared `taxonomy.html` exist to catch that. **Removing
+  them breaks every build that has a post in it**, not just the taxonomy pages.
 - Adding a page does **not** add it to the navigation. Update the nav by hand in
   `content/theme/templates/menu.html`.
 - **Links are deliberately relative** (`about.html`, `css/…`, not `/about.html`,

@@ -15,8 +15,8 @@ content/
   blog/         Markdown blog posts (one file per post, published under /blog/)
   theme/        Pelican theme (templates)
   css/ js/ fonts/ highlight/ images/   static assets
-pelicanconf.py  Pelican configuration (Python)
-pelicanconf.yaml
+pelicanconf.yaml  Pelican configuration — the one the ASF build reads
+pelicanconf.py    Stale copy of the generated settings, for local builds only
 .asf.yaml       ASF infrastructure configuration (build + notifications)
 pyproject.toml  Python dependencies (managed with uv)
 ```
@@ -56,6 +56,12 @@ Two things to watch:
 - **Links to pages need `../`** — a post lives one directory down, so link to
   `../get-involved.html`, not `get-involved.html`. Links between posts are plain
   (`other-post.html`), and so are external links.
+
+The index at `/blog/` is `content/pages/blog.md`, which only tells Pelican where to put
+the page; the heading and the post list come from the theme. Posts also generate
+`/tag/*.html`, `/category/*.html` and `/author/*.html` listings — those are a requirement
+of the ASF build rather than a feature, and they're marked `noindex`. See AGENTS.md
+before touching any of it.
 
 ## Local build (optional)
 
