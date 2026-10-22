@@ -1,0 +1,43 @@
+{% set root = root|default('../') %}
+{#
+  Shared page for Pelican's per-tag, per-category and per-author listings.
+
+  These pages exist because the ASF build generates its settings from
+  pelicanconf.yaml, and that template sets only the plural switches
+  (TAGS_SAVE_AS and friends). The singular ones default to tag/{slug}.html,
+  category/{slug}.html and author/{slug}.html, so Pelican writes one page per
+  tag, category and author whether or not we want them. Without a template of
+  our own it falls back to Pelican's simple theme, which extends index.html and
+  takes the whole build down. Giving it somewhere to land is the fix.
+#}
+{% block head %}
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ taxonomy_label }}: {{ taxonomy_name }} - {{SITENAME}}</title>
+    <meta name="robots" content="noindex, follow">
+    {% include "styles.html" %}
+  </head>
+  <body class="d-flex flex-column h-100">
+    {% include "menu.html" %}
+    <main class="flex-shrink-0">
+      <div id="contents">
+        <div class="bg-white rounded">
+          <div class="mx-auto">
+            <p class="rai-crumb"><a href="{{ root }}blog/">&larr; Blog</a></p>
+            <h1>{{ taxonomy_name }}</h1>
+            <p class="rai-lede">Posts filed under this {{ taxonomy_label|lower }}.</p>
+            {% include "postlist.html" %}
+            <div class="rai-postfoot"><a href="{{ root }}blog/">&larr; All posts</a></div>
+          </div>
+        </div>
+      </div>
+      {% include "footer.html" %}
+    </main>
+    {% include "post.html" %}
+  </body>
+</html>
+{% endblock %}

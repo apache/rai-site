@@ -3,6 +3,8 @@ license: https://www.apache.org/licenses/LICENSE-2.0
 
 News items will be shared on the [general@rai.apache.org](https://lists.apache.org/list.html?general@rai.apache.org) list — [subscribe](mailto:general-subscribe@rai.apache.org) today!
 
+- [Responsible AI at Community Over Code, Glasgow](blog/responsible-ai-at-community-over-code-glasgow.html)
+  — the hackathon, the roundtable, and where the platform actually is
 - Triumphs, Tooling, TLPs, and talks: [What the ASF Responsible AI Initiative Has
   Built So Far](https://news.apache.org/foundation/entry/what-the-asf-responsible-ai-initiative-has-built-so-far)
 - [Security scanning at Foundation scale](https://news.apache.org/foundation/entry/security-scanning-at-foundation-scale) with ASF Tooling and ASF Security

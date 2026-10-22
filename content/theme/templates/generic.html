@@ -1,11 +1,27 @@
+{% set root = root|default('') %}
 <!-- page contents -->
 <div id="contents">
   <div class="bg-white rounded">
     <div class="mx-auto">
       {% if article %}
-      <h1>{{ article.title }}</h1>
-      <p class="rai-meta">Posted on {{ article.date }}</p>
+      <header class="rai-posthead">
+        <p class="rai-crumb"><a href="{{ root }}blog/">&larr; Blog</a></p>
+        <h1>{{ article.title }}</h1>
+        <p class="rai-meta">
+          <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%d %B %Y') }}</time>
+          {%- if article.byline %} · {{ article.byline }}{% endif %}
+        </p>
+      </header>
       {{ article.content }}
+      {% if article.topics %}
+      <p class="rai-tags">
+        {% for topic in article.topics.split(',') %}<span class="rai-tag">{{ topic.strip() }}</span>{% endfor %}
+      </p>
+      {% endif %}
+      <div class="rai-postfoot">
+        <a href="{{ root }}blog/">&larr; All posts</a>
+        <a href="https://github.com/apache/rai-site/tree/main/content/blog/{{ article.slug }}.md">Edit this page</a>
+      </div>
       {% else %}
       <h1>{{ page.title }}</h1>
       {{ page.content }}

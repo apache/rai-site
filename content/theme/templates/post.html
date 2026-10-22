@@ -1,4 +1,5 @@
-    <script src="js/bootstrap.bundle.min.js" integrity="sha384-TYMA+uAx4f43rilxPIhmlqA+Vi+xbyMe+YVR3BcL15NyHLqd+7WYNtyBPdayiOPx"></script>
+{% set root = root|default('') %}
+    <script src="{{ root }}js/bootstrap.bundle.min.js" integrity="sha384-TYMA+uAx4f43rilxPIhmlqA+Vi+xbyMe+YVR3BcL15NyHLqd+7WYNtyBPdayiOPx"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
       function decodeHtmlEntities(str) {

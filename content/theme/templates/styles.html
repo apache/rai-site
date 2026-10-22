@@ -1,24 +1,25 @@
-<link rel="icon" href="images/rai-mark.svg" type="image/svg+xml">
+{% set root = root|default('') %}
+<link rel="icon" href="{{ root }}images/rai-mark.svg" type="image/svg+xml">
 <link rel="shortcut icon" href="https://apache.org/favicons/favicon.ico">
-<meta name="description" content="{{ SITEDESC }}">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/fontawesome.all.min.css" rel="stylesheet">
-<link href="css/headerlink.css" rel="stylesheet">
-<link href="css/app.css" rel="stylesheet">
-<link href="highlight/github.min.css" rel="stylesheet">
-<script src="highlight/highlight.min.js"></script>
-<script src="js/mermaid.min.js"></script>
+<meta name="description" content="{% if article %}{{ article.summary|striptags|truncate(180)|trim }}{% else %}{{ SITEDESC }}{% endif %}">
+<link href="{{ root }}css/bootstrap.min.css" rel="stylesheet">
+<link href="{{ root }}css/fontawesome.all.min.css" rel="stylesheet">
+<link href="{{ root }}css/headerlink.css" rel="stylesheet">
+<link href="{{ root }}css/app.css" rel="stylesheet">
+<link href="{{ root }}highlight/github.min.css" rel="stylesheet">
+<script src="{{ root }}highlight/highlight.min.js"></script>
+<script src="{{ root }}js/mermaid.min.js"></script>
 <!-- pagefind search -->
-<link href="_pagefind/pagefind-ui.css" rel="stylesheet">
-<script src="_pagefind/pagefind-ui.js"></script>
+<link href="{{ root }}_pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="{{ root }}_pagefind/pagefind-ui.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', (event) => {
-      new PagefindUI({ element: "#pagefind-search" });
+      new PagefindUI({ element: "#pagefind-search", bundlePath: "{{ root }}_pagefind/" });
   });
   var pageTitle = '';
   if(pageTitle === '404'){
       window.addEventListener('DOMContentLoaded', (event) => {
-          new PagefindUI({ element: "#page-404-search" });
+          new PagefindUI({ element: "#page-404-search", bundlePath: "{{ root }}_pagefind/" });
       });
   }
 </script>

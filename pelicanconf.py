@@ -45,7 +45,7 @@ TAGS_SAVE_AS = ""
 CATEGORIES_SAVE_AS = ""
 AUTHORS_SAVE_AS = ""
 ARCHIVES_SAVE_AS = ""
-# Disable articles by pointing to a (should-be-absent) subdir
+# Blog posts live in content/blog/ and are published under /blog/
 ARTICLE_PATHS = ["blog"]
 # needed to create blogs page
 ARTICLE_URL = "blog/{slug}.html"
