@@ -20,12 +20,12 @@
 <script src="_pagefind/pagefind-ui.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', (event) => {
-      new PagefindUI({ element: "#pagefind-search" });
+      new PagefindUI({ element: "#pagefind-search", bundlePath: "_pagefind/" });
   });
   var pageTitle = '';
   if(pageTitle === '404'){
       window.addEventListener('DOMContentLoaded', (event) => {
-          new PagefindUI({ element: "#page-404-search" });
+          new PagefindUI({ element: "#page-404-search", bundlePath: "_pagefind/" });
       });
   }
 </script>
@@ -71,6 +71,7 @@
         <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
         <li class="nav-item"><a class="nav-link" href="whats-new.html">What's
             New</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog/">Blog</a></li>
         <li class="nav-item dropdown">
           <a href="javascript:void(0)" class="nav-link dropdown-toggle hidden-xs" role="button" data-bs-toggle="dropdown"><span class="fa-solid fa-magnifying-glass" aria-hidden="true"></span> Search</a>
           <ul class="search-form dropdown-menu">
@@ -113,6 +114,8 @@
       <h1>What's New</h1>
       <p>News items will be shared on the <a href="https://lists.apache.org/list.html?general@rai.apache.org">general@rai.apache.org</a> list &mdash; <a href="mailto:general-subscribe@rai.apache.org">subscribe</a> today!</p>
 <ul>
+<li><a href="blog/responsible-ai-at-community-over-code-glasgow.html">Responsible AI at Community Over Code, Glasgow</a>
+&mdash; the hackathon, the roundtable, and where the platform actually is</li>
 <li>Triumphs, Tooling, TLPs, and talks: <a href="https://news.apache.org/foundation/entry/what-the-asf-responsible-ai-initiative-has-built-so-far">What the ASF Responsible AI Initiative Has
 Built So Far</a></li>
 <li><a href="https://news.apache.org/foundation/entry/security-scanning-at-foundation-scale">Security scanning at Foundation scale</a> with ASF Tooling and ASF Security</li>
@@ -135,6 +138,7 @@ at Community Over Code / Glasgow.  Come and learn how to connect to <a href="htt
             <li><a href="what-we-do.html">What we do</a></li>
             <li><a href="best-practices.html">Best practices</a></li>
             <li><a href="faq.html">FAQ</a></li>
+            <li><a href="blog/">Blog</a></li>
           </ul>
         </div>
         <div>

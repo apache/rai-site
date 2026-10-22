@@ -20,12 +20,12 @@
 <script src="_pagefind/pagefind-ui.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', (event) => {
-      new PagefindUI({ element: "#pagefind-search" });
+      new PagefindUI({ element: "#pagefind-search", bundlePath: "_pagefind/" });
   });
   var pageTitle = '';
   if(pageTitle === '404'){
       window.addEventListener('DOMContentLoaded', (event) => {
-          new PagefindUI({ element: "#page-404-search" });
+          new PagefindUI({ element: "#page-404-search", bundlePath: "_pagefind/" });
       });
   }
 </script>
@@ -71,6 +71,7 @@
         <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
         <li class="nav-item"><a class="nav-link" href="whats-new.html">What's
             New</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog/">Blog</a></li>
         <li class="nav-item dropdown">
           <a href="javascript:void(0)" class="nav-link dropdown-toggle hidden-xs" role="button" data-bs-toggle="dropdown"><span class="fa-solid fa-magnifying-glass" aria-hidden="true"></span> Search</a>
           <ul class="search-form dropdown-menu">
@@ -188,6 +189,7 @@ the four active work streams.</p>
             <li><a href="what-we-do.html">What we do</a></li>
             <li><a href="best-practices.html">Best practices</a></li>
             <li><a href="faq.html">FAQ</a></li>
+            <li><a href="blog/">Blog</a></li>
           </ul>
         </div>
         <div>
