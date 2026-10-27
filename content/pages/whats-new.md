@@ -1,8 +1,13 @@
 Title: What's New
 license: https://www.apache.org/licenses/LICENSE-2.0
 
-News items will be shared on the [general@rai.apache.org](https://lists.apache.org/list.html?general@rai.apache.org) list — [subscribe](mailto:general-subscribe@rai.apache.org) today!  Also be sure to check out the [Blog](/blog/) for team perspectives, deeper dives into RAI-related Projects, and more.
+News items will be shared on the [general@rai.apache.org](https://lists.apache.org/list.html?general@rai.apache.org) list — [subscribe](mailto:general-subscribe@rai.apache.org) today!
 
+Our own writing lives on the [blog](blog/); this page collects it alongside coverage elsewhere.
+
+- [Tiny model, full provenance](blog/tiny-model-full-provenance.html) — Apache Sourcelume
+  records provenance for models as well as datasets, demonstrated by a sample that trains a
+  tiny model and writes its own training provenance record in the same run
 - [Responsible AI at Community Over Code, Glasgow](blog/responsible-ai-at-community-over-code-glasgow.html)
   — the hackathon, the roundtable, and where the platform actually is
 - Triumphs, Tooling, TLPs, and talks: [What the ASF Responsible AI Initiative Has
