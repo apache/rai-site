@@ -1,0 +1,219 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny model, full provenance — where Apache Sourcelume is, and where it is heading - Apache Responsible AI</title>
+<link rel="icon" href="../images/rai-mark.svg" type="image/svg+xml">
+<link rel="shortcut icon" href="https://apache.org/favicons/favicon.ico">
+<meta name="description" content="Apache Sourcelume now records provenance for models as well as datasets, and a sample project trains a tiny model that writes its own training provenance record as part of the run.">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/fontawesome.all.min.css" rel="stylesheet">
+<link href="../css/headerlink.css" rel="stylesheet">
+<link href="../css/app.css" rel="stylesheet">
+<link href="../highlight/github.min.css" rel="stylesheet">
+<script src="../highlight/highlight.min.js"></script>
+<script src="../js/mermaid.min.js"></script>
+<!-- pagefind search -->
+<link href="../_pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="../_pagefind/pagefind-ui.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+      new PagefindUI({ element: "#pagefind-search", bundlePath: "../_pagefind/" });
+  });
+  var pageTitle = '';
+  if(pageTitle === '404'){
+      window.addEventListener('DOMContentLoaded', (event) => {
+          new PagefindUI({ element: "#page-404-search", bundlePath: "../_pagefind/" });
+      });
+  }
+</script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: "default"
+  });
+</script>  </head>
+  <body class="d-flex flex-column h-100">
+<!-- nav bar -->
+<nav class="navbar navbar-expand-lg navbar-light rai-nav fixed-top" aria-label="Responsible AI Navigation">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../index.html">
+      <img src="../images/rai-mark.svg" alt="" aria-hidden="true">
+      <span>Responsible AI</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarADP" aria-controls="navbarADP" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarADP">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="../what-we-do.html">What we do</a></li>
+        <li class="nav-item"><a class="nav-link" href="../projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="../strategy.html">Strategy</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">Best practices</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../best-practices.html">Overview</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../ai-generated-code.html">AI-generated code</a></li>
+            <li><a class="dropdown-item" href="../commit-messages.html">Commit messages</a></li>
+            <li><a class="dropdown-item" href="../authored-by-tags.html">Authored-by tags</a></li>
+            <li><a class="dropdown-item" href="../policy-recommendations.html">Policy recommendations</a></li>
+            <li><a class="dropdown-item" href="../tool-use-risk.html">Tool-use risk</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../us-copyright-law.html">US copyright law</a></li>
+            <li><a class="dropdown-item" href="../eu-ai-act.html">EU AI Act</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../get-involved.html">Get involved</a></li>
+        <li class="nav-item"><a class="nav-link" href="../faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="../whats-new.html">What's
+            New</a></li>
+        <li class="nav-item"><a class="nav-link" href="../blog/">Blog</a></li>
+        <li class="nav-item dropdown">
+          <a href="javascript:void(0)" class="nav-link dropdown-toggle hidden-xs" role="button" data-bs-toggle="dropdown"><span class="fa-solid fa-magnifying-glass" aria-hidden="true"></span> Search</a>
+          <ul class="search-form dropdown-menu">
+            <li>
+              <div id="pagefind-search" class="input-group" style="width: 100%; padding: 0 5px;"></div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item me-lg-3 my-2 my-lg-0">
+          <a class="rai-support" href="https://apache.org/foundation/initiatives/responsibleai">Support the initiative</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            The ASF
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="https://www.apache.org/">Foundation</a></li>
+            <li><a class="dropdown-item" href="https://github.com/apache/rai-site/">Website repository</a></li>
+            <li><a class="dropdown-item" href="https://lists.apache.org/list.html?discuss@rai.apache.org">Mailing list archive</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://www.apache.org/licenses/">License</a></li>
+            <li><a class="dropdown-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></li>
+            <li><a class="dropdown-item" href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://www.apache.org/security/">Security</a></li>
+            <li><a class="dropdown-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>    <main class="flex-shrink-0">
+<!-- page contents -->
+<div id="contents">
+  <div class="bg-white rounded">
+    <div class="mx-auto">
+      <header class="rai-posthead">
+        <p class="rai-crumb"><a href="../blog/">&larr; Blog</a></p>
+        <h1>Tiny model, full provenance — where Apache Sourcelume is, and where it is heading</h1>
+        <p class="rai-meta">
+          <time datetime="2026-10-27T00:00:00+00:00">27 October 2026</time> · Achim Nierbeck and Jamie Goodyear        </p>
+      </header>
+      <p>Ask anyone who ships a language model a simple question: which data was this trained on, and what license comes with it? The honest answer today is a shrug with a bibliography. Training corpora are assembled from dozens or hundreds of sources, licensing information is missing, wrong, or unverifiable &mdash; a 2024 audit found license-omission rates above 70% across popular dataset-hosting sites &mdash; and what a producer does publish is usually a claim you have to take on faith: a paragraph in a paper, a model card, a PDF. Nothing you can check.</p>
+<h2>What Sourcelume is</h2>
+<p>That is the gap <a href="https://sourcelume.apache.org/">Apache Sourcelume</a> is built for. It is not a certification authority and it does not decide whether anyone's licensing claims are true. It is plumbing: a versioned, JSON-LD metadata specification for dataset origin, custody chain, and licensing; a reference registry built on Apache Atlas that stores and serves those records through plain REST APIs; and tooling that turns "documenting your data" from a favor into a build step. The point is narrower and more radical than a licensing database: when a claim is published as a record, in a shared shape, at a stable identifier, then others can finally check it &mdash; resolve it, compare it, count it &mdash; instead of trusting it.</p>
+<h2>Datasets, and then models</h2>
+<p>The dataset side of this is already real. The spec's <code>ProvenanceRecord</code> has been exercised against a public example we could find: the <a href="https://huggingface.co/danish-foundation-models/DFM-Mimir">DFM M&iacute;mir training corpus</a>. We verified dataset by dataset, straight from the report's own tables. But records about datasets were only ever half of the question.</p>
+<p>On the model side, the situation is inverted: model producers know exactly what they trained on, but there has been no neutral place to say it. When a downstream consumer recently asked whether they could fetch structured provenance for a model &mdash; machine-readable, not prose &mdash; the piece that would answer them did not exist. The mental model that emerged in the discussion was an SBOM for models: software bills of materials let a shipped artifact declare its ingredients; a model should be able to do the same for its training data, with the producer attesting to the list. So Sourcelume grew a second record type: the <code>TrainingProvenanceRecord</code>. A model producer publishes it; it references dataset records by their canonical identifiers, with token counts and shares; it can say <code>disclosure: complete</code>, <code>partial</code>, or honestly <code>undisclosed</code>, because an honest "we don't disclose" is also information worth publishing.</p>
+<h2>A record you can watch being born</h2>
+<p>Which brings us to the demo, because a record type is only as real as a record you can watch being born. The <a href="https://github.com/apache/sourcelume-sample"><code>apache/sourcelume-sample</code></a> repository trains a character-level language model of 71,891 parameters, on a corpus every reader knows is public domain: <em>Alice's Adventures in Wonderland</em>, Project Gutenberg ebook #11, 1865. Then, in the same run, the trainer writes the model's provenance record: a <code>TrainingProvenanceRecord</code> pointing at the dataset record by its canonical IRI, with the <em>actual</em> numbers from the run &mdash; tokens, share, loss, timestamp.</p>
+<p>This is where the sober result lands. Not a claim restated in a PDF paper &mdash; the run's own tokens, shares, and loss now sit in Sourcelume, written by the trainer that produced them. And as the sample shows, the whole thing drops straight into existing build tooling. Nothing is reconstructed by hand after the fact: the record is written where the data is already being used, in the same pipeline that trains the model.</p>
+<p>Our sample code lives at <a href="https://github.com/apache/sourcelume-sample">github.com/apache/sourcelume-sample</a> for those who would like to dive in.</p>
+<h2>What it does not do yet</h2>
+<p>As it stands today, Sourcelume can show the data that was deposited in it. What it does not do yet &mdash; and where community discussion still needs to happen &mdash; is verify that any of it is true. Today, Sourcelume's job is exactly this: information can be filed and fetched back by machines. Our community is working towards its initial release goals, with attestation features becoming our next target.</p>
+<h2>Getting involved</h2>
+<p>Sourcelume is an open project, and there is room to help shape what comes next. Whether you're interested in provenance metadata, dataset licensing, model training, API design, or responsible AI more broadly, we welcome people who want to help build and test the specification, contribute to the reference implementation, improve the examples and documentation, or participate in discussions about how provenance claims should be represented and eventually verified.</p>
+<p>If this work interests you, join the Apache Sourcelume community. Explore the code and examples, try the sample training pipeline, share your feedback, or get involved in the discussions around the project's next milestones. The goal is not just to make provenance machine-readable, but to build an open, community-driven infrastructure that makes it easier to understand where datasets and models come from &mdash; and what we can actually verify about them.</p>
+<p>Apache Sourcelume is an ASF Top-level Project. For more information, visit <a href="https://sourcelume.apache.org/">sourcelume.apache.org</a>.</p>
+<hr/>
+<p><em>Achim Nierbeck is an ASF Member and a member of the Apache Karaf and Apache Sourcelume PMCs. Jamie Goodyear is an ASF Member and Vice President, Apache Sourcelume.</em></p>
+
+      <p class="rai-tags">
+<span class="rai-tag">sourcelume</span><span class="rai-tag">provenance</span><span class="rai-tag">projects</span>      </p>
+      <div class="rai-postfoot">
+        <a href="../blog/">&larr; All posts</a>
+        <a href="https://github.com/apache/rai-site/tree/main/content/blog/tiny-model-full-provenance.md">Edit this page</a>
+      </div>
+    </div>
+  </div>
+</div>    <!-- footer -->
+    <footer class="rai-footer">
+      <div class="rai-footer-inner">
+        <div>
+          <h4>Initiative</h4>
+          <ul>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../what-we-do.html">What we do</a></li>
+            <li><a href="../best-practices.html">Best practices</a></li>
+            <li><a href="../faq.html">FAQ</a></li>
+            <li><a href="../blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Participate</h4>
+          <ul>
+            <li><a href="../get-involved.html">Get involved</a></li>
+            <li><a href="https://lists.apache.org/list.html?discuss@rai.apache.org">Mailing list</a></li>
+            <li><a href="https://infra.apache.org/slack.html">ASF Slack</a></li>
+            <li><a href="https://github.com/apache/rai-site">Source repository</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="https://apache.org/foundation/initiatives/responsibleai">Support the initiative</a></li>
+            <li><a href="https://news.apache.org/foundation/entry/the-apache-software-foundation-launches-10m-responsible-ai-initiative-with-initial-1-75m-donation">Announcement</a></li>
+            <li><a href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Foundation</h4>
+          <ul>
+            <li><a href="https://www.apache.org/">apache.org</a></li>
+            <li><a href="https://www.apache.org/licenses/">License</a></li>
+            <li><a href="https://www.apache.org/security/">Security</a></li>
+            <li><a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="rai-legal">
+        Copyright 2026, <a href="https://www.apache.org/">The Apache Software Foundation</a>, licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br>
+        Apache&reg; and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation.
+      </div>
+    </footer>    </main>
+    <script src="../js/bootstrap.bundle.min.js" integrity="sha384-TYMA+uAx4f43rilxPIhmlqA+Vi+xbyMe+YVR3BcL15NyHLqd+7WYNtyBPdayiOPx"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+      function decodeHtmlEntities(str) {
+        const txt = document.createElement("textarea");
+        txt.innerHTML = str;
+        return txt.value;
+      }
+      document.querySelectorAll("pre > code.language-mermaid").forEach((code, i) => {
+        let decoded = decodeHtmlEntities(code.innerHTML);
+        // Normalize whitespace
+        decoded = decoded.replace(/\t/g, "    ");
+        decoded = decoded.replace(/^\s*\n/, "").replace(/\n\s*$/, "");
+        const div = document.createElement("div");
+        div.className = "mermaid";
+        div.textContent = decoded;
+        code.parentElement.replaceWith(div);
+        console.log(`=== Mermaid block ${i} ===`);
+        console.log(decoded);
+      });
+      // Mermaid v10+ runs asynchronously
+      mermaid.run({ querySelector: ".mermaid" })
+        .catch(err => {
+          console.error("Mermaid rendering failed:", err);
+        });
+      });
+    </script>
+    <script>hljs.highlightAll();</script>  </body>
+</html>
