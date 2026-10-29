@@ -5,6 +5,7 @@ News items will be shared on the [general@rai.apache.org](https://lists.apache.o
 
 Our own writing lives on the [blog](blog/); this page collects it alongside coverage elsewhere.
 
+- Interview with VP Responsible AI Initiative Jeff Genender, and AI Platform Engineer Andrew Musselman on the [PlusOne videocast](https://www.youtube.com/watch?v=DgQtZzeHX2w)
 - [Tiny model, full provenance](blog/tiny-model-full-provenance.html) — Apache Sourcelume
   records provenance for models as well as datasets, demonstrated by a sample that trains a
   tiny model and writes its own training provenance record in the same run
