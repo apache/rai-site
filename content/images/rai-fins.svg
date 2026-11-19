@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 70 766 1020" role="img" aria-label="Apache Responsible AI">
+<!-- Licensed to the Apache Software Foundation (ASF) under the Apache License, Version 2.0. -->
+  <title>Apache Responsible AI</title>
+  <g fill="none" stroke="#15181d" stroke-width="67" stroke-linejoin="miter">
+    <circle cx="227.5" cy="177.5" r="71"/>
+    <circle cx="106.5" cy="579.5" r="71"/>
+    <circle cx="227.5" cy="981.5" r="71"/>
+    <path d="M263.1 238.9L359.8 405.5H763"/>
+    <path d="M177.5 579.5H763"/>
+    <path d="M263.1 920.1L359.8 753.5H763"/>
+  </g>
+</svg>
