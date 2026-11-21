@@ -9,27 +9,24 @@ policy.  Direct any questions to discuss@rai.apache.org.**
 
 ## Guidance
 
-The following pages provide guidance on using AI in Apache projects. They cover
-copyright law, practical attribution conventions, commit message practices, and
-the Apache-ai tag policy.
+The following pages provide community guidance on using AI in Apache projects. They cover AI-generated code, copyright and regulatory considerations, tool-use risk, and key policy recommendations. For the authoritative Foundation legal policy on contributing AI-generated content, see the [ASF Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html).
 
-| Page | Description |
-| --- | --- |
-| [AI-generated code in Apache projects](ai-generated-code.html) | Guidelines for contributing code generated with AI tools to an Apache project |
-| [US copyright law and AI](us-copyright-law.html) | Thaler v. Perlmutter, US Copyright Office guidance, and what they mean for Apache contributors |
-| [EU AI Act and copyright](eu-ai-act.html) | EU AI Act timelines, transparency rules, and implications for ASF projects |
-| ["Authored by" and "Co-authored" Tags](authored-by-tags.html) | Best practices for attribution when AI assisted in creating content |
-| [Commit messages for AI-assisted code](commit-messages.html) | Conventions for documenting AI use in commit messages |
-| [Policy recommendations](policy-recommendations.html) | The Apache-ai tag and key recommendations for AI-assisted contributions |
-| [Tool-use risk for AI assistants](tool-use-risk.html) | Account-holder vendor rules vs what a release can carry |
+| Page                                                           | Description                                                                                    |
+| -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| [AI-generated code in Apache projects](ai-generated-code.html) | Guidelines for contributing code generated with AI tools to an Apache project                  |
+| [US copyright law and AI](us-copyright-law.html)               | Thaler v. Perlmutter, US Copyright Office guidance, and what they mean for Apache contributors |
+| [EU AI Act and copyright](eu-ai-act.html)                      | EU AI Act timelines, transparency rules, and implications for ASF projects                     |
+| [Policy recommendations](policy-recommendations.html)          | Key recommendations for AI-assisted contributions                                              |
+| [Tool-use risk for AI assistants](tool-use-risk.html)          | Account-holder vendor rules vs what a release can carry                                        |
 
 ## Related
 
-| Page | Description |
-| --- | --- |
-| [FAQ](faq.html) | Common questions about the Responsible AI initiative |
-| [What we do](what-we-do.html) | Our activities and guiding principles |
-| [Get involved](get-involved.html) | Join the discussion and contribute |
+| Page                                                                                    | Description                                                    |
+| --------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| [ASF Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html) | Authoritative ASF legal guidance on AI-generated contributions |
+| [FAQ](faq.html)                                                                         | Common questions about the Responsible AI initiative           |
+| [What we do](what-we-do.html)                                                           | Our activities and guiding principles                          |
+| [Get involved](get-involved.html)                                                       | Join the discussion and contribute                             |
 
 *These pages are guidance, not binding policy. Individual Apache projects
 remain self-governing and may adopt what is useful to them.*
