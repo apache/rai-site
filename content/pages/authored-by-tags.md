@@ -91,11 +91,7 @@ implying that the AI is a legal author or a human co-author.
 4. **Consider `ai-assisted-by` for AI tools.** If your project adopts this
    convention, it provides clear, unambiguous attribution for AI assistance.
 
-5. **Use the `Apache-ai` commit tag** if AI played a significant role. See
-   [Policy recommendations](policy-recommendations.html) for details on the
-   Apache-ai tag.
-
-6. **These are conventions, not legal requirements.** Individual projects may
+5. **These are conventions, not legal requirements.** Individual projects may
    adopt whatever attribution practices they find useful. The ASF does not
    mandate a specific convention.
 

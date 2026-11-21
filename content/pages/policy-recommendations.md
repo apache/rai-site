@@ -9,40 +9,7 @@ policy.  Direct any questions to discuss@rai.apache.org.**
 
 ## Policy recommendations for AI-assisted contributions
 
-This page summarizes the Apache Software Foundation's guidance and key
-recommendations for contributors who use AI tools when contributing code,
-documentation, or other material to Apache projects.
-
-## The Apache-ai commit tag
-
-The **Apache-ai** tag is a voluntary disclosure mechanism. When added to a
-commit, it signals that AI played a significant role in generating the
-contribution.
-
-### What it is
-
-- A tag in the commit message body, following the conventional `key: value`
-  format used by Git trailer tags.
-- A **disclosure**, not a warranty or a restriction. It tells downstream users
-  the story without imposing additional legal obligations.
-- Recognized by the ASF as a best practice for transparency, but it is not yet
-  a mandatory requirement across all projects.
-
-### When to use it
-
-| Situation | Recommendation |
-| --- | --- |
-| AI generated significant portions of code (core logic, large functions) | **Use the tag** — it is strongly recommended |
-| AI helped generate documentation or prose | **Consider the tag** — use it if the AI substantially rewrote the text |
-| AI assisted incidentally (suggested a single fix you heavily edited) | **Optional** — use it if you want to be thorough |
-| You are unsure | **Use it** — it is a disclosure, not a liability |
-
-### Example
-
-```
-Apache-ai: This contribution contains code significantly generated
-by an AI tool. See AI tagging policy for details.
-```
+This page summarizes key recommendations for contributors who use AI tools when contributing code, documentation, or other material to Apache projects.
 
 ## Key recommendations
 

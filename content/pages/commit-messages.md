@@ -86,33 +86,14 @@ All content written by the author.
    code, the commit message is your word as the committer. You are responsible
    for what you commit, regardless of whether AI generated any part of it.
 
-4. **Use the Apache-ai tag alongside `Generated-by:`.** If AI played a
-   significant role, add both the `Apache-ai` tag (for policy transparency)
-   and the `Generated-by:` token (for provenance tracking).
-
-5. **Keep it readable.** Don't over-annotate. A single `Generated-by:` line
+4. **Keep it readable.** Don't over-annotate. A single `Generated-by:` line
    and a brief description of what the AI produced and how you edited it is
    sufficient.
 
-## Sample commit with both tags
-
-```
-feat(config): add database connection pooling
-
-Generated-by: Cursor
-Apache-ai: This contribution contains code significantly generated
-by an AI tool. The function signature and connection logic were
-drafted by the AI; error handling and integration were written
-manually.
-
-Added configurable connection pooling to the database client.
-Supports connection limits, idle timeouts, and health checks.
-```
-
 ## Relationship to other pages
 
-- See [Policy recommendations](policy-recommendations.html) for the full
-  Apache-ai tag guidance.
+- See [Policy recommendations](policy-recommendations.html) for key
+  recommendations on AI-assisted contributions.
 - See ["Authored by" and "Co-authored" Tags](authored-by-tags.html) for
   attribution conventions.
 - See [AI-generated code in Apache projects](ai-generated-code.html) for

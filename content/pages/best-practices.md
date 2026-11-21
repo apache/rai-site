@@ -9,9 +9,7 @@ policy.  Direct any questions to discuss@rai.apache.org.**
 
 ## Guidance
 
-The following pages provide guidance on using AI in Apache projects. They cover
-copyright law, practical attribution conventions, commit message practices, and
-the Apache-ai tag policy.
+The following pages provide guidance on using AI in Apache projects. They cover copyright law, practical attribution conventions, commit message practices, and key policy recommendations.
 
 | Page | Description |
 | --- | --- |
@@ -20,7 +18,7 @@ the Apache-ai tag policy.
 | [EU AI Act and copyright](eu-ai-act.html) | EU AI Act timelines, transparency rules, and implications for ASF projects |
 | ["Authored by" and "Co-authored" Tags](authored-by-tags.html) | Best practices for attribution when AI assisted in creating content |
 | [Commit messages for AI-assisted code](commit-messages.html) | Conventions for documenting AI use in commit messages |
-| [Policy recommendations](policy-recommendations.html) | The Apache-ai tag and key recommendations for AI-assisted contributions |
+| [Policy recommendations](policy-recommendations.html) | Key recommendations for AI-assisted contributions |
 | [Tool-use risk for AI assistants](tool-use-risk.html) | Account-holder vendor rules vs what a release can carry |
 
 ## Related

@@ -123,9 +123,7 @@ Factors that suggest limited control:
    2.0 does not require the contributor to hold copyright — it only requires that
    you have the right to contribute it.
 
-2. **Be transparent.** Use the `Apache-ai` commit tag when AI played a
-   significant role in generating the code. See
-   [Policy recommendations](policy-recommendations.html).
+2. **Be transparent.** Follow the project's guidance on disclosing AI assistance when AI played a significant role in generating the code. See [Policy recommendations](policy-recommendations.html).
 
 3. **Document your process.** If you used AI to generate code, note what you did
    to review, edit, and integrate it. This helps downstream users understand the
