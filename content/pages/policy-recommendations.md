@@ -9,7 +9,7 @@ policy.  Direct any questions to discuss@rai.apache.org.**
 
 ## Policy recommendations for AI-assisted contributions
 
-This page summarizes key recommendations for contributors who use AI tools when contributing code, documentation, or other material to Apache projects.
+This page complements the official [ASF Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html) with practical recommendations for contributors who use AI tools when contributing code, documentation, or other material to Apache projects.
 
 ## Key recommendations
 
@@ -33,11 +33,12 @@ them on the [mailing list](get-involved.html).
 
 ## Cross-reference: all best practices pages
 
-| Topic                                          | Page                                                           |
-| ---------------------------------------------- | -------------------------------------------------------------- |
-| Guidelines for contributing AI-generated code  | [AI-generated code in Apache projects](ai-generated-code.html) |
-| US copyright law and AI                        | [US copyright law and AI](us-copyright-law.html)               |
-| EU AI Act and copyright                        | [EU AI Act and copyright](eu-ai-act.html)                      |
-| Tool-use risk for AI assistants                | [Tool-use risk for AI assistants](tool-use-risk.html)          |
+| Topic                                          | Page                                                                                    |
+| ---------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Authoritative ASF legal policy                 | [ASF Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html) |
+| Guidelines for contributing AI-generated code  | [AI-generated code in Apache projects](ai-generated-code.html)                          |
+| US copyright law and AI                        | [US copyright law and AI](us-copyright-law.html)                                        |
+| EU AI Act and copyright                        | [EU AI Act and copyright](eu-ai-act.html)                                               |
+| Tool-use risk for AI assistants                | [Tool-use risk for AI assistants](tool-use-risk.html)                                   |
 
 *Back to [Best practices](best-practices.html).*

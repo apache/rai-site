@@ -101,6 +101,7 @@ tool, consider the following:
 
 ## Further reading
 
+* See the [ASF Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html) for the official ASF legal policy.
 * See [US copyright law and AI](us-copyright-law.html) for the full legal context.
 * See [Policy recommendations](policy-recommendations.html) for a summary of key recommendations.
 
