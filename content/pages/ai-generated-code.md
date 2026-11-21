@@ -31,7 +31,7 @@ The US Copyright Office's guidance on AI-generated works distinguishes between t
 
 If a work is generated entirely by an AI without any human creative input, it receives **no copyright protection**. The US Court of Appeals held in *Thaler v. Perlmutter*, No. 23-5233, 2025 WL 839178 (D.C. Cir. Mar. 18, 2025) that only natural persons can be authors under the Copyright Act.
 
-**What this means for you:** You can still contribute purely AI-generated code to an Apache project — there is no legal barrier to contributing material that is not copyrightable. The distinction matters mainly for downstream users who want to know what is protected.
+**What this means for you:** You can contribute AI-generated code as long as it follows the [ASF Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html). In practice, the main things to check are the tool's terms and whether any third-party code was copied, since copyright status alone does not settle whether a contribution is safe to include.
 
 ### Scenario 2: human-authored work with embedded AI material
 

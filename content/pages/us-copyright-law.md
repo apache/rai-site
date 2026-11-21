@@ -72,7 +72,7 @@ Factors that suggest limited control:
 
 ## Implications for Apache contributors
 
-1. **You can contribute AI-generated code.** There is no legal barrier to contributing material that may not be fully copyrightable. The Apache License 2.0 does not require the contributor to hold copyright; it only requires that you have the right to contribute it.
+1. **You can contribute AI-generated code within ASF guidelines.** Not holding copyright on a piece of code does not by itself prevent contributing it, as long as you have the right to contribute it and follow the [ASF Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html) (in particular on tool terms and third-party material).
 
 2. **Be transparent.** Follow the project's guidance on disclosing AI assistance when AI played a significant role in generating the code. See [Policy recommendations](policy-recommendations.html).
 
