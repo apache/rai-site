@@ -103,7 +103,5 @@ tool, consider the following:
 
 * See [US copyright law and AI](us-copyright-law.html) for the full legal context.
 * See [Policy recommendations](policy-recommendations.html) for a summary of key recommendations.
-* See [Commit messages for AI-assisted code](commit-messages.html) for conventions
-  on documenting AI use in commits.
 
 *Back to [Best practices](best-practices.html).*

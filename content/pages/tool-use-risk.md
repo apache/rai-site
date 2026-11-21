@@ -114,11 +114,7 @@ ALv2 software is not that act.
    assistant. Case 3: do not use vendor outputs as training data.
 3. **You still own the commit.** Review the output. Do not commit what you
    cannot explain. Follow the project's usual review rules.
-4. **Disclose as the project asks.** See
-   [Commit messages for AI-assisted code](commit-messages.html) and
-   [Policy recommendations](policy-recommendations.html). Attribution
-   (Generated-by / Co-authored-by) is documentation of how the patch was
-   made. It is not an admission that the vendor's AUP rides with the file.
+4. **Disclose as the project asks.** See [Policy recommendations](policy-recommendations.html). Optional disclosure notes or trailers (such as `Generated-by:` or `Assisted-by:`) document how the patch was made, and are not an admission that the vendor's AUP rides with the file.
 5. **Secrets and private lists stay out of prompts.** Tool-use risk includes
    sending project-private or embargoed material to a vendor. That is
    operational, not a license category.
@@ -162,7 +158,6 @@ about whether a given output is contributable under ALv2 belong on
 ## Further reading
 
 * [AI-generated code in Apache projects](ai-generated-code.html)
-* [Commit messages for AI-assisted code](commit-messages.html)
 * [Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html)
 * [Generative AI tool terms: review results (draft)](https://www.apache.org/legal/generative-tooling-terms-reviewed.html)
 * [Generative AI tool terms: what to look for (draft)](https://www.apache.org/legal/generative-tooling-terms-categories.html)
