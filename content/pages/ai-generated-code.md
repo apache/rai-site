@@ -3,99 +3,57 @@ license: https://www.apache.org/licenses/LICENSE-2.0
 
 ## DRAFT DOCUMENT
 
-**This document is an UNOFFICIAL DRAFT and should not be considered official
-policy.  Substantial changes may be made before being published as an official
-policy.  Direct any questions to discuss@rai.apache.org.**
+**This document is an UNOFFICIAL DRAFT and should not be considered official policy. Substantial changes may be made before being published as an official policy. Direct any questions to discuss@rai.apache.org.**
 
 ## Contributing AI-generated code to Apache projects
 
-Apache contributors increasingly use AI tools — such as GitHub Copilot, Claude,
-Cursor, and other large language model (LLM) assistants — to help generate code,
-fix bugs, write documentation, and review pull requests. When the code you
-contribute to an Apache project has been significantly generated or modified by
-an AI tool, there are practical and legal considerations to keep in mind.
+Apache contributors increasingly use AI tools (such as GitHub Copilot, Claude, Cursor, and other large language model assistants) to help generate code, fix bugs, write documentation, and review pull requests. When the code you contribute to an Apache project has been significantly generated or modified by an AI tool, there are practical and legal considerations to keep in mind.
 
 ## Your obligations as a contributor
 
-Under the Apache Contributor License Agreement (ICLA), you represent that your
-contribution is your **original creation** or that you have the right to submit
-it under the applicable license. Specifically, Section 7 of the CLA states:
+Under the Apache Contributor License Agreement (ICLA), you represent that your contribution is your **original creation** or that you have the right to submit it under the applicable license. Specifically, Section 7 of the CLA states:
 
-> *Should You wish to submit work that is not Your original creation, You may
-> submit it to the Foundation separately from any Contribution, identifying the
-> complete details of its source and of any license or other restriction
-> (including, but not limited to, related patents, trademarks, and license
-> agreements) of which you are personally aware, and conspicuously marking the
-> work as "Submitted on behalf of a third-party: [named here]".*
+> *Should You wish to submit work that is not Your original creation, You may submit it to the Foundation separately from any Contribution, identifying the complete details of its source and of any license or other restriction (including, but not limited to, related patents, trademarks, and license agreements) of which you are personally aware, and conspicuously marking the work as "Submitted on behalf of a third-party: [named here]".*
 
-What this means is, if you want to submit something you did not create yourself,
-you can still submit it, but you must submit it separately from your own work
-and clearly tell the Foundation:
+What this means is, if you want to submit something you did not create yourself, you can still submit it, but you must submit it separately from your own work and clearly tell the Foundation:
 
 * Where the work came from (its source).
-* What legal restrictions apply to it that you know about—for example,
-  copyrights, patents, trademarks, or license agreements.
-* Clearly label it: “Submitted on behalf of a third-party: [name].”
+* What legal restrictions apply to it that you know about (for example, copyrights, patents, trademarks, or license agreements).
+* Clearly label it: "Submitted on behalf of a third-party: [name]."
 
-So, essentially: Don’t present someone else’s work as your own. If you submit
-it, identify the creator/source and disclose any restrictions you know about.
+So, essentially: Don't present someone else's work as your own. If you submit it, identify the creator/source and disclose any restrictions you know about.
 
 ## How the US Copyright Office views AI-generated material
 
-The US Copyright Office's guidance on AI-generated works distinguishes between
-three scenarios:
+The US Copyright Office's guidance on AI-generated works distinguishes between three scenarios:
 
 ### Scenario 1: purely AI-generated
 
-If a work is generated entirely by an AI without any human creative input, it
-receives **no copyright protection**. The US Court of Appeals held in *Thaler v.
-Perlmutter*, No. 23-5233, 2025 WL 839178 (D.C. Cir. Mar. 18, 2025) that only
-natural persons can be authors under the Copyright Act.
+If a work is generated entirely by an AI without any human creative input, it receives **no copyright protection**. The US Court of Appeals held in *Thaler v. Perlmutter*, No. 23-5233, 2025 WL 839178 (D.C. Cir. Mar. 18, 2025) that only natural persons can be authors under the Copyright Act.
 
-**What this means for you:** You can still contribute purely AI-generated code
-to an Apache project — there is no legal barrier to contributing material that
-is not copyrightable. The distinction matters mainly for downstream users who
-want to know what is protected.
+**What this means for you:** You can contribute AI-generated code as long as it follows the [ASF Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html). In practice, the main things to check are the tool's terms and whether any third-party code was copied, since copyright status alone does not settle whether a contribution is safe to include.
 
 ### Scenario 2: human-authored work with embedded AI material
 
-If you wrote a substantial amount of code and the AI contributed some portions
-(e.g., you used it to generate a function but then edited, reorganized, and
-integrated it into a larger module), the **human-authored portions** are
-copyrightable, while the AI-generated portions are not.
+If you wrote a substantial amount of code and the AI contributed some portions (e.g., you used it to generate a function but then edited, reorganized, and integrated it into a larger module), the **human-authored portions** are copyrightable, while the AI-generated portions are not.
 
-**What this means for you:** If you curate, edit, or substantially modify
-AI-generated code, the human contribution is protectable. Document what you
-did to make it your own creation.
+**What this means for you:** If you curate, edit, or substantially modify AI-generated code, the human contribution is protectable. Document what you did to make it your own creation.
 
 ### Scenario 3: AI-assisted (human uses AI as a tool)
 
-If you use AI as an assistive tool — much like using a compiler, a linter, or
-an IDE autocomplete — and you exercise creative control over the result, the
-work as a whole is copyrightable, and **you** are the author.
+If you use AI as an assistive tool (much like using a compiler, a linter, or an IDE autocomplete) and you exercise creative control over the result, the work as a whole is copyrightable, and **you** are the author.
 
-**What this means for you:** This is the most common scenario for Apache
-contributors. Using AI to suggest code, identify bugs, or generate a draft that
-you then review and integrate is generally safe.
+**What this means for you:** This is the most common scenario for Apache contributors. Using AI to suggest code, identify bugs, or generate a draft that you then review and integrate is generally safe.
 
 ## Conditions for contributing AI-generated code
 
-Before contributing code that was significantly generated or modified by an AI
-tool, consider the following:
+Before contributing code that was significantly generated or modified by an AI tool, consider the following:
 
-1. **Verify the tool's terms of service.** Some AI tools grant the provider broad
-   rights over your input (your code) and output (the generated code). Make sure
-   these terms are compatible with contributing under the Apache License 2.0.
+1. **Verify the tool's terms of service.** Some AI tools grant the provider broad rights over your input (your code) and output (the generated code). Make sure these terms are compatible with contributing under the Apache License 2.0.
 
-2. **Check for third-party material.** AI models are trained on vast corpora
-   that may include open source code from other projects. If the AI generates
-   code that closely resembles a file from a copyrighted project, there is a
-   (currently small) risk that the output could be a derivative work. This risk
-   is low for typical use but something to be aware of.
+2. **Check for third-party material.** AI models are trained on vast corpora that may include open source code from other projects. If the AI generates code that closely resembles a file from a copyrighted project, there is a (currently small) risk that the output could be a derivative work. This risk is low for typical use but something to be aware of.
 
-3. **Review and understand the output.** You are responsible for what you commit.
-   Read the AI-generated code, verify it is correct, and be able to explain what
-   it does.
+3. **Review and understand the output.** You are responsible for what you commit. Read the AI-generated code, verify it is correct, and be able to explain what it does.
 
 4. **Follow project disclosure practices.** Check whether the project you are contributing to asks for AI disclosure (for example, in the pull request description or via an optional commit trailer). See [Policy recommendations](policy-recommendations.html) for details.
 

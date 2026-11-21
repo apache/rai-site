@@ -3,9 +3,7 @@ license: https://www.apache.org/licenses/LICENSE-2.0
 
 ## DRAFT DOCUMENT
 
-**This document is an UNOFFICIAL DRAFT and should not be considered official
-policy.  Substantial changes may be made before being published as an official
-policy.  Direct any questions to discuss@rai.apache.org.**
+**This document is an UNOFFICIAL DRAFT and should not be considered official policy. Substantial changes may be made before being published as an official policy. Direct any questions to discuss@rai.apache.org.**
 
 ## Policy recommendations for AI-assisted contributions
 
@@ -17,7 +15,7 @@ This page complements the official [ASF Generative Tooling Guidance](https://www
 
 2. **Verify tool terms are compatible with Apache License 2.0.** Check the terms of service for your AI tool. Some tools grant the provider broad rights over your input (your code) and output (the generated code). Make sure these terms do not conflict with contributing under the Apache License 2.0.
 
-3. **Understand that AI-generated-only content may not be copyrightable.** Under US law, only natural persons can be authors. Purely AI-generated material may not receive copyright protection. This does not prevent you from contributing it, though it is important for downstream users to know what is protected.
+3. **Understand that AI-generated-only content may not be copyrightable.** Under US law, only natural persons can be authors, so purely AI-generated material may not receive copyright protection. That alone does not rule out contributing it under the [ASF Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html), though it is still worth keeping in mind for downstream users and across different jurisdictions.
 
 4. **Maintain human oversight and editorial control.** You are responsible for what you commit. Review AI-generated code, understand it, and be able to explain what it does.
 
@@ -25,11 +23,7 @@ This page complements the official [ASF Generative Tooling Guidance](https://www
 
 ## This is guidance, not binding policy
 
-The recommendations on this page are **guidance**, not binding policy.
-Individual Apache projects remain self-governing under the Apache Way and may
-adopt, adapt, or ignore these recommendations as they see fit. The initiative
-offers these as shared good practices, and projects are encouraged to discuss
-them on the [mailing list](get-involved.html).
+The recommendations on this page are **guidance**, not binding policy. Individual Apache projects remain self-governing under the Apache Way and may adopt, adapt, or ignore these recommendations as they see fit. The initiative offers these as shared good practices, and projects are encouraged to discuss them on the [mailing list](get-involved.html).
 
 ## Cross-reference: all best practices pages
 
