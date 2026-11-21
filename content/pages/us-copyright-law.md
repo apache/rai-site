@@ -3,106 +3,60 @@ license: https://www.apache.org/licenses/LICENSE-2.0
 
 ## DRAFT DOCUMENT
 
-**This document is an UNOFFICIAL DRAFT and should not be considered official
-policy.  Substantial changes may be made before being published as an official
-policy.  Direct any questions to discuss@rai.apache.org.**
+**This document is an UNOFFICIAL DRAFT and should not be considered official policy. Substantial changes may be made before being published as an official policy. Direct any questions to discuss@rai.apache.org.**
 
 ## US Copyright law and artificial intelligence
 
-A growing number of Apache contributors use AI tools to write, edit, and review
-code. The question arises: **who owns the copyright in that code, and what does
-that mean for the Apache community and downstream users?**
+A growing number of Apache contributors use AI tools to write, edit, and review code. The question arises: **who owns the copyright in that code, and what does that mean for the Apache community and downstream users?**
 
-This page summarizes the current state of US copyright law as it applies to
-AI-generated and AI-assisted software.
+This page summarizes the current state of US copyright law as it applies to AI-generated and AI-assisted software.
 
-## The key court case: _Thaler v. Perlmutter_
+## The key court case: *Thaler v. Perlmutter*
 
-The controlling US authority is the decision of the US Court of Appeals for the
-DC Circuit in **_Thaler v. Perlmutter_, No. 23-5233, 2025 WL 839178 (D.C. Cir.
-Mar. 18, 2025**.
+The controlling US authority is the decision of the US Court of Appeals for the DC Circuit in ***Thaler v. Perlmutter*, No. 23-5233, 2025 WL 839178 (D.C. Cir. Mar. 18, 2025)**.
 
-Thaler v. Perlmutter involved Stephen Thaler’s attempt to copyright artwork
-created entirely by his AI system, the “Creativity Machine.” The courts held
-that U.S. copyright law **requires a human author**, so an AI-generated work with no
-human creative authorship cannot receive copyright protection.
-
-Thaler v. Perlmutter concerned whether an AI system could be legally recognized
-as the author of a copyrightable work. Stephen Thaler argued that his AI system,
-the “Creativity Machine,” created the artwork independently and should be listed
-as its author. The courts rejected that argument, holding that **U.S. copyright
-law requires human authorship**. The case is significant because it establishes
-that AI cannot itself be an author, while leaving open how much human
-involvement is needed for AI-assisted works to receive copyright protection.
+*Thaler v. Perlmutter* concerned Stephen Thaler's attempt to register copyright for artwork created independently by his AI system, the "Creativity Machine," with the AI listed as author. The courts rejected that argument, holding that **U.S. copyright law requires human authorship**, so an AI-generated work with no human creative authorship cannot receive copyright protection. The case establishes that AI itself cannot be an author, while leaving open how much human involvement is needed for AI-assisted works to receive copyright protection.
 
 ## The US Copyright Office's Guidance
 
-The **U.S. Copyright Office** has released its multi-part report titled
-_Copyright and Artificial Intelligence_ to address the legal and policy
-implications of generative AI. The key portion of the report are summarized
-below, specifically Part 2 (Copyrightability of Generative AI Outputs) which has
-the greatest impacts on code contribution.
+The **U.S. Copyright Office** has released its multi-part report titled *Copyright and Artificial Intelligence* to address the legal and policy implications of generative AI. The key portion of the report is summarized below, specifically Part 2 (Copyrightability of Generative AI Outputs), which has the greatest impact on code contributions.
 
 ### Part 2: Copyrightability of Generative AI Outputs (Released January 29, 2025)
 
-**Focus:** Whether works created with or by generative AI qualify for copyright
-protection.
+**Focus:** Whether works created with or by generative AI qualify for copyright protection.
 
-- **The Human Authorship Mandate:** The report strongly reaffirms that **human
-  authorship is a strict requirement** for copyright protection under U.S. law.
-  Purely AI-generated material is not protectable.
-
-- **Prompting Alone is Insufficient:** Entering text prompts into an AI engine
-  does not constitute legal authorship, as the prompter does not maintain
-  complete creative control over the final expressive elements.
-
-- **AI-Assisted Work:** Works using AI may receive copyright protection on a
-  **case-by-case basis** if a human contributed sufficient original expression.
-  This includes creatively selecting, arranging, or modifying the AI output.
-
-- **Recommendation:** The Office advises **against creating any new intellectual
-  property frameworks** or laws for AI-generated outputs, stating that existing
-  copyright laws are fully equipped to handle these variations.
+- **The Human Authorship Mandate:** The report strongly reaffirms that **human authorship is a strict requirement** for copyright protection under U.S. law. Purely AI-generated material is not protectable.
+- **Prompting Alone is Insufficient:** Entering text prompts into an AI engine does not constitute legal authorship, as the prompter does not maintain complete creative control over the final expressive elements.
+- **AI-Assisted Work:** Works using AI may receive copyright protection on a **case-by-case basis** if a human contributed sufficient original expression. This includes creatively selecting, arranging, or modifying the AI output.
+- **Recommendation:** The Office advises **against creating any new intellectual property frameworks** or laws for AI-generated outputs, stating that existing copyright laws are fully equipped to handle these variations.
 
 ### Scenario 1: Purely AI-generated
 
 A work is entirely generated by an AI system without any human creative input.
 
-**Copyright status:** No copyright protection. The work is in the public domain
-because there is no human author.
+**Copyright status:** No copyright protection. The work is in the public domain because there is no human author.
 
-**Example:** You type a prompt into an AI code generator, it produces a file of
-code, and you copy-paste it into your project without any editing or selection.
+**Example:** You type a prompt into an AI code generator, it produces a file of code, and you copy-paste it into your project without any editing or selection.
 
 ### Scenario 2: Human-authored with embedded AI material
 
 A work contains both human-authored elements and AI-generated material.
 
-**Copyright status:** Only the **human-authored portions** are protected. The
-AI-generated portions are not. If the work cannot be separated into distinct
-human and AI portions, the protection is limited.
+**Copyright status:** Only the **human-authored portions** are protected. The AI-generated portions are not. If the work cannot be separated into distinct human and AI portions, the protection is limited.
 
-**Example:** You write a module, use AI to generate a helper function, and then
-edit that function to fit the module's design. The module structure and your
-edits are protected; the raw AI output is not.
+**Example:** You write a module, use AI to generate a helper function, and then edit that function to fit the module's design. The module structure and your edits are protected; the raw AI output is not.
 
 ### Scenario 3: AI-assisted (human uses AI as a tool)
 
-The human uses an AI tool in a way that is analogous to using a camera, a
-synthesizer, or an IDE — the tool assists, but the human makes the creative
-decisions.
+The human uses an AI tool in a way that is analogous to using a camera, a synthesizer, or an IDE: the tool assists, but the human makes the creative decisions.
 
-**Copyright status:** The work as a whole is copyrightable. The human is the
-author.
+**Copyright status:** The work as a whole is copyrightable. The human is the author.
 
-**Example:** You write code, ask an AI to suggest a refactor, review the
-suggestion, choose which changes to apply, and integrate them into your code.
+**Example:** You write code, ask an AI to suggest a refactor, review the suggestion, choose which changes to apply, and integrate them into your code.
 
 ## What "creative control" means
 
-The key factor distinguishing Scenario 2 from Scenario 3 is **human creative
-control** — did the human make substantive creative choices about the expression
-of the work?
+The key factor distinguishing Scenario 2 from Scenario 3 is **human creative control**: did the human make substantive creative choices about the expression of the work?
 
 Factors that suggest creative control:
 
@@ -118,30 +72,19 @@ Factors that suggest limited control:
 
 ## Implications for Apache contributors
 
-1. **You can contribute AI-generated code.** There is no legal barrier to
-   contributing material that may not be fully copyrightable. The Apache License
-   2.0 does not require the contributor to hold copyright — it only requires that
-   you have the right to contribute it.
+1. **You can contribute AI-generated code.** There is no legal barrier to contributing material that may not be fully copyrightable. The Apache License 2.0 does not require the contributor to hold copyright; it only requires that you have the right to contribute it.
 
 2. **Be transparent.** Follow the project's guidance on disclosing AI assistance when AI played a significant role in generating the code. See [Policy recommendations](policy-recommendations.html).
 
-3. **Document your process.** If you used AI to generate code, note what you did
-   to review, edit, and integrate it. This helps downstream users understand the
-   provenance of the code.
+3. **Document your process.** If you used AI to generate code, note what you did to review, edit, and integrate it. This helps downstream users understand the provenance of the code.
 
-4. **Your representation and warranty still apply.** Under Section 4 and 5 of
-   the Individual Contributor License Agreement v2.2, you represent that your
-   contribution is your original work or that you have the right to submit it.
-   Using AI does not change this obligation — you are still responsible for what
-   you commit.
+4. **Your representation and warranty still apply.** Under Sections 4 and 5 of the Apache Individual Contributor License Agreement (ICLA), you represent that your contribution is your original work or that you have the right to submit it. Using AI does not change this obligation; you are still responsible for what you commit.
 
 ## Further reading
 
-- [_Thaler v. Perlmutter_, No. 23-5233, 2025 WL 839178 (D.C. Cir. Mar. 18,
-  2025)](https://law.justia.com/cases/federal/appellate-courts/cadc/23-5233/23-5233-2025-03-18.html)
-- [US Copyright Office, "Artificial Intelligence Study
-  Intelligence"](https://www.copyright.gov/policy/artificial-intelligence/)
-- See [AI-generated code in Apache projects](ai-generated-code.html) for
-  practical guidance on contributing.
+- [ASF Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html)
+- [*Thaler v. Perlmutter*, No. 23-5233, 2025 WL 839178 (D.C. Cir. Mar. 18, 2025)](https://law.justia.com/cases/federal/appellate-courts/cadc/23-5233/23-5233-2025-03-18.html)
+- [US Copyright Office, "Copyright and Artificial Intelligence"](https://www.copyright.gov/policy/artificial-intelligence/)
+- See [AI-generated code in Apache projects](ai-generated-code.html) for practical guidance on contributing.
 
-_Back to [Best practices](best-practices.html)._
+*Back to [Best practices](best-practices.html).*
