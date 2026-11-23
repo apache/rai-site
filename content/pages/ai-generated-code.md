@@ -11,17 +11,11 @@ Apache contributors increasingly use AI tools (such as GitHub Copilot, Claude, C
 
 ## Your obligations as a contributor
 
-Under the Apache Contributor License Agreement (ICLA), you represent that your contribution is your **original creation** or that you have the right to submit it under the applicable license. Specifically, Section 7 of the CLA states:
+Under the Apache Individual Contributor License Agreement (ICLA) and the Apache License 2.0, every contribution carries two core expectations: you are legally entitled to grant the license (ICLA Section 4), and the contribution is your original creation (ICLA Section 5) with any third-party copyrighted material disclosed and compatible with the [ASF 3rd Party Licensing Policy](https://www.apache.org/legal/resolved.html).
 
-> *Should You wish to submit work that is not Your original creation, You may submit it to the Foundation separately from any Contribution, identifying the complete details of its source and of any license or other restriction (including, but not limited to, related patents, trademarks, and license agreements) of which you are personally aware, and conspicuously marking the work as "Submitted on behalf of a third-party: [named here]".*
+Note that while ICLA Section 7 allows submitting third-party work separately with full details of its source and license, those details are generally not knowable for generative AI output. As noted in the [ASF Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html), Section 7 is therefore not a practical route for contributing AI-generated material; contributors instead need to meet the tool-terms and third-party material conditions below.
 
-What this means is, if you want to submit something you did not create yourself, you can still submit it, but you must submit it separately from your own work and clearly tell the Foundation:
-
-* Where the work came from (its source).
-* What legal restrictions apply to it that you know about (for example, copyrights, patents, trademarks, or license agreements).
-* Clearly label it: "Submitted on behalf of a third-party: [name]."
-
-So, essentially: Don't present someone else's work as your own. If you submit it, identify the creator/source and disclose any restrictions you know about.
+If you later learn that an AI-assisted contribution reproduced code under an incompatible license, notify the Foundation (ICLA Section 8).
 
 ## How the US Copyright Office views AI-generated material
 
@@ -49,9 +43,9 @@ If you use AI as an assistive tool (much like using a compiler, a linter, or an 
 
 Before contributing code that was significantly generated or modified by an AI tool, consider the following:
 
-1. **Verify the tool's terms of service.** Some AI tools grant the provider broad rights over your input (your code) and output (the generated code). Make sure these terms are compatible with contributing under the Apache License 2.0.
+1. **Check the tool's terms of service.** Confirm that the tool's terms place no restrictions on the output inconsistent with the Open Source Definition and grant you sufficient rights to contribute the output under the Apache License 2.0.
 
-2. **Check for third-party material.** AI models are trained on vast corpora that may include open source code from other projects. If the AI generates code that closely resembles a file from a copyrighted project, there is a (currently small) risk that the output could be a derivative work. This risk is low for typical use but something to be aware of.
+2. **Check for third-party material.** AI models can reproduce snippets from copyrighted training data. Ensure the output either includes no third-party material, uses any included third-party material under an Apache-2.0-compatible license with proper attribution, or is not copyrightable subject matter (note that meeting the first two conditions is the sounder route, since copyrightability of AI output remains unsettled across jurisdictions). Using tools with similarity checks or code scanning helps gain reasonable certainty here.
 
 3. **Review and understand the output.** You are responsible for what you commit. Read the AI-generated code, verify it is correct, and be able to explain what it does.
 
