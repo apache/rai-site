@@ -78,7 +78,7 @@ Factors that suggest limited control:
 
 3. **Document your process.** If you used AI to generate code, note what you did to review, edit, and integrate it. This helps downstream users understand the provenance of the code.
 
-4. **Your representation and warranty still apply.** Under Sections 4 and 5 of the Apache Individual Contributor License Agreement (ICLA), you represent that your contribution is your original work or that you have the right to submit it. Using AI does not change this obligation; you are still responsible for what you commit.
+4. **Your representation and warranty still apply.** Under Sections 4 and 5 of the Apache Individual Contributor License Agreement (ICLA), you represent that your contribution is your original work and that you have the right to submit it. Using AI does not change this obligation; you are still responsible for what you commit.
 
 ## Further reading
 
