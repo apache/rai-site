@@ -17,7 +17,7 @@ This page complements the official [ASF Generative Tooling Guidance](https://www
 
 3. **Check for third-party material.** Ensure the output either includes no third-party copyrighted material or only includes material under an Apache-2.0-compatible license with proper attribution. See [AI-generated code in Apache projects](ai-generated-code.html) for details.
 
-4. **Understand that AI-generated-only content may not be copyrightable.** Under US law, only natural persons can be authors, so purely AI-generated material may not receive copyright protection. That alone does not rule out contributing it under the [ASF Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html), though it is still worth keeping in mind for downstream users and across different jurisdictions.
+4. **Understand that AI-generated-only content may not be copyrightable.** Under US law, only natural persons can be authors, so purely AI-generated material may not receive copyright protection. Because copyrightability of AI output remains unsettled across jurisdictions, relying on non-copyrightability is a weaker basis than meeting the tool-terms and third-party material conditions in the [ASF Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html) (see [AI-generated code in Apache projects](ai-generated-code.html)).
 
 5. **Maintain human oversight and editorial control.** You are responsible for what you commit. Review AI-generated code, understand it, and be able to explain what it does.
 
