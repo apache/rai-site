@@ -13,7 +13,7 @@ This page complements the official [ASF Generative Tooling Guidance](https://www
 
 1. **Follow your project's disclosure practices.** Check whether the project asks contributors to disclose AI assistance (for example, in pull request descriptions or via optional commit trailers such as `Generated-by:` or `Assisted-by:`). Individual PMCs decide what convention, if any, works best for their workflow; `Signed-off-by:` and `Co-authored-by:` should remain reserved for humans rather than AI tools.
 
-2. **Verify tool terms are compatible with Apache License 2.0.** Check the terms of service for your AI tool. Some tools grant the provider broad rights over your input (your code) and output (the generated code). Make sure these terms do not conflict with contributing under the Apache License 2.0.
+2. **Verify tool terms are compatible with Apache License 2.0.** Check the terms of service for your AI tool. Confirm that the tool's terms place no restrictions on the output inconsistent with the Open Source Definition and grant you sufficient rights to contribute the output under the Apache License 2.0.
 
 3. **Understand that AI-generated-only content may not be copyrightable.** Under US law, only natural persons can be authors, so purely AI-generated material may not receive copyright protection. That alone does not rule out contributing it under the [ASF Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html), though it is still worth keeping in mind for downstream users and across different jurisdictions.
 
