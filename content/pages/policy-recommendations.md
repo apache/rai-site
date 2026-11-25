@@ -13,13 +13,15 @@ This page complements the official [ASF Generative Tooling Guidance](https://www
 
 1. **Follow your project's disclosure practices.** Check whether the project asks contributors to disclose AI assistance (for example, in pull request descriptions or via optional commit trailers such as `Generated-by:` or `Assisted-by:`). Individual PMCs decide what convention, if any, works best for their workflow; `Signed-off-by:` and `Co-authored-by:` should remain reserved for humans rather than AI tools.
 
-2. **Verify tool terms are compatible with Apache License 2.0.** Check the terms of service for your AI tool. Some tools grant the provider broad rights over your input (your code) and output (the generated code). Make sure these terms do not conflict with contributing under the Apache License 2.0.
+2. **Verify tool terms are compatible with Apache License 2.0.** Check the terms of service for your AI tool. Confirm that the tool's terms place no restrictions on the output inconsistent with the Open Source Definition and grant you sufficient rights to contribute the output under the Apache License 2.0.
 
-3. **Understand that AI-generated-only content may not be copyrightable.** Under US law, only natural persons can be authors, so purely AI-generated material may not receive copyright protection. That alone does not rule out contributing it under the [ASF Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html), though it is still worth keeping in mind for downstream users and across different jurisdictions.
+3. **Check for third-party material.** Ensure the output either includes no third-party copyrighted material or only includes material under an Apache-2.0-compatible license with proper attribution. See [AI-generated code in Apache projects](ai-generated-code.html) for details.
 
-4. **Maintain human oversight and editorial control.** You are responsible for what you commit. Review AI-generated code, understand it, and be able to explain what it does.
+4. **Understand that AI-generated-only content may not be copyrightable.** Under US law, only natural persons can be authors, so purely AI-generated material may not receive copyright protection. Because copyrightability of AI output remains unsettled across jurisdictions, relying on non-copyrightability is a weaker basis than meeting the tool-terms and third-party material conditions in the [ASF Generative Tooling Guidance](https://www.apache.org/legal/generative-tooling.html) (see [AI-generated code in Apache projects](ai-generated-code.html)).
 
-5. **Be aware of the EU AI Act.** If you or your project uses AI in ways that reach EU audiences (e.g., public-facing chatbots, AI-drafted public-interest content), review the transparency obligations under Article 50 of Regulation (EU) 2024/1689. See [EU AI Act and copyright](eu-ai-act.html) for details.
+5. **Maintain human oversight and editorial control.** You are responsible for what you commit. Review AI-generated code, understand it, and be able to explain what it does.
+
+6. **Be aware of the EU AI Act.** If you or your project uses AI in ways that reach EU audiences (e.g., public-facing chatbots, AI-drafted public-interest content), review the transparency obligations under Article 50 of Regulation (EU) 2024/1689. See [EU AI Act and copyright](eu-ai-act.html) for details.
 
 ## This is guidance, not binding policy
 
